@@ -1,11 +1,12 @@
-import {Button} from "./components/ui/button.tsx";
+import {NavbarDemo} from "@/components/NavbarDemo.tsx";
+import {ThemeProvider} from "@/providers/theme-provider.tsx";
 
 function App() {
 
     return (
-        <>
-            <Button>Hello</Button>
-        </>
+        <ThemeProvider defaultTheme="dark" storageKey="vite-ui-theme">
+                <NavbarDemo/>
+        </ThemeProvider>
     )
 }
 

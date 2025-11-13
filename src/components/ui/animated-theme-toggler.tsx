@@ -3,6 +3,7 @@ import { Moon, Sun } from "lucide-react"
 import { flushSync } from "react-dom"
 
 import { cn } from "@/lib/utils"
+import {useTheme} from "@/providers/theme-provider.tsx";
 
 interface AnimatedThemeTogglerProps
   extends React.ComponentPropsWithoutRef<"button"> {
@@ -14,15 +15,16 @@ export const AnimatedThemeToggler = ({
   duration = 400,
   ...props
 }: AnimatedThemeTogglerProps) => {
-  const [isDark, setIsDark] = useState(false)
+  //const [isDark, setIsDark] = useState(false)
+    const {theme, setTheme} = useTheme()
   const buttonRef = useRef<HTMLButtonElement>(null)
 
-  useEffect(() => {
-    const updateTheme = () => {
+  /*useEffect(() => {
+    /!*const updateTheme = () => {
       setIsDark(document.documentElement.classList.contains("dark"))
     }
 
-    updateTheme()
+    updateTheme()*!/
 
     const observer = new MutationObserver(updateTheme)
     observer.observe(document.documentElement, {
@@ -31,17 +33,17 @@ export const AnimatedThemeToggler = ({
     })
 
     return () => observer.disconnect()
-  }, [])
+  }, [])*/
 
   const toggleTheme = useCallback(async () => {
     if (!buttonRef.current) return
 
     await document.startViewTransition(() => {
       flushSync(() => {
-        const newTheme = !isDark
-        setIsDark(newTheme)
-        document.documentElement.classList.toggle("dark")
-        localStorage.setItem("theme", newTheme ? "dark" : "light")
+        const newTheme = (theme !== "dark")
+        setTheme(newTheme ? "dark" : "light")
+        //document.documentElement.classList.toggle("dark")
+        //localStorage.setItem("theme", newTheme ? "dark" : "light")
       })
     }).ready
 
@@ -68,7 +70,7 @@ export const AnimatedThemeToggler = ({
         pseudoElement: "::view-transition-new(root)",
       }
     )
-  }, [isDark, duration])
+  }, [theme, duration])
 
   return (
     <button
@@ -77,7 +79,7 @@ export const AnimatedThemeToggler = ({
       className={cn(className)}
       {...props}
     >
-      {isDark ? <Sun /> : <Moon />}
+      {theme === "dark" ? <Sun size={20}/> : <Moon size={20}/>}
       <span className="sr-only">Toggle theme</span>
     </button>
   )

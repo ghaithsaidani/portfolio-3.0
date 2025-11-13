@@ -1,0 +1,1 @@
+export {default as PersonalImage} from './personal-image.png'

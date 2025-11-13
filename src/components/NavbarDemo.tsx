@@ -11,6 +11,9 @@ import {
 import {useState} from "react";
 import {AnimatedThemeToggler} from "@/components/ui/animated-theme-toggler.tsx";
 import {Button} from "@/components/ui/button.tsx";
+import {Experience5} from "@/components/experience5.tsx";
+import {Content1} from "@/components/content1.tsx";
+import {Hero1} from "@/components/hero1.tsx";
 
 export function NavbarDemo() {
     const navItems = [
@@ -88,7 +91,12 @@ export function NavbarDemo() {
                     </MobileNavMenu>
                 </MobileNav>
             </Navbar>
-            <DummyContent/>
+            <main>
+                <Hero1/>
+                <Experience5/>
+                {/*<Content1/>*/}
+            </main>
+
 
             {/* Navbar */}
         </div>

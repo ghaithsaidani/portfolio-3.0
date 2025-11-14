@@ -8,15 +8,10 @@ import {
     NavBody,
     NavItems,
 } from "@/components/ui/resizable-navbar";
-import {useState} from "react";
+import {type ReactNode, useState} from "react";
 import {AnimatedThemeToggler} from "@/components/ui/animated-theme-toggler.tsx";
-import {Experience} from "@/components/experience.tsx";
-import {Hero} from "@/components/hero.tsx";
-import Contact from "@/components/contact.tsx";
-import {Certificates} from "@/components/certificates.tsx";
-import {Footer} from "@/components/footer.tsx";
 
-export function AnimatedNavbar() {
+export function AnimatedNavbar({ children }: { children: ReactNode }) {
     const navItems = [
         {
             name: "Features",
@@ -93,14 +88,7 @@ export function AnimatedNavbar() {
                     </MobileNavMenu>
                 </MobileNav>
             </Navbar>
-            <main>
-                <Hero/>
-                <Experience/>
-                <Certificates/>
-                <Contact/>
-                <Footer/>
-                {/*<Content1/>*/}
-            </main>
+            {children}
 
 
             {/* Navbar */}

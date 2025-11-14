@@ -14,7 +14,7 @@ import { cn } from "@/lib/utils";
 import { Alert, AlertDescription, AlertTitle } from "@/components/ui/alert";
 import { Badge } from "@/components/ui/badge";
 
-const Content1 = () => {
+const Content = () => {
   const [activeSection, setActiveSection] = useState<string | null>(null);
   const sectionRefs = useRef<Record<string, HTMLElement>>({});
 
@@ -282,4 +282,4 @@ const Content1 = () => {
   );
 };
 
-export { Content1 };
+export { Content };

@@ -69,7 +69,7 @@ export const Navbar = ({ children, className }: NavbarProps) => {
     <motion.div
       ref={ref}
       // IMPORTANT: Change this to class of `fixed` if you want the navbar to be fixed
-      className={cn("sticky inset-x-0 z-40 w-full", visible ? "top-10" : "mt-10" , className)}
+      className={cn("sticky inset-x-0 z-40 w-full", visible ? "top-2 sm:top-10" : "mt-2 sm:mt-10" , className)}
     >
       {React.Children.map(children, (child) =>
         React.isValidElement(child)
@@ -195,7 +195,7 @@ export const MobileNavMenu = ({
   children,
   className,
   isOpen,
-  onClose,
+  //onClose,
 }: MobileNavMenuProps) => {
   return (
     <AnimatePresence>

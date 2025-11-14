@@ -4,7 +4,7 @@ import {Badge} from "@/components/ui/badge";
 import {Button} from "@/components/ui/button";
 import {PersonalImage} from "@/assets";
 
-interface Hero1Props {
+interface HeroProps {
     badge?: string;
     heading?: string;
     description?: string;
@@ -24,29 +24,29 @@ interface Hero1Props {
     };
 }
 
-const Hero1 = ({
-                   badge = "✨ Your Website Builder",
-                   heading = "Blocks Built With Shadcn & Tailwind",
-                   description = "Finely crafted components built with React, Tailwind and Shadcn UI. Developers can copy and paste these blocks directly into their project.",
-                   buttons = {
-                       primary: {
-                           text: "Discover all components",
-                           url: "https://www.shadcnblocks.com",
-                       },
-                       secondary: {
-                           text: "View on GitHub",
-                           url: "https://www.shadcnblocks.com",
-                       },
-                   },
-                   image = {
-                       src: "https://deifkwefumgah.cloudfront.net/shadcnblocks/block/placeholder-1.svg",
-                       alt: "Hero section demo image showing interface components",
-                   },
-               }: Hero1Props) => {
+const Hero = ({
+                  badge = "✨ Your Website Builder",
+                  heading = "Blocks Built With Shadcn & Tailwind",
+                  description = "Finely crafted components built with React, Tailwind and Shadcn UI. Developers can copy and paste these blocks directly into their project.",
+                  buttons = {
+                      primary: {
+                          text: "Discover all components",
+                          url: "https://www.shadcnblocks.com",
+                      },
+                      secondary: {
+                          text: "View on GitHub",
+                          url: "https://www.shadcnblocks.com",
+                      },
+                  },
+                  image = {
+                      src: "https://deifkwefumgah.cloudfront.net/shadcnblocks/block/placeholder-1.svg",
+                      alt: "Hero section demo image showing interface components",
+                  },
+              }: HeroProps) => {
     return (
-        <section className={"py-10 lg:py-40 xl:py-28"}>
+        <section className={"py-5 lg:py-40 xl:py-28"}>
             <div className="container">
-                <div className="grid w-fit items-center gap-8 lg:gap-28 lg:grid-cols-2">
+                <div className="grid w-fit items-center gap-4 md:gap-8 lg:gap-28 lg:grid-cols-2">
                     <div className="flex flex-col items-center text-center lg:items-start lg:text-left">
                         {badge && (
                             <Badge variant="outline">
@@ -54,10 +54,10 @@ const Hero1 = ({
                                 <ArrowUpRight className="ml-2 size-4"/>
                             </Badge>
                         )}
-                        <h1 className="my-6 text-pretty text-4xl font-bold lg:text-6xl">
+                        <h1 className="my-6 text-pretty text-2xl sm:text-4xl font-bold lg:text-6xl">
                             {heading}
                         </h1>
-                        <p className="text-muted-foreground mb-8 max-w-xl lg:text-xl">
+                        <p className="text-muted-foreground mb-8 text-sm max-w-xl lg:text-xl">
                             {description}
                         </p>
                         <div className="flex w-full flex-col justify-center gap-2 sm:flex-row lg:justify-start">
@@ -79,7 +79,7 @@ const Hero1 = ({
                     <img
                         src={PersonalImage}
                         alt={image.alt}
-                        className="h-auto w-full bg-muted rounded-lg border-primary object-cover object-[50%_20%]"
+                        className="h-auto w-full bg-muted rounded-lg border-primary object-cover object-[50%_0%]"
                     />
                 </div>
             </div>
@@ -87,4 +87,4 @@ const Hero1 = ({
     );
 };
 
-export {Hero1};
+export {Hero};

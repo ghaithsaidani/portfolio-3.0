@@ -1,10 +1,10 @@
-import {NavbarDemo} from "@/components/NavbarDemo.tsx";
+import {AnimatedNavbar} from "@/components/animated-navbar.tsx";
 import {ThemeProvider} from "@/providers/theme-provider.tsx";
 
 function App() {
     return (
         <ThemeProvider defaultTheme="dark" storageKey="vite-ui-theme">
-            <NavbarDemo/>
+            <AnimatedNavbar/>
         </ThemeProvider>
     )
 }

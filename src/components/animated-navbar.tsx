@@ -10,12 +10,13 @@ import {
 } from "@/components/ui/resizable-navbar";
 import {useState} from "react";
 import {AnimatedThemeToggler} from "@/components/ui/animated-theme-toggler.tsx";
-import {Button} from "@/components/ui/button.tsx";
-import {Experience5} from "@/components/experience5.tsx";
-import {Content1} from "@/components/content1.tsx";
-import {Hero1} from "@/components/hero1.tsx";
+import {Experience} from "@/components/experience.tsx";
+import {Hero} from "@/components/hero.tsx";
+import Contact from "@/components/contact.tsx";
+import {Certificates} from "@/components/certificates.tsx";
+import {Footer} from "@/components/footer.tsx";
 
-export function NavbarDemo() {
+export function AnimatedNavbar() {
     const navItems = [
         {
             name: "Features",
@@ -73,6 +74,7 @@ export function NavbarDemo() {
                             </a>
                         ))}
                         <div className="flex w-full flex-col gap-4">
+                            <AnimatedThemeToggler className={"z-20"}/>
                             {/*<NavbarButton
                                 onClick={() => setIsMobileMenuOpen(false)}
                                 variant="primary"
@@ -92,8 +94,11 @@ export function NavbarDemo() {
                 </MobileNav>
             </Navbar>
             <main>
-                <Hero1/>
-                <Experience5/>
+                <Hero/>
+                <Experience/>
+                <Certificates/>
+                <Contact/>
+                <Footer/>
                 {/*<Content1/>*/}
             </main>
 
@@ -103,6 +108,7 @@ export function NavbarDemo() {
     );
 }
 
+/*
 const DummyContent = () => {
     return (
         <div className="container mx-auto p-8 pt-24">
@@ -199,3 +205,4 @@ const DummyContent = () => {
         </div>
     );
 };
+*/

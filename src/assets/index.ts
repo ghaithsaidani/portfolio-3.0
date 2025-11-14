@@ -1,1 +1,5 @@
 export {default as PersonalImage} from './personal-image.png'
+export {default as Infogerance} from './infogerance.png'
+export {default as Confledis} from './confledis-sas.png'
+export {default as Xsustain} from './xsustain.jpg'
+export {default as Sofiatech} from './sofia_technologies_tunisia_logo.jpg'

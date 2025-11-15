@@ -3,26 +3,7 @@ import {ArrowRight, ArrowUpRight} from "lucide-react";
 import {Badge} from "@/components/ui/badge";
 import {Button} from "@/components/ui/button";
 import {PersonalImage} from "@/assets";
-
-interface HeroProps {
-    badge?: string;
-    heading?: string;
-    description?: string;
-    buttons?: {
-        primary?: {
-            text: string;
-            url: string;
-        };
-        secondary?: {
-            text: string;
-            url: string;
-        };
-    };
-    image?: {
-        src: string;
-        alt: string;
-    };
-}
+import type {HeroProps} from "@/types/heor.ts";
 
 const Hero = ({
                   badge = "✨ Your Website Builder",
@@ -79,7 +60,7 @@ const Hero = ({
                     <img
                         src={PersonalImage}
                         alt={image.alt}
-                        className="h-auto w-full bg-muted rounded-lg border-primary object-cover object-[50%_0%]"
+                        className="h-auto w-full bg-muted rounded-4xl border-primary object-cover object-[50%_0%]"
                     />
                 </div>
             </div>

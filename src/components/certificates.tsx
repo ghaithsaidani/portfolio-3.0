@@ -11,19 +11,9 @@ import React from "react";
 
 import { Button } from "@/components/ui/button";
 import { Separator } from "@/components/ui/separator";
+import type {ListProps} from "@/types/certificate.ts";
 
-interface ListItem {
-  icon: React.ReactNode;
-  title: string;
-  category: string;
-  description: string;
-  link: string;
-}
 
-interface List2Props {
-  heading?: string;
-  items?: ListItem[];
-}
 
 const Certificates = ({
   heading = "Our Achievements & Recognition",
@@ -71,7 +61,7 @@ const Certificates = ({
       link: "#",
     },
   ],
-}: List2Props) => {
+}: ListProps) => {
   return (
     <section className="py-32">
       <div className="container px-0 md:px-8">

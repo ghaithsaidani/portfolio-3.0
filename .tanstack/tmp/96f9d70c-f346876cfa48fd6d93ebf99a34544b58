@@ -13,7 +13,6 @@ import { createFileRoute } from '@tanstack/react-router'
 import { Route as rootRouteImport } from './routes/__root'
 import { Route as IndexRouteImport } from './routes/index'
 
-const ProjectsProject2LazyRouteImport = createFileRoute('/projects/project2')()
 const ProjectsProject1LazyRouteImport = createFileRoute('/projects/project1')()
 
 const IndexRoute = IndexRouteImport.update({
@@ -21,13 +20,6 @@ const IndexRoute = IndexRouteImport.update({
   path: '/',
   getParentRoute: () => rootRouteImport,
 } as any)
-const ProjectsProject2LazyRoute = ProjectsProject2LazyRouteImport.update({
-  id: '/projects/project2',
-  path: '/projects/project2',
-  getParentRoute: () => rootRouteImport,
-} as any).lazy(() =>
-  import('./routes/projects/project2.lazy').then((d) => d.Route),
-)
 const ProjectsProject1LazyRoute = ProjectsProject1LazyRouteImport.update({
   id: '/projects/project1',
   path: '/projects/project1',
@@ -39,31 +31,27 @@ const ProjectsProject1LazyRoute = ProjectsProject1LazyRouteImport.update({
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
   '/projects/project1': typeof ProjectsProject1LazyRoute
-  '/projects/project2': typeof ProjectsProject2LazyRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
   '/projects/project1': typeof ProjectsProject1LazyRoute
-  '/projects/project2': typeof ProjectsProject2LazyRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
   '/projects/project1': typeof ProjectsProject1LazyRoute
-  '/projects/project2': typeof ProjectsProject2LazyRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
-  fullPaths: '/' | '/projects/project1' | '/projects/project2'
+  fullPaths: '/' | '/projects/project1'
   fileRoutesByTo: FileRoutesByTo
-  to: '/' | '/projects/project1' | '/projects/project2'
-  id: '__root__' | '/' | '/projects/project1' | '/projects/project2'
+  to: '/' | '/projects/project1'
+  id: '__root__' | '/' | '/projects/project1'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
   ProjectsProject1LazyRoute: typeof ProjectsProject1LazyRoute
-  ProjectsProject2LazyRoute: typeof ProjectsProject2LazyRoute
 }
 
 declare module '@tanstack/react-router' {
@@ -73,13 +61,6 @@ declare module '@tanstack/react-router' {
       path: '/'
       fullPath: '/'
       preLoaderRoute: typeof IndexRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/projects/project2': {
-      id: '/projects/project2'
-      path: '/projects/project2'
-      fullPath: '/projects/project2'
-      preLoaderRoute: typeof ProjectsProject2LazyRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/projects/project1': {
@@ -95,7 +76,6 @@ declare module '@tanstack/react-router' {
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
   ProjectsProject1LazyRoute: ProjectsProject1LazyRoute,
-  ProjectsProject2LazyRoute: ProjectsProject2LazyRoute,
 }
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)

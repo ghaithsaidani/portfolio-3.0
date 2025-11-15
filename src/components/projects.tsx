@@ -8,12 +8,13 @@ import {
     CarouselContent,
     CarouselItem,
 } from "@/components/ui/carousel";
+import {Link, type LinkProps} from "@tanstack/react-router";
 
 interface GalleryItem {
     id: string;
     title: string;
     summary: string;
-    url: string;
+    url: LinkProps['to'];
     image: string;
 }
 
@@ -23,7 +24,7 @@ interface GalleryProps {
     items?: GalleryItem[];
 }
 
-const Gallery = ({
+const Projects = ({
                       heading = "Gallery",
                       demoUrl = "https://www.shadcnblocks.com",
                       items = [
@@ -32,7 +33,7 @@ const Gallery = ({
                               title: "Build Modern UIs",
                               summary:
                                   "Create stunning user interfaces with our comprehensive design system.",
-                              url: "#",
+                              url: "/projects/project1",
                               image: "https://deifkwefumgah.cloudfront.net/shadcnblocks/block/placeholder-dark-1.svg",
                           },
                           {
@@ -40,7 +41,7 @@ const Gallery = ({
                               title: "Computer Vision Technology",
                               summary:
                                   "Powerful image recognition and processing capabilities that allow AI systems to analyze, understand, and interpret visual information from the world.",
-                              url: "#",
+                              url: "/projects/project2",
                               image: "https://deifkwefumgah.cloudfront.net/shadcnblocks/block/placeholder-dark-1.svg",
                           },
                           {
@@ -48,7 +49,7 @@ const Gallery = ({
                               title: "Machine Learning Automation",
                               summary:
                                   "Self-improving algorithms that learn from data patterns to automate complex tasks and make intelligent decisions with minimal human intervention.",
-                              url: "#",
+                              url: "/projects/project1",
                               image: "https://deifkwefumgah.cloudfront.net/shadcnblocks/block/placeholder-dark-1.svg",
                           },
                           {
@@ -56,7 +57,7 @@ const Gallery = ({
                               title: "Predictive Analytics",
                               summary:
                                   "Advanced forecasting capabilities that analyze historical data to predict future trends and outcomes, helping businesses make data-driven decisions.",
-                              url: "#",
+                              url: "/projects/project1",
                               image: "https://deifkwefumgah.cloudfront.net/shadcnblocks/block/placeholder-dark-1.svg",
                           },
                           {
@@ -64,7 +65,7 @@ const Gallery = ({
                               title: "Neural Network Architecture",
                               summary:
                                   "Sophisticated AI models inspired by human brain structure, capable of solving complex problems through deep learning and pattern recognition.",
-                              url: "#",
+                              url: "/projects/project1",
                               image: "https://deifkwefumgah.cloudfront.net/shadcnblocks/block/placeholder-dark-1.svg",
                           },
                       ],
@@ -143,8 +144,8 @@ const Gallery = ({
                     <CarouselContent className="hide-scrollbar w-full max-w-full">
                         {items.map((item) => (
                             <CarouselItem key={item.id} className="ml-8 max-w-[350px] md:max-w-[452px] px-5 py-8 bg-muted rounded-xl">
-                                <a
-                                    href={item.url}
+                                <Link
+                                    to={item.url}
                                     className="group flex flex-col justify-between"
                                 >
                                     <div>
@@ -170,7 +171,7 @@ const Gallery = ({
                                         Read more{" "}
                                         <ArrowRight className="ml-2 size-5 transition-transform group-hover:translate-x-1" />
                                     </div>
-                                </a>
+                                </Link>
                             </CarouselItem>
                         ))}
                     </CarouselContent>
@@ -180,4 +181,4 @@ const Gallery = ({
     );
 };
 
-export { Gallery };
+export { Projects };

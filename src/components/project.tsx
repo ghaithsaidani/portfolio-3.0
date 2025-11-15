@@ -1,5 +1,3 @@
-"use client";
-
 import {
   AlignLeft,
   GalleryVerticalEnd,
@@ -13,8 +11,11 @@ import { cn } from "@/lib/utils";
 
 import { Alert, AlertDescription, AlertTitle } from "@/components/ui/alert";
 import { Badge } from "@/components/ui/badge";
+import type {ProjectProps} from "@/types/project.ts";
 
-const Content = () => {
+
+
+const Project = (project: ProjectProps) => {
   const [activeSection, setActiveSection] = useState<string | null>(null);
   const sectionRefs = useRef<Record<string, HTMLElement>>({});
 
@@ -65,7 +66,8 @@ const Content = () => {
             <div>
               <Badge variant="outline">Kingdom Tales</Badge>
               <h1 className="mt-3 text-3xl font-extrabold">
-                The Great Joke Tax
+                {/*The Great Joke Tax*/}
+                  {project.name}
               </h1>
               <p className="text-muted-foreground mt-2 text-lg">
                 In a kingdom far away, where laughter once flowed freely, a
@@ -282,4 +284,4 @@ const Content = () => {
   );
 };
 
-export { Content };
+export { Project };

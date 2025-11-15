@@ -13,6 +13,9 @@ import { createFileRoute } from '@tanstack/react-router'
 import { Route as rootRouteImport } from './routes/__root'
 import { Route as IndexRouteImport } from './routes/index'
 
+const ProjectsProject5LazyRouteImport = createFileRoute('/projects/project5')()
+const ProjectsProject4LazyRouteImport = createFileRoute('/projects/project4')()
+const ProjectsProject3LazyRouteImport = createFileRoute('/projects/project3')()
 const ProjectsProject2LazyRouteImport = createFileRoute('/projects/project2')()
 const ProjectsProject1LazyRouteImport = createFileRoute('/projects/project1')()
 
@@ -21,6 +24,27 @@ const IndexRoute = IndexRouteImport.update({
   path: '/',
   getParentRoute: () => rootRouteImport,
 } as any)
+const ProjectsProject5LazyRoute = ProjectsProject5LazyRouteImport.update({
+  id: '/projects/project5',
+  path: '/projects/project5',
+  getParentRoute: () => rootRouteImport,
+} as any).lazy(() =>
+  import('./routes/projects/project5.lazy').then((d) => d.Route),
+)
+const ProjectsProject4LazyRoute = ProjectsProject4LazyRouteImport.update({
+  id: '/projects/project4',
+  path: '/projects/project4',
+  getParentRoute: () => rootRouteImport,
+} as any).lazy(() =>
+  import('./routes/projects/project4.lazy').then((d) => d.Route),
+)
+const ProjectsProject3LazyRoute = ProjectsProject3LazyRouteImport.update({
+  id: '/projects/project3',
+  path: '/projects/project3',
+  getParentRoute: () => rootRouteImport,
+} as any).lazy(() =>
+  import('./routes/projects/project3.lazy').then((d) => d.Route),
+)
 const ProjectsProject2LazyRoute = ProjectsProject2LazyRouteImport.update({
   id: '/projects/project2',
   path: '/projects/project2',
@@ -40,30 +64,61 @@ export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
   '/projects/project1': typeof ProjectsProject1LazyRoute
   '/projects/project2': typeof ProjectsProject2LazyRoute
+  '/projects/project3': typeof ProjectsProject3LazyRoute
+  '/projects/project4': typeof ProjectsProject4LazyRoute
+  '/projects/project5': typeof ProjectsProject5LazyRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
   '/projects/project1': typeof ProjectsProject1LazyRoute
   '/projects/project2': typeof ProjectsProject2LazyRoute
+  '/projects/project3': typeof ProjectsProject3LazyRoute
+  '/projects/project4': typeof ProjectsProject4LazyRoute
+  '/projects/project5': typeof ProjectsProject5LazyRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
   '/projects/project1': typeof ProjectsProject1LazyRoute
   '/projects/project2': typeof ProjectsProject2LazyRoute
+  '/projects/project3': typeof ProjectsProject3LazyRoute
+  '/projects/project4': typeof ProjectsProject4LazyRoute
+  '/projects/project5': typeof ProjectsProject5LazyRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
-  fullPaths: '/' | '/projects/project1' | '/projects/project2'
+  fullPaths:
+    | '/'
+    | '/projects/project1'
+    | '/projects/project2'
+    | '/projects/project3'
+    | '/projects/project4'
+    | '/projects/project5'
   fileRoutesByTo: FileRoutesByTo
-  to: '/' | '/projects/project1' | '/projects/project2'
-  id: '__root__' | '/' | '/projects/project1' | '/projects/project2'
+  to:
+    | '/'
+    | '/projects/project1'
+    | '/projects/project2'
+    | '/projects/project3'
+    | '/projects/project4'
+    | '/projects/project5'
+  id:
+    | '__root__'
+    | '/'
+    | '/projects/project1'
+    | '/projects/project2'
+    | '/projects/project3'
+    | '/projects/project4'
+    | '/projects/project5'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
   ProjectsProject1LazyRoute: typeof ProjectsProject1LazyRoute
   ProjectsProject2LazyRoute: typeof ProjectsProject2LazyRoute
+  ProjectsProject3LazyRoute: typeof ProjectsProject3LazyRoute
+  ProjectsProject4LazyRoute: typeof ProjectsProject4LazyRoute
+  ProjectsProject5LazyRoute: typeof ProjectsProject5LazyRoute
 }
 
 declare module '@tanstack/react-router' {
@@ -73,6 +128,27 @@ declare module '@tanstack/react-router' {
       path: '/'
       fullPath: '/'
       preLoaderRoute: typeof IndexRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/projects/project5': {
+      id: '/projects/project5'
+      path: '/projects/project5'
+      fullPath: '/projects/project5'
+      preLoaderRoute: typeof ProjectsProject5LazyRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/projects/project4': {
+      id: '/projects/project4'
+      path: '/projects/project4'
+      fullPath: '/projects/project4'
+      preLoaderRoute: typeof ProjectsProject4LazyRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/projects/project3': {
+      id: '/projects/project3'
+      path: '/projects/project3'
+      fullPath: '/projects/project3'
+      preLoaderRoute: typeof ProjectsProject3LazyRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/projects/project2': {
@@ -96,6 +172,9 @@ const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
   ProjectsProject1LazyRoute: ProjectsProject1LazyRoute,
   ProjectsProject2LazyRoute: ProjectsProject2LazyRoute,
+  ProjectsProject3LazyRoute: ProjectsProject3LazyRoute,
+  ProjectsProject4LazyRoute: ProjectsProject4LazyRoute,
+  ProjectsProject5LazyRoute: ProjectsProject5LazyRoute,
 }
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)

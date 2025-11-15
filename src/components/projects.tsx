@@ -49,7 +49,7 @@ const Projects = ({
                               title: "Machine Learning Automation",
                               summary:
                                   "Self-improving algorithms that learn from data patterns to automate complex tasks and make intelligent decisions with minimal human intervention.",
-                              url: "/projects/project1",
+                              url: "/projects/project3",
                               image: "https://deifkwefumgah.cloudfront.net/shadcnblocks/block/placeholder-dark-1.svg",
                           },
                           {
@@ -57,7 +57,7 @@ const Projects = ({
                               title: "Predictive Analytics",
                               summary:
                                   "Advanced forecasting capabilities that analyze historical data to predict future trends and outcomes, helping businesses make data-driven decisions.",
-                              url: "/projects/project1",
+                              url: "/projects/project4",
                               image: "https://deifkwefumgah.cloudfront.net/shadcnblocks/block/placeholder-dark-1.svg",
                           },
                           {
@@ -65,7 +65,7 @@ const Projects = ({
                               title: "Neural Network Architecture",
                               summary:
                                   "Sophisticated AI models inspired by human brain structure, capable of solving complex problems through deep learning and pattern recognition.",
-                              url: "/projects/project1",
+                              url: "/projects/project5",
                               image: "https://deifkwefumgah.cloudfront.net/shadcnblocks/block/placeholder-dark-1.svg",
                           },
                       ],

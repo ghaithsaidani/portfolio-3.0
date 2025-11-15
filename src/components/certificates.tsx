@@ -1,109 +1,102 @@
-import {
-  ArrowRight,
-  Award,
-  Building2,
-  HeartHandshake,
-  Leaf,
-  Lightbulb,
-  Trophy,
-} from "lucide-react";
+import {ArrowRight} from "lucide-react";
 import React from "react";
-
-import { Button } from "@/components/ui/button";
-import { Separator } from "@/components/ui/separator";
+import {Button} from "@/components/ui/button";
+import {Separator} from "@/components/ui/separator";
 import type {ListProps} from "@/types/certificate.ts";
-
+import {AmazonWebServices, LinuxFoundation, Meta} from "@/const/icons.tsx";
+import {ITSpecialistCloudComputing, ITSpecialistJava} from "@/assets";
 
 
 const Certificates = ({
-  heading = "Our Achievements & Recognition",
-  items = [
-    {
-      icon: <Trophy />,
-      title: "Industry Recognition",
-      category: "Achievement",
-      description: "Outstanding Performance Award.",
-      link: "#",
-    },
-    {
-      icon: <Award />,
-      title: "Excellence Award",
-      category: "Recognition",
-      description: "Best in Category Winner.",
-      link: "#",
-    },
-    {
-      icon: <Lightbulb />,
-      title: "Innovation Prize",
-      category: "Technology",
-      description: "Breakthrough Solution of the Year.",
-      link: "#",
-    },
-    {
-      icon: <HeartHandshake />,
-      title: "Customer Success",
-      category: "Service",
-      description: "Top-Rated Solution Provider.",
-      link: "#",
-    },
-    {
-      icon: <Building2 />,
-      title: "Global Leadership",
-      category: "Management",
-      description: "Executive Team of the Year.",
-      link: "#",
-    },
-    {
-      icon: <Leaf />,
-      title: "Sustainability Impact",
-      category: "Environmental",
-      description: "Green Initiative Excellence.",
-      link: "#",
-    },
-  ],
-}: ListProps) => {
-  return (
-    <section className="py-32">
-      <div className="container px-0 md:px-8">
-        <h1 className="mb-10 px-4 text-3xl font-semibold md:mb-14 md:text-4xl">
-          {heading}
-        </h1>
-        <div className="flex flex-col">
-          <Separator />
-          {items.map((item, index) => (
-            <React.Fragment key={index}>
-              <div className="grid items-center gap-4 px-4 py-5 md:grid-cols-4">
-                <div className="order-2 flex items-center gap-2 md:order-none">
-                  <span className="bg-neutral-100 flex h-14 w-16 shrink-0 items-center justify-center rounded-md dark:bg-neutral-800">
+                          heading = "Certificates",
+                          items = [
+                              {
+                                  icon: <LinuxFoundation className={"size-8"}/>,
+                                  title: "Excellence Award",
+                                  category: "Recognition",
+                                  description: "Best in Category Winner.",
+                                  link: "#",
+                              },
+                              {
+                                  icon: <AmazonWebServices className={"size-8 dark:"}/>,
+                                  title: "Industry Recognition",
+                                  category: "Achievement",
+                                  description: "Outstanding Performance Award.",
+                                  link: "#",
+                              },
+                              {
+                                  icon: <AmazonWebServices className={"size-8 dark:"}/>,
+                                  title: "Industry Recognition",
+                                  category: "Achievement",
+                                  description: "Outstanding Performance Award.",
+                                  link: "#",
+                              },
+                              {
+                                  icon: <img src={ITSpecialistCloudComputing} alt={"ITSpecialist Cloud Computing certificate Logo"} className={"size-8"}/>,
+                                  title: "Customer Success",
+                                  category: "Service",
+                                  description: "Top-Rated Solution Provider.",
+                                  link: "#",
+                              },
+                              {
+                                  icon: <Meta className={"size-8"}/>,
+                                  title: "Global Leadership",
+                                  category: "Management",
+                                  description: "Executive Team of the Year.",
+                                  link: "#",
+                              },
+                              {
+                                  icon: <img src={ITSpecialistJava} alt={"ITSpecialist Java certificate Logo"} className={"size-8"}/>,
+                                  title: "Innovation Prize",
+                                  category: "Technology",
+                                  description: "Breakthrough Solution of the Year.",
+                                  link: "#",
+                              }
+                          ],
+                      }: ListProps) => {
+    return (
+        <section className="py-32">
+            <div className="container px-0 md:px-8">
+                <h1 className="mb-10 px-4 text-3xl font-semibold md:mb-14 md:text-4xl">
+                    {heading}
+                </h1>
+                <div className="flex flex-col">
+                    <Separator/>
+                    {items.map((item, index) => (
+                        <React.Fragment key={index}>
+                            <div className="grid items-center gap-4 px-4 py-5 md:grid-cols-4">
+                                <div className="order-2 flex items-center gap-2 md:order-none">
+                  <span
+                      className="bg-muted flex h-14 w-16 shrink-0 items-center justify-center rounded-md">
                     {item.icon}
                   </span>
-                  <div className="flex flex-col gap-1">
-                    <h3 className="font-semibold">{item.title}</h3>
-                    <p className="text-neutral-500 text-sm dark:text-neutral-400">
-                      {item.category}
-                    </p>
-                  </div>
+                                    <div className="flex flex-col gap-1">
+                                        <h3 className="font-semibold">{item.title}</h3>
+                                        <p className="text-neutral-500 text-sm dark:text-neutral-400">
+                                            {item.category}
+                                        </p>
+                                    </div>
+                                </div>
+                                <p className="order-1 text-2xl font-semibold md:order-none md:col-span-2">
+                                    {item.description}
+                                </p>
+                                <Button variant="outline" asChild>
+                                    <a
+                                        className="order-3 ml-auto w-fit gap-2 md:order-none"
+                                        href={item.link}
+                                    >
+                                        <span>View project</span>
+                                        <ArrowRight className="h-4 w-4"/>
+                                    </a>
+                                </Button>
+                            </div>
+                            <Separator/>
+                        </React.Fragment>
+                    ))}
                 </div>
-                <p className="order-1 text-2xl font-semibold md:order-none md:col-span-2">
-                  {item.description}
-                </p>
-                <Button variant="outline" asChild>
-                  <a
-                    className="order-3 ml-auto w-fit gap-2 md:order-none"
-                    href={item.link}
-                  >
-                    <span>View project</span>
-                    <ArrowRight className="h-4 w-4" />
-                  </a>
-                </Button>
-              </div>
-              <Separator />
-            </React.Fragment>
-          ))}
-        </div>
-      </div>
-    </section>
-  );
+            </div>
+        </section>
+    )
 };
 
-export { Certificates };
+export {Certificates};

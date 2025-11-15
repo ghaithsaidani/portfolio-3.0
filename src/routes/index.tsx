@@ -6,8 +6,8 @@ import {Certificates} from "@/components/certificates.tsx";
 import {Projects} from "@/components/projects.tsx";
 import Contact from "@/components/contact.tsx";
 import {Footer} from "@/components/footer.tsx";
-import {ThemeProvider} from "@/providers/theme-provider.tsx";
 import {Logos} from "@/components/logos.tsx";
+import {Education} from "@/components/education.tsx";
 
 export const Route = createFileRoute('/')({
     component: Index,
@@ -15,20 +15,20 @@ export const Route = createFileRoute('/')({
 
 function Index() {
     return (
-        <ThemeProvider defaultTheme="dark" storageKey="vite-ui-theme">
-            <AnimatedNavbar>
-                <main>
-                    <Hero/>
-                    <Experience/>
-                    <Certificates/>
-                    <Projects/>
-                    <Logos/>
-                    {/*<Content/>*/}
-                    <Contact/>
-                    <Footer/>
-                    {/*<Content1/>*/}
-                </main>
-            </AnimatedNavbar>
-        </ThemeProvider>
+
+        <AnimatedNavbar>
+            <main>
+                <Hero/>
+                <Experience/>
+                <Education/>
+                <Certificates/>
+                <Projects/>
+                <Logos/>
+                {/*<Content/>*/}
+                <Contact/>
+                <Footer/>
+                {/*<Content1/>*/}
+            </main>
+        </AnimatedNavbar>
     )
 }

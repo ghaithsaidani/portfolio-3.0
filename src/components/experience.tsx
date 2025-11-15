@@ -1,4 +1,6 @@
 import {Confledis, Infogerance, Sofiatech, Xsustain} from "@/assets";
+import {Button} from "@/components/ui/button.tsx";
+import {Download} from "lucide-react";
 
 interface ExperienceItem {
     title: string;
@@ -15,7 +17,7 @@ interface ExperienceProps {
 }
 
 const Experience = ({
-                        title = "Work Experience",
+                        //title = "Work Experience",
                         experience = [
                             {
                                 title: "DevOps Engineer",
@@ -59,9 +61,17 @@ const Experience = ({
         <section className="py-16 md:py-32">
             <div className="container">
                 <div className="mx-auto max-w-7xl">
-                    <h2 className="mb-12 text-4xl font-medium leading-tight md:text-7xl">
+                    {/*<h2 className="mb-12 text-4xl font-medium leading-tight md:text-7xl">
                         {title}
-                    </h2>
+                    </h2>*/}
+                    <div className="flex w-full items-end justify-between mb-16">
+                        <h1 className="text-5xl font-semibold tracking-tighter lg:text-6xl">
+                            Experience
+                        </h1>
+                        <Button variant="ghost" size="lg" className="font-semibold">
+                            Download CV <Download className="size-4" />
+                        </Button>
+                    </div>
 
                     <div className="space-y-8">
                         {experience.map(

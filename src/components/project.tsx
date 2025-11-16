@@ -19,38 +19,43 @@ const Project = (project: ProjectProps) => {
   const [activeSection, setActiveSection] = useState<string | null>(null);
   const sectionRefs = useRef<Record<string, HTMLElement>>({});
 
-  useEffect(() => {
-    const sections = Object.keys(sectionRefs.current);
+    useEffect(() => {
+        window.scrollTo(0, 0);
+    }, []);
 
-    const observerCallback = (entries: IntersectionObserverEntry[]) => {
-      entries.forEach((entry) => {
-        if (entry.isIntersecting) {
-          setActiveSection(entry.target.id);
+
+    useEffect(() => {
+      const sections = Object.keys(sectionRefs.current);
+
+      const observerCallback = (entries: IntersectionObserverEntry[]) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            setActiveSection(entry.target.id);
+          }
+        });
+      };
+
+      let observer: IntersectionObserver | null = new IntersectionObserver(
+        observerCallback,
+        {
+          root: null,
+          rootMargin: "0px",
+          threshold: 1,
+        },
+      );
+
+      sections.forEach((sectionId) => {
+        const element = sectionRefs.current[sectionId];
+        if (element) {
+          observer?.observe(element);
         }
       });
-    };
 
-    let observer: IntersectionObserver | null = new IntersectionObserver(
-      observerCallback,
-      {
-        root: null,
-        rootMargin: "0px",
-        threshold: 1,
-      },
-    );
-
-    sections.forEach((sectionId) => {
-      const element = sectionRefs.current[sectionId];
-      if (element) {
-        observer?.observe(element);
-      }
-    });
-
-    return () => {
-      observer?.disconnect();
-      observer = null;
-    };
-  }, []);
+      return () => {
+        observer?.disconnect();
+        observer = null;
+      };
+    }, []);
 
   const addSectionRef = (id: string, ref: HTMLElement | null) => {
     if (ref) {

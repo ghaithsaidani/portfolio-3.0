@@ -4,9 +4,11 @@ import {ThemeProvider} from "@/providers/theme-provider.tsx";
 
 const RootLayout = () => (
     <ThemeProvider defaultTheme="dark" storageKey="vite-ui-theme">
-        <Outlet />
+        <Outlet/>
         {/*<TanStackRouterDevtools />*/}
     </ThemeProvider>
 )
 
-export const Route = createRootRoute({ component: RootLayout })
+export const Route = createRootRoute({
+    component: RootLayout,
+})

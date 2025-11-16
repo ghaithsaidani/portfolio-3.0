@@ -146,6 +146,7 @@ const Projects = ({
                             <CarouselItem key={item.id} className="ml-8 max-w-[350px] md:max-w-[452px] px-5 py-8 bg-muted rounded-xl">
                                 <Link
                                     to={item.url}
+                                    hashScrollIntoView={true}
                                     className="group flex flex-col justify-between"
                                 >
                                     <div>

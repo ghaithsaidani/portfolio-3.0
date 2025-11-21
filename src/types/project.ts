@@ -1,5 +1,6 @@
 interface ProjectProps{
     name: string
+    image?: string
 }
 
 

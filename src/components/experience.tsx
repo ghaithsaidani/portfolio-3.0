@@ -64,11 +64,11 @@ const Experience = ({
                     {/*<h2 className="mb-12 text-4xl font-medium leading-tight md:text-7xl">
                         {title}
                     </h2>*/}
-                    <div className="flex w-full items-end justify-between mb-16">
-                        <h1 className="text-5xl font-semibold tracking-tighter lg:text-6xl">
+                    <div className="flex w-full items-center justify-between mb-16">
+                        <h1 className="text-3xl md:text-5xl font-semibold tracking-tighter lg:text-6xl">
                             Experience
                         </h1>
-                        <Button variant="ghost" size="lg" className="font-semibold">
+                        <Button variant="ghost" size="lg" className="text-sm font-semibold">
                             Download CV <Download className="size-4" />
                         </Button>
                     </div>

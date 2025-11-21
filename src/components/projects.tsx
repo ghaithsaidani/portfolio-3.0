@@ -9,6 +9,16 @@ import {
     CarouselItem,
 } from "@/components/ui/carousel";
 import {Link, type LinkProps} from "@tanstack/react-router";
+import {
+    AmanaInsurances,
+    CloudWebAppBuilder,
+    ConfledisInternship, HRIndustries, InfogeranceInternship,
+    Kubepilot,
+    MicroservicesProvision,
+    MondeEnBouche,
+    PDS,
+    Portfolio2, XsustainInternship
+} from "@/assets";
 
 interface GalleryItem {
     id: string;
@@ -34,7 +44,7 @@ const Projects = ({
                               summary:
                                   "Create stunning user interfaces with our comprehensive design system.",
                               url: "/projects/project1",
-                              image: "https://deifkwefumgah.cloudfront.net/shadcnblocks/block/placeholder-dark-1.svg",
+                              image: Kubepilot,
                           },
                           {
                               id: "item-2",
@@ -42,7 +52,7 @@ const Projects = ({
                               summary:
                                   "Powerful image recognition and processing capabilities that allow AI systems to analyze, understand, and interpret visual information from the world.",
                               url: "/projects/project2",
-                              image: "https://deifkwefumgah.cloudfront.net/shadcnblocks/block/placeholder-dark-1.svg",
+                              image: PDS,
                           },
                           {
                               id: "item-3",
@@ -50,7 +60,7 @@ const Projects = ({
                               summary:
                                   "Self-improving algorithms that learn from data patterns to automate complex tasks and make intelligent decisions with minimal human intervention.",
                               url: "/projects/project3",
-                              image: "https://deifkwefumgah.cloudfront.net/shadcnblocks/block/placeholder-dark-1.svg",
+                              image: Portfolio2,
                           },
                           {
                               id: "item-4",
@@ -58,7 +68,7 @@ const Projects = ({
                               summary:
                                   "Advanced forecasting capabilities that analyze historical data to predict future trends and outcomes, helping businesses make data-driven decisions.",
                               url: "/projects/project4",
-                              image: "https://deifkwefumgah.cloudfront.net/shadcnblocks/block/placeholder-dark-1.svg",
+                              image: MondeEnBouche,
                           },
                           {
                               id: "item-5",
@@ -66,7 +76,55 @@ const Projects = ({
                               summary:
                                   "Sophisticated AI models inspired by human brain structure, capable of solving complex problems through deep learning and pattern recognition.",
                               url: "/projects/project5",
-                              image: "https://deifkwefumgah.cloudfront.net/shadcnblocks/block/placeholder-dark-1.svg",
+                              image: CloudWebAppBuilder,
+                          },
+                          {
+                              id: "item-6",
+                              title: "Neural Network Architecture",
+                              summary:
+                                  "Sophisticated AI models inspired by human brain structure, capable of solving complex problems through deep learning and pattern recognition.",
+                              url: "/projects/project5",
+                              image: MicroservicesProvision,
+                          },
+                          {
+                              id: "item-7",
+                              title: "Neural Network Architecture",
+                              summary:
+                                  "Sophisticated AI models inspired by human brain structure, capable of solving complex problems through deep learning and pattern recognition.",
+                              url: "/projects/project5",
+                              image: ConfledisInternship,
+                          },
+                          {
+                              id: "item-8",
+                              title: "Neural Network Architecture",
+                              summary:
+                                  "Sophisticated AI models inspired by human brain structure, capable of solving complex problems through deep learning and pattern recognition.",
+                              url: "/projects/project5",
+                              image: XsustainInternship,
+                          },
+                          {
+                              id: "item-9",
+                              title: "Neural Network Architecture",
+                              summary:
+                                  "Sophisticated AI models inspired by human brain structure, capable of solving complex problems through deep learning and pattern recognition.",
+                              url: "/projects/project5",
+                              image: HRIndustries,
+                          },
+                          {
+                              id: "item-10",
+                              title: "Neural Network Architecture",
+                              summary:
+                                  "Sophisticated AI models inspired by human brain structure, capable of solving complex problems through deep learning and pattern recognition.",
+                              url: "/projects/project5",
+                              image: AmanaInsurances,
+                          },
+                          {
+                              id: "item-11",
+                              title: "Neural Network Architecture",
+                              summary:
+                                  "Sophisticated AI models inspired by human brain structure, capable of solving complex problems through deep learning and pattern recognition.",
+                              url: "/projects/project5",
+                              image: InfogeranceInternship  ,
                           },
                       ],
                   }: GalleryProps) => {
@@ -150,7 +208,7 @@ const Projects = ({
                                     className="group flex flex-col justify-between"
                                 >
                                     <div>
-                                        <div className="aspect-3/2 flex overflow-clip rounded-xl">
+                                        <div className="aspect-3/2 flex overflow-clip rounded-xl border-1 dark:border-none">
                                             <div className="flex-1">
                                                 <div className="relative h-full w-full origin-bottom transition duration-300 group-hover:scale-105">
                                                     <img

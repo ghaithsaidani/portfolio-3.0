@@ -25,14 +25,14 @@ export const LayoutTextFlip = ({
     <>
       <motion.span
         layoutId="subtext"
-        className="text-3xl font-bold tracking-tight drop-shadow-lg xl:text-5xl"
+        className="text-lg sm:text-2xl font-bold tracking-tight drop-shadow-lg xl:text-[2.75rem]"
       >
         {text}
       </motion.span>
 
       <motion.span
         layout
-        className="relative w-fit overflow-hidden rounded-md border border-neutral-200 border-transparent bg-white px-4 py-2 font-sans text-xl xl:text-4xl font-bold tracking-tight text-black shadow-sm ring shadow-black/10 ring-black/10 drop-shadow-lg dark:bg-neutral-900 dark:text-white dark:shadow-sm dark:ring-1 dark:shadow-white/10 dark:ring-white/10 dark:border-neutral-800"
+        className="relative w-fit overflow-hidden rounded-md border border-neutral-200 border-transparent bg-white px-4 py-2 font-sans text-sm sm:text-xl xl:text-4xl font-bold tracking-tight text-black shadow-sm ring shadow-black/10 ring-black/10 drop-shadow-lg dark:bg-neutral-900 dark:text-white dark:shadow-sm dark:ring-1 dark:shadow-white/10 dark:ring-white/10 dark:border-neutral-800"
       >
         <AnimatePresence mode="popLayout">
           <motion.span

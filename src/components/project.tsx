@@ -80,9 +80,9 @@ const Project = (project: ProjectProps) => {
                 essence of joy itself - jokes and jest.
               </p>
               <img
-                src="https://deifkwefumgah.cloudfront.net/shadcnblocks/block/placeholder-1.svg"
+                src={project.image ? project.image : "https://deifkwefumgah.cloudfront.net/shadcnblocks/block/placeholder-1.svg"}
                 alt="placeholder"
-                className="my-8 aspect-video w-full rounded-md object-cover"
+                className="my-8 aspect-video w-full rounded-md object-cover border-1"
               />
             </div>
             <section

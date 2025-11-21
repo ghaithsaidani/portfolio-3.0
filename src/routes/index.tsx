@@ -8,6 +8,7 @@ import Contact from "@/components/contact.tsx";
 import {Footer} from "@/components/footer.tsx";
 import {Logos} from "@/components/logos.tsx";
 import {Education} from "@/components/education.tsx";
+import {Skills} from "@/components/skills.tsx";
 
 export const Route = createFileRoute('/')({
     component: Index,
@@ -24,6 +25,7 @@ function Index() {
                 <Certificates/>
                 <Projects/>
                 <Logos/>
+                <Skills/>
                 {/*<Content/>*/}
                 <Contact/>
                 <Footer/>

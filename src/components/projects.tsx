@@ -1,133 +1,18 @@
-import { ArrowLeft, ArrowRight, ArrowUpRight } from "lucide-react";
-import { useEffect, useState } from "react";
+import {ArrowLeft, ArrowRight, ArrowUpRight} from "lucide-react";
+import {useEffect, useState} from "react";
 
-import { Button } from "@/components/ui/button";
-import type { CarouselApi } from "@/components/ui/carousel";
-import {
-    Carousel,
-    CarouselContent,
-    CarouselItem,
-} from "@/components/ui/carousel";
-import {Link, type LinkProps} from "@tanstack/react-router";
-import {
-    AmanaInsurances,
-    CloudWebAppBuilder,
-    ConfledisInternship, HRIndustries, InfogeranceInternship,
-    Kubepilot,
-    MicroservicesProvision,
-    MondeEnBouche,
-    PDS,
-    Portfolio2, XsustainInternship
-} from "@/assets";
+import {Button} from "@/components/ui/button";
+import {Carousel, type CarouselApi, CarouselContent, CarouselItem,} from "@/components/ui/carousel";
+import {Link} from "@tanstack/react-router";
+import {projects} from "@/const/projects.ts";
+import type {ProjectProps} from "@/types/project.ts";
 
-interface GalleryItem {
-    id: string;
-    title: string;
-    summary: string;
-    url: LinkProps['to'];
-    image: string;
-}
-
-interface GalleryProps {
-    heading?: string;
-    demoUrl?: string;
-    items?: GalleryItem[];
-}
 
 const Projects = ({
-                      heading = "Gallery",
+                      heading = "Projects",
                       demoUrl = "https://www.shadcnblocks.com",
-                      items = [
-                          {
-                              id: "item-1",
-                              title: "Build Modern UIs",
-                              summary:
-                                  "Create stunning user interfaces with our comprehensive design system.",
-                              url: "/projects/project1",
-                              image: Kubepilot,
-                          },
-                          {
-                              id: "item-2",
-                              title: "Computer Vision Technology",
-                              summary:
-                                  "Powerful image recognition and processing capabilities that allow AI systems to analyze, understand, and interpret visual information from the world.",
-                              url: "/projects/project2",
-                              image: PDS,
-                          },
-                          {
-                              id: "item-3",
-                              title: "Machine Learning Automation",
-                              summary:
-                                  "Self-improving algorithms that learn from data patterns to automate complex tasks and make intelligent decisions with minimal human intervention.",
-                              url: "/projects/project3",
-                              image: Portfolio2,
-                          },
-                          {
-                              id: "item-4",
-                              title: "Predictive Analytics",
-                              summary:
-                                  "Advanced forecasting capabilities that analyze historical data to predict future trends and outcomes, helping businesses make data-driven decisions.",
-                              url: "/projects/project4",
-                              image: MondeEnBouche,
-                          },
-                          {
-                              id: "item-5",
-                              title: "Neural Network Architecture",
-                              summary:
-                                  "Sophisticated AI models inspired by human brain structure, capable of solving complex problems through deep learning and pattern recognition.",
-                              url: "/projects/project5",
-                              image: CloudWebAppBuilder,
-                          },
-                          {
-                              id: "item-6",
-                              title: "Neural Network Architecture",
-                              summary:
-                                  "Sophisticated AI models inspired by human brain structure, capable of solving complex problems through deep learning and pattern recognition.",
-                              url: "/projects/project5",
-                              image: MicroservicesProvision,
-                          },
-                          {
-                              id: "item-7",
-                              title: "Neural Network Architecture",
-                              summary:
-                                  "Sophisticated AI models inspired by human brain structure, capable of solving complex problems through deep learning and pattern recognition.",
-                              url: "/projects/project5",
-                              image: ConfledisInternship,
-                          },
-                          {
-                              id: "item-8",
-                              title: "Neural Network Architecture",
-                              summary:
-                                  "Sophisticated AI models inspired by human brain structure, capable of solving complex problems through deep learning and pattern recognition.",
-                              url: "/projects/project5",
-                              image: XsustainInternship,
-                          },
-                          {
-                              id: "item-9",
-                              title: "Neural Network Architecture",
-                              summary:
-                                  "Sophisticated AI models inspired by human brain structure, capable of solving complex problems through deep learning and pattern recognition.",
-                              url: "/projects/project5",
-                              image: HRIndustries,
-                          },
-                          {
-                              id: "item-10",
-                              title: "Neural Network Architecture",
-                              summary:
-                                  "Sophisticated AI models inspired by human brain structure, capable of solving complex problems through deep learning and pattern recognition.",
-                              url: "/projects/project5",
-                              image: AmanaInsurances,
-                          },
-                          {
-                              id: "item-11",
-                              title: "Neural Network Architecture",
-                              summary:
-                                  "Sophisticated AI models inspired by human brain structure, capable of solving complex problems through deep learning and pattern recognition.",
-                              url: "/projects/project5",
-                              image: InfogeranceInternship  ,
-                          },
-                      ],
-                  }: GalleryProps) => {
+                      items = projects
+                  }: ProjectProps) => {
     const [carouselApi, setCarouselApi] = useState<CarouselApi>();
     const [canScrollPrev, setCanScrollPrev] = useState(false);
     const [canScrollNext, setCanScrollNext] = useState(false);
@@ -158,7 +43,7 @@ const Projects = ({
                             className="group flex items-center gap-1 text-sm font-medium md:text-base lg:text-lg"
                         >
                             Book a demo
-                            <ArrowUpRight className="size-4 transition-transform group-hover:translate-x-1" />
+                            <ArrowUpRight className="size-4 transition-transform group-hover:translate-x-1"/>
                         </a>
                     </div>
                     <div className="mt-8 flex shrink-0 items-center justify-start gap-2">
@@ -171,7 +56,7 @@ const Projects = ({
                             disabled={!canScrollPrev}
                             className="disabled:pointer-events-auto"
                         >
-                            <ArrowLeft className="size-5" />
+                            <ArrowLeft className="size-5"/>
                         </Button>
                         <Button
                             size="icon"
@@ -182,7 +67,7 @@ const Projects = ({
                             disabled={!canScrollNext}
                             className="disabled:pointer-events-auto"
                         >
-                            <ArrowRight className="size-5" />
+                            <ArrowRight className="size-5"/>
                         </Button>
                     </div>
                 </div>
@@ -201,16 +86,20 @@ const Projects = ({
                 >
                     <CarouselContent className="hide-scrollbar w-full max-w-full">
                         {items.map((item) => (
-                            <CarouselItem key={item.id} className="ml-8 max-w-[350px] md:max-w-[452px] px-5 py-8 bg-muted rounded-xl">
+                            <CarouselItem key={item.id}
+                                          className="ml-8 max-w-[350px] md:max-w-[452px] px-5 py-8 bg-muted rounded-xl">
                                 <Link
-                                    to={item.url}
+                                    to="/projects/$index"
+                                    params={{index: item.params.index}}
                                     hashScrollIntoView={true}
                                     className="group flex flex-col justify-between"
                                 >
                                     <div>
-                                        <div className="aspect-3/2 flex overflow-clip rounded-xl border-1 dark:border-none">
+                                        <div
+                                            className="aspect-3/2 flex overflow-clip rounded-xl border-1 dark:border-none">
                                             <div className="flex-1">
-                                                <div className="relative h-full w-full origin-bottom transition duration-300 group-hover:scale-105">
+                                                <div
+                                                    className="relative h-full w-full origin-bottom transition duration-300 group-hover:scale-105">
                                                     <img
                                                         src={item.image}
                                                         alt={item.title}
@@ -220,15 +109,18 @@ const Projects = ({
                                             </div>
                                         </div>
                                     </div>
-                                    <div className="mb-2 line-clamp-3 break-words pt-4 text-lg font-medium md:mb-3 md:pt-4 md:text-xl lg:pt-4 lg:text-2xl">
+                                    <div
+                                        className="mb-2 line-clamp-3 break-words pt-4 text-lg font-medium md:mb-3 md:pt-4 md:text-xl lg:pt-4 lg:text-2xl">
                                         {item.title}
                                     </div>
-                                    <div className="text-muted-foreground mb-8 line-clamp-2 text-sm md:mb-12 md:text-base lg:mb-9">
+                                    <div
+                                        className="text-muted-foreground mb-8 line-clamp-2 text-sm md:mb-12 md:text-base lg:mb-9">
                                         {item.summary}
                                     </div>
                                     <div className="flex items-center text-sm">
                                         Read more{" "}
-                                        <ArrowRight className="ml-2 size-5 transition-transform group-hover:translate-x-1" />
+                                        <ArrowRight
+                                            className="ml-2 size-5 transition-transform group-hover:translate-x-1"/>
                                     </div>
                                 </Link>
                             </CarouselItem>
@@ -240,4 +132,4 @@ const Projects = ({
     );
 };
 
-export { Projects };
+export {Projects};

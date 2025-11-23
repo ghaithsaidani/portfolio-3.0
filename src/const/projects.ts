@@ -30,17 +30,17 @@ const singleProjects: ProjectPageProps[] = [
 
 const projects: ProjectItem[] = [
     {
-        id: "item-1",
-        title: "Build Modern UIs",
+        id: "project-1",
+        title: "KubePilot",
         summary:
-            "Create stunning user interfaces with our comprehensive design system.",
+            "Developed Kubepilot, a secure unified Kubernetes platform featuring drag-and-drop CI/CD, built-in observability, and streamlined cluster management.",
         url: "/projects/$index",
         params: {index: "1"},
         image: Kubepilot,
     },
     {
         id: "item-2",
-        title: "Computer Vision Technology",
+        title: "Automated Deployment of Infrastructure and Microservices on Kubernetes",
         summary:
             "Powerful image recognition and processing capabilities that allow AI systems to analyze, understand, and interpret visual information from the world.",
         url: "/projects/$index",
@@ -49,7 +49,7 @@ const projects: ProjectItem[] = [
     },
     {
         id: "item-3",
-        title: "Machine Learning Automation",
+        title: "Predictive Maintenance System",
         summary:
             "Self-improving algorithms that learn from data patterns to automate complex tasks and make intelligent decisions with minimal human intervention.",
         url: "/projects/$index",
@@ -58,7 +58,7 @@ const projects: ProjectItem[] = [
     },
     {
         id: "item-4",
-        title: "Predictive Analytics",
+        title: "Cloud Web App Builder",
         summary:
             "Advanced forecasting capabilities that analyze historical data to predict future trends and outcomes, helping businesses make data-driven decisions.",
         url: "/projects/$index",
@@ -67,7 +67,7 @@ const projects: ProjectItem[] = [
     },
     {
         id: "item-5",
-        title: "Neural Network Architecture",
+        title: "HR Industries Website",
         summary:
             "Sophisticated AI models inspired by human brain structure, capable of solving complex problems through deep learning and pattern recognition.",
         url: "/projects/$index",
@@ -76,7 +76,7 @@ const projects: ProjectItem[] = [
     },
     {
         id: "item-6",
-        title: "Neural Network Architecture",
+        title: "Smart Menu",
         summary:
             "Sophisticated AI models inspired by human brain structure, capable of solving complex problems through deep learning and pattern recognition.",
         url: "/projects/$index",
@@ -85,7 +85,7 @@ const projects: ProjectItem[] = [
     },
     {
         id: "item-7",
-        title: "Neural Network Architecture",
+        title: "Le Monde En Bouche",
         summary:
             "Sophisticated AI models inspired by human brain structure, capable of solving complex problems through deep learning and pattern recognition.",
         url: "/projects/$index",
@@ -94,7 +94,7 @@ const projects: ProjectItem[] = [
     },
     {
         id: "item-8",
-        title: "Neural Network Architecture",
+        title: "Portfolio 2.0",
         summary:
             "Sophisticated AI models inspired by human brain structure, capable of solving complex problems through deep learning and pattern recognition.",
         url: "/projects/$index",
@@ -103,7 +103,7 @@ const projects: ProjectItem[] = [
     },
     {
         id: "item-9",
-        title: "Neural Network Architecture",
+        title: "Insurance Agency Management",
         summary:
             "Sophisticated AI models inspired by human brain structure, capable of solving complex problems through deep learning and pattern recognition.",
         url: "/projects/$index",
@@ -112,7 +112,7 @@ const projects: ProjectItem[] = [
     },
     {
         id: "item-10",
-        title: "Neural Network Architecture",
+        title: "InnERP",
         summary:
             "Sophisticated AI models inspired by human brain structure, capable of solving complex problems through deep learning and pattern recognition.",
         url: "/projects/$index",
@@ -121,7 +121,7 @@ const projects: ProjectItem[] = [
     },
     {
         id: "item-11",
-        title: "Neural Network Architecture",
+        title: "Hotel Management System",
         summary:
             "Sophisticated AI models inspired by human brain structure, capable of solving complex problems through deep learning and pattern recognition.",
         url: "/projects/$index",

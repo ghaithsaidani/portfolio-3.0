@@ -6,6 +6,8 @@ import {Carousel, type CarouselApi, CarouselContent, CarouselItem,} from "@/comp
 import {Link} from "@tanstack/react-router";
 import {projects} from "@/const/projects.ts";
 import type {ProjectProps} from "@/types/project.ts";
+import {type Avatar, AvatarCircles} from "@/components/ui/avatar-circles.tsx";
+import {GitLab, Keycloak, Kubernetes, Loki, Prometheus, ReactIcon, Spring, Tekton, Vault} from "@/const/icons.tsx";
 
 
 const Projects = ({
@@ -30,6 +32,56 @@ const Projects = ({
             carouselApi.off("select", updateSelection);
         };
     }, [carouselApi]);
+
+    const avatars: Avatar[] = [
+        {
+            icon: ReactIcon,
+            profileUrl: "https://github.com/dillionverma",
+            label: 'ReactJs',
+        },
+        {
+            icon: Spring,
+            profileUrl: "https://github.com/tomonarifeehan",
+            label: 'SpringBoot',
+        },
+        {
+            icon: GitLab,
+            profileUrl: "https://github.com/BankkRoll",
+            label: 'Gitlab',
+        },
+        {
+            icon: Kubernetes,
+            profileUrl: "https://github.com/safethecode",
+            label: 'Kubernetes',
+        },
+        {
+            icon: Keycloak,
+            profileUrl: "https://github.com/sanjay-mali",
+            label: 'Keycloak',
+        },
+        {
+            icon: Tekton,
+            profileUrl: "https://github.com/sanjay-mali",
+            label: 'Tekton',
+        },
+        {
+            icon: Vault,
+            profileUrl: "https://github.com/sanjay-mali",
+            label: 'Vault',
+        },
+        {
+            icon: Prometheus,
+            profileUrl: "https://github.com/sanjay-mali",
+            label: 'Prometheus',
+        },
+
+        {
+            icon: Loki,
+            profileUrl: "https://github.com/sanjay-mali",
+            label: 'Loki',
+        },
+
+    ]
     return (
         <section className="py-32">
             <div className="container">
@@ -92,35 +144,43 @@ const Projects = ({
                                     to="/projects/$index"
                                     params={{index: item.params.index}}
                                     hashScrollIntoView={true}
-                                    className="group flex flex-col justify-between"
+                                    className="group flex flex-col h-full"
                                 >
-                                    <div>
-                                        <div
-                                            className="aspect-3/2 flex overflow-clip rounded-xl border-1 dark:border-none">
-                                            <div className="flex-1">
-                                                <div
-                                                    className="relative h-full w-full origin-bottom transition duration-300 group-hover:scale-105">
-                                                    <img
-                                                        src={item.image}
-                                                        alt={item.title}
-                                                        className="h-full w-full object-cover object-center"
-                                                    />
-                                                </div>
+
+                                    <div
+                                        className="aspect-3/2 flex overflow-clip rounded-xl border-1 dark:border-none">
+                                        <div className="flex-1">
+                                            <div
+                                                className="relative h-full w-full origin-bottom transition duration-300 group-hover:scale-105">
+                                                <img
+                                                    src={item.image}
+                                                    alt={item.title}
+                                                    className="h-full w-full object-cover object-center"
+                                                />
                                             </div>
                                         </div>
                                     </div>
-                                    <div
-                                        className="mb-2 line-clamp-3 break-words pt-4 text-lg font-medium md:mb-3 md:pt-4 md:text-xl lg:pt-4 lg:text-2xl">
-                                        {item.title}
-                                    </div>
-                                    <div
-                                        className="text-muted-foreground mb-8 line-clamp-2 text-sm md:mb-12 md:text-base lg:mb-9">
-                                        {item.summary}
-                                    </div>
-                                    <div className="flex items-center text-sm">
-                                        Read more{" "}
-                                        <ArrowRight
-                                            className="ml-2 size-5 transition-transform group-hover:translate-x-1"/>
+
+                                    <div className={"flex flex-col h-full justify-between"}>
+                                        <div>
+                                            <h2
+                                                className="mb-2 line-clamp-3 break-words pt-4 text-lg font-medium md:mb-3 md:pt-4 md:text-xl lg:pt-4 lg:text-2xl">
+                                                {item.title}
+                                            </h2>
+                                            <p
+                                                className="text-muted-foreground mb-8 line-clamp-3 text-sm md:mb-12 md:text-base lg:mb-9">
+                                                {item.summary}
+                                            </p>
+                                        </div>
+                                        <div className={"flex justify-between"}>
+                                            <AvatarCircles avatarUrls={avatars} numPeople={10}/>
+                                            <div className="flex items-center text-sm">
+                                                Read more{" "}
+                                                <ArrowRight
+                                                    className="ml-2 size-5 transition-transform group-hover:translate-x-1"/>
+                                            </div>
+                                        </div>
+
                                     </div>
                                 </Link>
                             </CarouselItem>

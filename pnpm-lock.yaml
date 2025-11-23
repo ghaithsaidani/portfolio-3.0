@@ -65,6 +65,9 @@ importers:
       react-icons:
         specifier: ^5.5.0
         version: 5.5.0(react@19.2.0)
+      simple-icons:
+        specifier: ^15.21.0
+        version: 15.21.0
       tailwind-merge:
         specifier: ^3.4.0
         version: 3.4.0
@@ -1975,6 +1978,10 @@ packages:
     resolution: {integrity: sha512-7++dFhtcx3353uBaq8DDR4NuxBetBzC7ZQOhmTQInHEd6bSrXdiEyzCvG07Z44UYdLShWUyXt5M/yhz8ekcb1A==}
     engines: {node: '>=8'}
 
+  simple-icons@15.21.0:
+    resolution: {integrity: sha512-xEKtyjl3bmmnyxZIsxNlN4RnN/BaP2tecQCSxOj1C6llJKt0TG4u+ZNJKSA82yBGrkO0CWW10UBTFMkH6tVKzQ==}
+    engines: {node: '>=0.12.18'}
+
   solid-js@1.9.10:
     resolution: {integrity: sha512-Coz956cos/EPDlhs6+jsdTxKuJDPT7B5SVIWgABwROyxjY7Xbr8wkzD68Et+NxnV7DLJ3nJdAC2r9InuV/4Jew==}
 
@@ -3879,6 +3886,8 @@ snapshots:
       shebang-regex: 3.0.0
 
   shebang-regex@3.0.0: {}
+
+  simple-icons@15.21.0: {}
 
   solid-js@1.9.10:
     dependencies:

@@ -11,7 +11,6 @@ import {AvatarCircles} from "@/components/ui/avatar-circles.tsx";
 
 const Projects = ({
                       heading = "Projects",
-                      demoUrl = "https://www.shadcnblocks.com",
                       items = projects
                   }: ProjectProps) => {
     const [carouselApi, setCarouselApi] = useState<CarouselApi>();
@@ -36,18 +35,9 @@ const Projects = ({
         <section className="py-32">
             <div className="container">
                 <div className="mb-8 flex flex-col justify-between md:mb-14 md:flex-row md:items-end lg:mb-16">
-                    <div>
-                        <h2 className="mb-3 text-3xl font-semibold md:mb-4 md:text-4xl lg:mb-6">
-                            {heading}
-                        </h2>
-                        <a
-                            href={demoUrl}
-                            className="group flex items-center gap-1 text-sm font-medium md:text-base lg:text-lg"
-                        >
-                            Book a demo
-                            <ArrowUpRight className="size-4 transition-transform group-hover:translate-x-1"/>
-                        </a>
-                    </div>
+                    <h2 className="mb-3 text-neutral-950 mb-10 text-center text-3xl font-bold tracking-tighter sm:text-6xl dark:text-neutral-50">
+                        {heading}
+                    </h2>
                     <div className="mt-8 flex shrink-0 items-center justify-start gap-2">
                         <Button
                             size="icon"

@@ -38,7 +38,7 @@ export const AvatarCircles = ({
                     onMouseEnter={() => setHovered(index)}
                     onMouseLeave={() => setHovered(null)}
                     style={{ backgroundColor: item.color }}
-                    className={"relative z-10 flex items-center justify-center rounded-full border bg-muted  overflow-hidden hover:z-50"}
+                    className={"relative z-10 flex items-center justify-center rounded-full border-2 bg-muted overflow-hidden hover:z-50"}
                     initial={{width: "2.2rem", height: "2.2rem"}} // size-10
                     animate={{
                         width: hovered === index ? "auto" : "2.2rem",

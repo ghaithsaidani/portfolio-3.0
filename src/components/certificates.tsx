@@ -57,7 +57,7 @@ const Certificates = ({
     return (
         <section className="py-32">
             <div className="container px-0 md:px-8">
-                <h1 className="mb-10 px-4 text-3xl font-semibold md:mb-14 md:text-4xl">
+                <h1 className="mb-10 px-4 text-neutral-950 mb-10 text-3xl font-bold tracking-tighter sm:text-6xl dark:text-neutral-50">
                     {heading}
                 </h1>
                 <div className="flex flex-col">

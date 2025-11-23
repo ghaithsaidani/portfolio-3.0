@@ -1,5 +1,6 @@
-import {Kubepilot, KubePilotDetailedArchitecture} from "@/assets";
+import {Kubepilot, KubepilotDemo, KubePilotDetailedArchitecture} from "@/assets";
 import type {ProjectPageProps} from "@/types/project.ts";
+import {HeroVideoDialog} from "@/components/ui/hero-video-dialog.tsx";
 
 export const singleProjects: ProjectPageProps[] = [
     /*{name: "1st Project", image: Kubepilot},
@@ -16,6 +17,7 @@ export const singleProjects: ProjectPageProps[] = [
     {
         badge: "DevOps Platform",
         title: "KubePilot",
+        link: "https://gitlab.com/kube-pilot",
         description: "A unified Kubernetes automation platform streamlining deployments, observability, and CI/CD.",
         image: Kubepilot,
         sections: [
@@ -24,8 +26,9 @@ export const singleProjects: ProjectPageProps[] = [
                 title: "Overview",
                 content: (
                     <p>
-                        KubePilot centralizes Kubernetes application lifecycle management—
-                        deployments, scaling, RBAC, pipelines, and monitoring—into one UI.
+                        KubePilot is a centralized DevOps platform designed to simplify the management of Kubernetes
+                        resources, automate CI/CD pipelines with Tekton, and provide real-time observability for
+                        clusters—all from a modern web interface.
                     </p>
                 ),
             },
@@ -88,6 +91,18 @@ export const singleProjects: ProjectPageProps[] = [
 
                 ),
             },
+            {
+                id: "demo",
+                title: "Demo Video",
+                content: (
+                    <HeroVideoDialog
+                        animationStyle="from-center"
+                        videoSrc={KubepilotDemo}
+                        thumbnailSrc={Kubepilot}
+                        thumbnailAlt="Kubepilot Demo Video"
+                    />
+                )
+            }
             /*{
                 id: "deployment",
                 title: "Deployment",

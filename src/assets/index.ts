@@ -1,33 +1,36 @@
-export {default as PersonalImage} from './personal-image.png'
+export {default as PersonalImage} from './images/personal-image.png'
+
+//videos
+export {default as KubepilotDemo} from './videos/Kubepilot.mp4'
 
 //certifications
-export {default as ITSpecialistJava} from './ITS_Java.png'
-export {default as ITSpecialistCloudComputing} from './ITS_Cloud_Computing.png'
+export {default as ITSpecialistJava} from './images/ITS_Java.png'
+export {default as ITSpecialistCloudComputing} from './images/ITS_Cloud_Computing.png'
 
 //experience
-export {default as Infogerance} from './infogerance.png'
-export {default as Confledis} from './confledis-sas.png'
-export {default as Xsustain} from './xsustain.jpg'
-export {default as Sofiatech} from './sofiatech.jpg'
+export {default as Infogerance} from './images/infogerance.png'
+export {default as Confledis} from './images/confledis-sas.png'
+export {default as Xsustain} from './images/xsustain.jpg'
+export {default as Sofiatech} from './images/sofiatech.jpg'
 
 //education
-export {default as Marburg} from './marburg.jpeg'
-export {default as Sesame} from './sesame.png'
-export {default as FSB} from './fsb.png'
-export {default as LJFB} from './ljfb.png'
+export {default as Marburg} from './images/marburg.jpeg'
+export {default as Sesame} from './images/sesame.png'
+export {default as FSB} from './images/fsb.png'
+export {default as LJFB} from './images/ljfb.png'
 
 // projects
-export {default as Kubepilot} from './projects/kubepilot.png'
-export {default as PDS} from './projects/pds.png'
-export {default as Portfolio2} from './projects/portfolio-2.0.png'
-export {default as MondeEnBouche} from './projects/monde-en-bouche.png'
-export {default as CloudWebAppBuilder} from './projects/cloud-web-app-builder.png'
-export {default as MicroservicesProvision} from './projects/microservices-provisioning.png'
-export {default as ConfledisInternship} from './projects/confledis-internship.png'
-export {default as XsustainInternship} from './projects/xsustain-internship.png'
-export {default as HRIndustries} from './projects/hr-industries.png'
-export {default as AmanaInsurances} from './projects/amana-insurances.png'
-export {default as InfogeranceInternship} from './projects/infogérance-internship.png'
+export {default as Kubepilot} from './images/projects/kubepilot.png'
+export {default as PDS} from './images/projects/pds.png'
+export {default as Portfolio2} from './images/projects/portfolio-2.0.png'
+export {default as MondeEnBouche} from './images/projects/monde-en-bouche.png'
+export {default as CloudWebAppBuilder} from './images/projects/cloud-web-app-builder.png'
+export {default as MicroservicesProvision} from './images/projects/microservices-provisioning.png'
+export {default as ConfledisInternship} from './images/projects/confledis-internship.png'
+export {default as XsustainInternship} from './images/projects/xsustain-internship.png'
+export {default as HRIndustries} from './images/projects/hr-industries.png'
+export {default as AmanaInsurances} from './images/projects/amana-insurances.png'
+export {default as InfogeranceInternship} from './images/projects/infogérance-internship.png'
 
 //diagrams
-export {default as KubePilotDetailedArchitecture} from './projects/diagrams/kubepilot detailed architecture diagram.png'
+export {default as KubePilotDetailedArchitecture} from './images/projects/diagrams/diagrams-detailed architecture diagram - english.svg'

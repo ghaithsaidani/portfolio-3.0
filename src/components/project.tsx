@@ -2,12 +2,14 @@ import {useEffect, useRef, useState} from "react";
 import {cn} from "@/lib/utils";
 import type {ProjectPageProps} from "@/types/project.ts";
 import {Badge} from "@/components/ui/badge.tsx";
-import {AlignLeft} from "lucide-react";
+import {AlignLeft, LinkIcon} from "lucide-react";
+
 
 
 export function Project({
                             badge,
                             title,
+                            link,
                             description,
                             image,
                             sections,
@@ -67,7 +69,14 @@ export function Project({
                     {/* LEFT — CONTENT */}
                     <div className="lg:col-span-2">
                         {badge && <Badge variant={"outline"}>{badge}</Badge>}
-                        <h1 className="mt-3 text-3xl font-extrabold">{title}</h1>
+                        <div className={"flex items-center gap-5 mt-3"}>
+                            <h1 className="text-3xl font-extrabold">{title}</h1>
+                            {link && <a className={"w-4 h-4"} href={link} target="_blank">
+                                <LinkIcon size={18}/>
+                                </a>
+                            }
+                        </div>
+
                         <p className="text-muted-foreground mt-2 text-lg">{description}</p>
 
                         {image && (

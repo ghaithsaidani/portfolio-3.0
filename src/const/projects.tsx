@@ -1,0 +1,620 @@
+import type {ProjectItem} from "@/types/project.ts";
+import {
+    AmanaInsurances,
+    CloudWebAppBuilder,
+    ConfledisInternship,
+    HRIndustries,
+    InfogeranceInternship,
+    Kubepilot,
+    MicroservicesProvision,
+    MondeEnBouche,
+    PDS,
+    Portfolio2,
+    XsustainInternship
+} from "@/assets";
+import {GitLab, Keycloak, Kubernetes, Loki, Prometheus, ReactIcon, Spring, Tekton, Vault} from "@/const/icons.tsx";
+
+
+export const projects: ProjectItem[] = [
+    {
+        id: "project-1",
+        title: "KubePilot",
+        summary:
+            "Developed Kubepilot, a secure unified Kubernetes platform featuring drag-and-drop CI/CD, built-in observability, and streamlined cluster management.",
+        url: "/projects/$index",
+        params: {index: "1"},
+        image: Kubepilot,
+        technologies: [
+            {
+                icon: ReactIcon,
+                profileUrl: "https://github.com/dillionverma",
+                label: 'ReactJs',
+            },
+            {
+                icon: Spring,
+                profileUrl: "https://github.com/tomonarifeehan",
+                label: 'SpringBoot',
+            },
+            {
+                icon: GitLab,
+                profileUrl: "https://github.com/BankkRoll",
+                label: 'Gitlab',
+            },
+            {
+                icon: Kubernetes,
+                profileUrl: "https://github.com/safethecode",
+                label: 'Kubernetes',
+            },
+            {
+                icon: Keycloak,
+                profileUrl: "https://github.com/sanjay-mali",
+                label: 'Keycloak',
+            },
+            {
+                icon: Tekton,
+                profileUrl: "https://github.com/sanjay-mali",
+                label: 'Tekton',
+            },
+            {
+                icon: Vault,
+                profileUrl: "https://github.com/sanjay-mali",
+                label: 'Vault',
+            },
+            {
+                icon: Prometheus,
+                profileUrl: "https://github.com/sanjay-mali",
+                label: 'Prometheus',
+            },
+
+            {
+                icon: Loki,
+                profileUrl: "https://github.com/sanjay-mali",
+                label: 'Loki',
+            },
+
+        ]
+    },
+    {
+        id: "item-2",
+        title: "Automated Deployment of Infrastructure and Microservices on Kubernetes",
+        summary:
+            "Powerful image recognition and processing capabilities that allow AI systems to analyze, understand, and interpret visual information from the world.",
+        url: "/projects/$index",
+        params: {index: "2"},
+        image: MicroservicesProvision,
+        technologies: [
+            {
+                icon: ReactIcon,
+                profileUrl: "https://github.com/dillionverma",
+                label: 'ReactJs',
+            },
+            {
+                icon: Spring,
+                profileUrl: "https://github.com/tomonarifeehan",
+                label: 'SpringBoot',
+            }
+        ]
+    },
+    {
+        id: "item-3",
+        title: "Predictive Maintenance System",
+        summary:
+            "Self-improving algorithms that learn from data patterns to automate complex tasks and make intelligent decisions with minimal human intervention.",
+        url: "/projects/$index",
+        params: {index: "3"},
+        image: PDS,
+        technologies: [
+            {
+                icon: ReactIcon,
+                profileUrl: "https://github.com/dillionverma",
+                label: 'ReactJs',
+            },
+            {
+                icon: Spring,
+                profileUrl: "https://github.com/tomonarifeehan",
+                label: 'SpringBoot',
+            },
+            {
+                icon: GitLab,
+                profileUrl: "https://github.com/BankkRoll",
+                label: 'Gitlab',
+            },
+            {
+                icon: Kubernetes,
+                profileUrl: "https://github.com/safethecode",
+                label: 'Kubernetes',
+            },
+            {
+                icon: Keycloak,
+                profileUrl: "https://github.com/sanjay-mali",
+                label: 'Keycloak',
+            },
+            {
+                icon: Tekton,
+                profileUrl: "https://github.com/sanjay-mali",
+                label: 'Tekton',
+            },
+            {
+                icon: Vault,
+                profileUrl: "https://github.com/sanjay-mali",
+                label: 'Vault',
+            },
+            {
+                icon: Prometheus,
+                profileUrl: "https://github.com/sanjay-mali",
+                label: 'Prometheus',
+            },
+
+            {
+                icon: Loki,
+                profileUrl: "https://github.com/sanjay-mali",
+                label: 'Loki',
+            },
+
+        ]
+    },
+    {
+        id: "item-4",
+        title: "Cloud Web App Builder",
+        summary:
+            "Advanced forecasting capabilities that analyze historical data to predict future trends and outcomes, helping businesses make data-driven decisions.",
+        url: "/projects/$index",
+        params: {index: "4"},
+        image: CloudWebAppBuilder,
+        technologies: [
+            {
+                icon: ReactIcon,
+                profileUrl: "https://github.com/dillionverma",
+                label: 'ReactJs',
+            },
+            {
+                icon: Spring,
+                profileUrl: "https://github.com/tomonarifeehan",
+                label: 'SpringBoot',
+            },
+            {
+                icon: GitLab,
+                profileUrl: "https://github.com/BankkRoll",
+                label: 'Gitlab',
+            },
+            {
+                icon: Kubernetes,
+                profileUrl: "https://github.com/safethecode",
+                label: 'Kubernetes',
+            },
+            {
+                icon: Keycloak,
+                profileUrl: "https://github.com/sanjay-mali",
+                label: 'Keycloak',
+            },
+            {
+                icon: Tekton,
+                profileUrl: "https://github.com/sanjay-mali",
+                label: 'Tekton',
+            },
+            {
+                icon: Vault,
+                profileUrl: "https://github.com/sanjay-mali",
+                label: 'Vault',
+            },
+            {
+                icon: Prometheus,
+                profileUrl: "https://github.com/sanjay-mali",
+                label: 'Prometheus',
+            },
+
+            {
+                icon: Loki,
+                profileUrl: "https://github.com/sanjay-mali",
+                label: 'Loki',
+            },
+
+        ]
+    },
+    {
+        id: "item-5",
+        title: "HR Industries Website",
+        summary:
+            "Sophisticated AI models inspired by human brain structure, capable of solving complex problems through deep learning and pattern recognition.",
+        url: "/projects/$index",
+        params: {index: "5"},
+        image: HRIndustries,
+        technologies: [
+            {
+                icon: ReactIcon,
+                profileUrl: "https://github.com/dillionverma",
+                label: 'ReactJs',
+            },
+            {
+                icon: Spring,
+                profileUrl: "https://github.com/tomonarifeehan",
+                label: 'SpringBoot',
+            },
+            {
+                icon: GitLab,
+                profileUrl: "https://github.com/BankkRoll",
+                label: 'Gitlab',
+            },
+            {
+                icon: Kubernetes,
+                profileUrl: "https://github.com/safethecode",
+                label: 'Kubernetes',
+            },
+            {
+                icon: Keycloak,
+                profileUrl: "https://github.com/sanjay-mali",
+                label: 'Keycloak',
+            },
+            {
+                icon: Tekton,
+                profileUrl: "https://github.com/sanjay-mali",
+                label: 'Tekton',
+            },
+            {
+                icon: Vault,
+                profileUrl: "https://github.com/sanjay-mali",
+                label: 'Vault',
+            },
+            {
+                icon: Prometheus,
+                profileUrl: "https://github.com/sanjay-mali",
+                label: 'Prometheus',
+            },
+
+            {
+                icon: Loki,
+                profileUrl: "https://github.com/sanjay-mali",
+                label: 'Loki',
+            },
+
+        ]
+    },
+    {
+        id: "item-6",
+        title: "Smart Menu",
+        summary:
+            "Sophisticated AI models inspired by human brain structure, capable of solving complex problems through deep learning and pattern recognition.",
+        url: "/projects/$index",
+        params: {index: "6"},
+        image: XsustainInternship,
+        technologies: [
+            {
+                icon: ReactIcon,
+                profileUrl: "https://github.com/dillionverma",
+                label: 'ReactJs',
+            },
+            {
+                icon: Spring,
+                profileUrl: "https://github.com/tomonarifeehan",
+                label: 'SpringBoot',
+            },
+            {
+                icon: GitLab,
+                profileUrl: "https://github.com/BankkRoll",
+                label: 'Gitlab',
+            },
+            {
+                icon: Kubernetes,
+                profileUrl: "https://github.com/safethecode",
+                label: 'Kubernetes',
+            },
+            {
+                icon: Keycloak,
+                profileUrl: "https://github.com/sanjay-mali",
+                label: 'Keycloak',
+            },
+            {
+                icon: Tekton,
+                profileUrl: "https://github.com/sanjay-mali",
+                label: 'Tekton',
+            },
+            {
+                icon: Vault,
+                profileUrl: "https://github.com/sanjay-mali",
+                label: 'Vault',
+            },
+            {
+                icon: Prometheus,
+                profileUrl: "https://github.com/sanjay-mali",
+                label: 'Prometheus',
+            },
+
+            {
+                icon: Loki,
+                profileUrl: "https://github.com/sanjay-mali",
+                label: 'Loki',
+            },
+
+        ]
+    },
+    {
+        id: "item-7",
+        title: "Le Monde En Bouche",
+        summary:
+            "Sophisticated AI models inspired by human brain structure, capable of solving complex problems through deep learning and pattern recognition.",
+        url: "/projects/$index",
+        params: {index: "7"},
+        image: MondeEnBouche,
+        technologies: [
+            {
+                icon: ReactIcon,
+                profileUrl: "https://github.com/dillionverma",
+                label: 'ReactJs',
+            },
+            {
+                icon: Spring,
+                profileUrl: "https://github.com/tomonarifeehan",
+                label: 'SpringBoot',
+            },
+            {
+                icon: GitLab,
+                profileUrl: "https://github.com/BankkRoll",
+                label: 'Gitlab',
+            },
+            {
+                icon: Kubernetes,
+                profileUrl: "https://github.com/safethecode",
+                label: 'Kubernetes',
+            },
+            {
+                icon: Keycloak,
+                profileUrl: "https://github.com/sanjay-mali",
+                label: 'Keycloak',
+            },
+            {
+                icon: Tekton,
+                profileUrl: "https://github.com/sanjay-mali",
+                label: 'Tekton',
+            },
+            {
+                icon: Vault,
+                profileUrl: "https://github.com/sanjay-mali",
+                label: 'Vault',
+            },
+            {
+                icon: Prometheus,
+                profileUrl: "https://github.com/sanjay-mali",
+                label: 'Prometheus',
+            },
+
+            {
+                icon: Loki,
+                profileUrl: "https://github.com/sanjay-mali",
+                label: 'Loki',
+            },
+
+        ]
+    },
+    {
+        id: "item-8",
+        title: "Portfolio 2.0",
+        summary:
+            "Sophisticated AI models inspired by human brain structure, capable of solving complex problems through deep learning and pattern recognition.",
+        url: "/projects/$index",
+        params: {index: "8"},
+        image: Portfolio2,
+        technologies: [
+            {
+                icon: ReactIcon,
+                profileUrl: "https://github.com/dillionverma",
+                label: 'ReactJs',
+            },
+            {
+                icon: Spring,
+                profileUrl: "https://github.com/tomonarifeehan",
+                label: 'SpringBoot',
+            },
+            {
+                icon: GitLab,
+                profileUrl: "https://github.com/BankkRoll",
+                label: 'Gitlab',
+            },
+            {
+                icon: Kubernetes,
+                profileUrl: "https://github.com/safethecode",
+                label: 'Kubernetes',
+            },
+            {
+                icon: Keycloak,
+                profileUrl: "https://github.com/sanjay-mali",
+                label: 'Keycloak',
+            },
+            {
+                icon: Tekton,
+                profileUrl: "https://github.com/sanjay-mali",
+                label: 'Tekton',
+            },
+            {
+                icon: Vault,
+                profileUrl: "https://github.com/sanjay-mali",
+                label: 'Vault',
+            },
+            {
+                icon: Prometheus,
+                profileUrl: "https://github.com/sanjay-mali",
+                label: 'Prometheus',
+            },
+
+            {
+                icon: Loki,
+                profileUrl: "https://github.com/sanjay-mali",
+                label: 'Loki',
+            },
+
+        ]
+    },
+    {
+        id: "item-9",
+        title: "Insurance Agency Management",
+        summary:
+            "Sophisticated AI models inspired by human brain structure, capable of solving complex problems through deep learning and pattern recognition.",
+        url: "/projects/$index",
+        params: {index: "9"},
+        image: AmanaInsurances,
+        technologies: [
+            {
+                icon: ReactIcon,
+                profileUrl: "https://github.com/dillionverma",
+                label: 'ReactJs',
+            },
+            {
+                icon: Spring,
+                profileUrl: "https://github.com/tomonarifeehan",
+                label: 'SpringBoot',
+            },
+            {
+                icon: GitLab,
+                profileUrl: "https://github.com/BankkRoll",
+                label: 'Gitlab',
+            },
+            {
+                icon: Kubernetes,
+                profileUrl: "https://github.com/safethecode",
+                label: 'Kubernetes',
+            },
+            {
+                icon: Keycloak,
+                profileUrl: "https://github.com/sanjay-mali",
+                label: 'Keycloak',
+            },
+            {
+                icon: Tekton,
+                profileUrl: "https://github.com/sanjay-mali",
+                label: 'Tekton',
+            },
+            {
+                icon: Vault,
+                profileUrl: "https://github.com/sanjay-mali",
+                label: 'Vault',
+            },
+            {
+                icon: Prometheus,
+                profileUrl: "https://github.com/sanjay-mali",
+                label: 'Prometheus',
+            },
+
+            {
+                icon: Loki,
+                profileUrl: "https://github.com/sanjay-mali",
+                label: 'Loki',
+            },
+
+        ]
+    },
+    {
+        id: "item-10",
+        title: "InnERP",
+        summary:
+            "Sophisticated AI models inspired by human brain structure, capable of solving complex problems through deep learning and pattern recognition.",
+        url: "/projects/$index",
+        params: {index: "10"},
+        image: ConfledisInternship,
+        technologies: [
+            {
+                icon: ReactIcon,
+                profileUrl: "https://github.com/dillionverma",
+                label: 'ReactJs',
+            },
+            {
+                icon: Spring,
+                profileUrl: "https://github.com/tomonarifeehan",
+                label: 'SpringBoot',
+            },
+            {
+                icon: GitLab,
+                profileUrl: "https://github.com/BankkRoll",
+                label: 'Gitlab',
+            },
+            {
+                icon: Kubernetes,
+                profileUrl: "https://github.com/safethecode",
+                label: 'Kubernetes',
+            },
+            {
+                icon: Keycloak,
+                profileUrl: "https://github.com/sanjay-mali",
+                label: 'Keycloak',
+            },
+            {
+                icon: Tekton,
+                profileUrl: "https://github.com/sanjay-mali",
+                label: 'Tekton',
+            },
+            {
+                icon: Vault,
+                profileUrl: "https://github.com/sanjay-mali",
+                label: 'Vault',
+            },
+            {
+                icon: Prometheus,
+                profileUrl: "https://github.com/sanjay-mali",
+                label: 'Prometheus',
+            },
+
+            {
+                icon: Loki,
+                profileUrl: "https://github.com/sanjay-mali",
+                label: 'Loki',
+            },
+
+        ]
+    },
+    {
+        id: "item-11",
+        title: "Hotel Management System",
+        summary:
+            "Sophisticated AI models inspired by human brain structure, capable of solving complex problems through deep learning and pattern recognition.",
+        url: "/projects/$index",
+        params: {index: "11"},
+        image: InfogeranceInternship,
+        technologies: [
+            {
+                icon: ReactIcon,
+                profileUrl: "https://github.com/dillionverma",
+                label: 'ReactJs',
+            },
+            {
+                icon: Spring,
+                profileUrl: "https://github.com/tomonarifeehan",
+                label: 'SpringBoot',
+            },
+            {
+                icon: GitLab,
+                profileUrl: "https://github.com/BankkRoll",
+                label: 'Gitlab',
+            },
+            {
+                icon: Kubernetes,
+                profileUrl: "https://github.com/safethecode",
+                label: 'Kubernetes',
+            },
+            {
+                icon: Keycloak,
+                profileUrl: "https://github.com/sanjay-mali",
+                label: 'Keycloak',
+            },
+            {
+                icon: Tekton,
+                profileUrl: "https://github.com/sanjay-mali",
+                label: 'Tekton',
+            },
+            {
+                icon: Vault,
+                profileUrl: "https://github.com/sanjay-mali",
+                label: 'Vault',
+            },
+            {
+                icon: Prometheus,
+                profileUrl: "https://github.com/sanjay-mali",
+                label: 'Prometheus',
+            },
+
+            {
+                icon: Loki,
+                profileUrl: "https://github.com/sanjay-mali",
+                label: 'Loki',
+            },
+
+        ]
+    },
+]

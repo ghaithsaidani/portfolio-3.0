@@ -1,9 +1,11 @@
 import type {LinkProps} from "@tanstack/react-router";
+import type {Avatar} from "@/components/ui/avatar-circles.tsx";
+import type {ReactNode} from "react";
 
-interface ProjectPageProps{
+/*interface ProjectPageProps{
     name: string
     image?: string
-}
+}*/
 
 interface ProjectItem {
     id: string;
@@ -12,6 +14,21 @@ interface ProjectItem {
     url: LinkProps['to'];
     params: Record<string, string>;
     image: string;
+    technologies: Avatar[]
+}
+
+interface ProjectSection {
+    id: string;
+    title: string;
+    content: ReactNode;
+}
+
+interface ProjectPageProps {
+    badge?: string;
+    title: string;
+    description: string;
+    image?: string;
+    sections: ProjectSection[];
 }
 
 interface ProjectProps {
@@ -22,7 +39,8 @@ interface ProjectProps {
 
 
 export type {
-    ProjectPageProps,
     ProjectProps,
-    ProjectItem
+    ProjectItem,
+    ProjectSection,
+    ProjectPageProps
 }

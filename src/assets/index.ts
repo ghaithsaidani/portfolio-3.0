@@ -1,14 +1,22 @@
 export {default as PersonalImage} from './personal-image.png'
-export {default as Infogerance} from './infogerance.png'
-export {default as Confledis} from './confledis-sas.png'
+
+//certifications
 export {default as ITSpecialistJava} from './ITS_Java.png'
 export {default as ITSpecialistCloudComputing} from './ITS_Cloud_Computing.png'
+
+//experience
+export {default as Infogerance} from './infogerance.png'
+export {default as Confledis} from './confledis-sas.png'
 export {default as Xsustain} from './xsustain.jpg'
 export {default as Sofiatech} from './sofiatech.jpg'
+
+//education
 export {default as Marburg} from './marburg.jpeg'
 export {default as Sesame} from './sesame.png'
 export {default as FSB} from './fsb.png'
 export {default as LJFB} from './ljfb.png'
+
+// projects
 export {default as Kubepilot} from './projects/kubepilot.png'
 export {default as PDS} from './projects/pds.png'
 export {default as Portfolio2} from './projects/portfolio-2.0.png'
@@ -20,3 +28,6 @@ export {default as XsustainInternship} from './projects/xsustain-internship.png'
 export {default as HRIndustries} from './projects/hr-industries.png'
 export {default as AmanaInsurances} from './projects/amana-insurances.png'
 export {default as InfogeranceInternship} from './projects/infogérance-internship.png'
+
+//diagrams
+export {default as KubePilotDetailedArchitecture} from './projects/diagrams/kubepilot detailed architecture diagram.png'

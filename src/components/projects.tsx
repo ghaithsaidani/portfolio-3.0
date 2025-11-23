@@ -4,10 +4,9 @@ import {useEffect, useState} from "react";
 import {Button} from "@/components/ui/button";
 import {Carousel, type CarouselApi, CarouselContent, CarouselItem,} from "@/components/ui/carousel";
 import {Link} from "@tanstack/react-router";
-import {projects} from "@/const/projects.ts";
+import {projects} from "@/const/projects.tsx";
 import type {ProjectProps} from "@/types/project.ts";
-import {type Avatar, AvatarCircles} from "@/components/ui/avatar-circles.tsx";
-import {GitLab, Keycloak, Kubernetes, Loki, Prometheus, ReactIcon, Spring, Tekton, Vault} from "@/const/icons.tsx";
+import {AvatarCircles} from "@/components/ui/avatar-circles.tsx";
 
 
 const Projects = ({
@@ -33,55 +32,6 @@ const Projects = ({
         };
     }, [carouselApi]);
 
-    const avatars: Avatar[] = [
-        {
-            icon: ReactIcon,
-            profileUrl: "https://github.com/dillionverma",
-            label: 'ReactJs',
-        },
-        {
-            icon: Spring,
-            profileUrl: "https://github.com/tomonarifeehan",
-            label: 'SpringBoot',
-        },
-        {
-            icon: GitLab,
-            profileUrl: "https://github.com/BankkRoll",
-            label: 'Gitlab',
-        },
-        {
-            icon: Kubernetes,
-            profileUrl: "https://github.com/safethecode",
-            label: 'Kubernetes',
-        },
-        {
-            icon: Keycloak,
-            profileUrl: "https://github.com/sanjay-mali",
-            label: 'Keycloak',
-        },
-        {
-            icon: Tekton,
-            profileUrl: "https://github.com/sanjay-mali",
-            label: 'Tekton',
-        },
-        {
-            icon: Vault,
-            profileUrl: "https://github.com/sanjay-mali",
-            label: 'Vault',
-        },
-        {
-            icon: Prometheus,
-            profileUrl: "https://github.com/sanjay-mali",
-            label: 'Prometheus',
-        },
-
-        {
-            icon: Loki,
-            profileUrl: "https://github.com/sanjay-mali",
-            label: 'Loki',
-        },
-
-    ]
     return (
         <section className="py-32">
             <div className="container">
@@ -155,7 +105,7 @@ const Projects = ({
                                                 <img
                                                     src={item.image}
                                                     alt={item.title}
-                                                    className="h-full w-full object-cover object-center"
+                                                    className="aspect-video w-full h-full object-cover"
                                                 />
                                             </div>
                                         </div>
@@ -173,12 +123,14 @@ const Projects = ({
                                             </p>
                                         </div>
                                         <div className={"flex justify-between"}>
-                                            <AvatarCircles avatarUrls={avatars} numPeople={10}/>
+                                            <AvatarCircles avatarUrls={item.technologies}/>
                                             <div className="flex items-center text-sm">
                                                 Read more{" "}
-                                                <ArrowRight
+                                                <ArrowUpRight
                                                     className="ml-2 size-5 transition-transform group-hover:translate-x-1"/>
                                             </div>
+
+
                                         </div>
 
                                     </div>

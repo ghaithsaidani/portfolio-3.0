@@ -1,6 +1,6 @@
 import {createFileRoute} from '@tanstack/react-router'
+import {singleProjects} from "@/const/single-projects-pages.tsx";
 import {Project} from "@/components/project.tsx";
-import {singleProjects} from "@/const/projects.ts";
 
 
 export const Route = createFileRoute('/projects/$index')({
@@ -14,5 +14,5 @@ function RouteComponent() {
 
     if (!project) return <div>Project not found</div>
 
-    return <Project name={project.name} image={project.image}/>
+    return <Project {...project}/>
 }

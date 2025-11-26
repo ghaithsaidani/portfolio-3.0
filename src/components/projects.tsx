@@ -80,13 +80,8 @@ const Projects = ({
                         {items.map((item) => (
                             <CarouselItem key={item.id}
                                           className="ml-8 max-w-[350px] md:max-w-[452px] px-5 py-8 bg-muted rounded-xl">
-                                <Link
-                                    to="/projects/$index"
-                                    params={{index: item.params.index}}
-                                    hashScrollIntoView={true}
-                                    className="group flex flex-col h-full"
-                                >
 
+                                <div className={"group flex flex-col h-full flex"}>
                                     <div
                                         className="aspect-3/2 flex overflow-clip rounded-xl border-1 dark:border-none">
                                         <div className="flex-1">
@@ -114,17 +109,19 @@ const Projects = ({
                                         </div>
                                         <div className={"flex justify-between"}>
                                             <AvatarCircles avatarUrls={item.technologies}/>
-                                            <div className="flex items-center text-sm">
+                                            <Link
+                                                to="/projects/$index"
+                                                params={{index: item.params.index}}
+                                                hashScrollIntoView={true}
+                                                className="flex items-center text-sm"
+                                            >
                                                 Read more{" "}
                                                 <ArrowUpRight
                                                     className="ml-2 size-5 transition-transform group-hover:translate-x-1"/>
-                                            </div>
-
-
+                                            </Link>
                                         </div>
-
                                     </div>
-                                </Link>
+                                </div>
                             </CarouselItem>
                         ))}
                     </CarouselContent>

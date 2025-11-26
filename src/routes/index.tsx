@@ -22,10 +22,11 @@ function Index() {
                 <Hero/>
                 <Experience/>
                 <Education/>
-                <Certificates/>
                 <Projects/>
-                <Logos/>
                 <Skills/>
+                <Certificates/>
+                <Logos/>
+
                 {/*<Content/>*/}
                 <Contact/>
                 <Footer/>

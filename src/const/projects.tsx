@@ -1,18 +1,45 @@
 import type {ProjectItem} from "@/types/project.ts";
 import {
+    AfterEffects,
     AmanaInsurances,
+    Angular,
+    ArgoCD,
+    Cloud9,
     CloudWebAppBuilder,
     ConfledisInternship,
+    CPanel, Django,
+    EmailJS,
+    Figma,
+    GithubActions,
+    Gitlab,
+    Grafana,
+    Helm,
     HRIndustries,
     InfogeranceInternship,
+    Jenkins,
+    Keycloak,
     Kubepilot,
+    Kubernetes,
+    Loki,
     MicroservicesProvision,
+    MicrosoftAzure,
     MondeEnBouche,
+    MongoDB,
+    Netlify,
+    NodeJs, Oracle,
     PDS,
     Portfolio2,
+    PostgreSQL,
+    Prometheus,
+    ReactJs,
+    Redis,
+    SpringBoot,
+    Tekton,
+    Terraform,
+    Vault,
     XsustainInternship
 } from "@/assets";
-import {GitLab, Keycloak, Kubernetes, Loki, Prometheus, ReactIcon, Spring, Tekton, Vault} from "@/const/icons.tsx";
+import {AmazonWebServices, Expressjs, Flask, GitHub, MySQL} from "@/const/icons.tsx";
 
 
 export const projects: ProjectItem[] = [
@@ -26,73 +53,137 @@ export const projects: ProjectItem[] = [
         image: Kubepilot,
         technologies: [
             {
-                icon: ReactIcon,
-                profileUrl: "https://github.com/dillionverma",
+                icon: ReactJs,
+                url: "https://react.dev/",
                 label: 'ReactJs',
             },
             {
-                icon: Spring,
-                profileUrl: "https://github.com/tomonarifeehan",
+                icon: SpringBoot,
+                url: "https://spring.io/",
                 label: 'SpringBoot',
             },
             {
-                icon: GitLab,
-                profileUrl: "https://github.com/BankkRoll",
-                label: 'Gitlab',
+                icon: PostgreSQL,
+                url: "https://www.postgresql.org/",
+                label: 'PostgreSQL',
+            },
+            {
+                icon: Redis,
+                url: "https://redis.io/",
+                label: 'PostgreSQL',
             },
             {
                 icon: Kubernetes,
-                profileUrl: "https://github.com/safethecode",
+                url: "https://kubernetes.io/",
                 label: 'Kubernetes',
             },
             {
                 icon: Keycloak,
-                profileUrl: "https://github.com/sanjay-mali",
+                url: "https://www.keycloak.org/",
                 label: 'Keycloak',
             },
             {
                 icon: Tekton,
-                profileUrl: "https://github.com/sanjay-mali",
+                url: "https://github.com/sanjay-mali",
                 label: 'Tekton',
             },
             {
                 icon: Vault,
-                profileUrl: "https://github.com/sanjay-mali",
+                url: "https://www.hashicorp.com/en/products/vault",
                 label: 'Vault',
             },
             {
                 icon: Prometheus,
-                profileUrl: "https://github.com/sanjay-mali",
+                url: "https://prometheus.io/",
                 label: 'Prometheus',
             },
-
             {
                 icon: Loki,
-                profileUrl: "https://github.com/sanjay-mali",
+                url: "https://grafana.com/oss/loki/",
                 label: 'Loki',
             },
-
+            {
+                icon: Gitlab,
+                url: "https://gitlab.com/",
+                label: 'Gitlab',
+            },
+            {
+                icon: Figma,
+                url: "https://www.figma.com",
+                label: 'Figma',
+            },
+            {
+                icon: AfterEffects,
+                url: "https://www.adobe.com/products/aftereffects.html",
+                label: 'After Effects',
+            },
         ]
     },
     {
         id: "item-2",
-        title: "Automated Deployment of Infrastructure and Microservices on Kubernetes",
+        title: "Microservices Deployment",
         summary:
-            "Powerful image recognition and processing capabilities that allow AI systems to analyze, understand, and interpret visual information from the world.",
+            "Automated deployment pipeline and cloud infrastructure provisioning for microservices running on Kubernetes.",
         url: "/projects/$index",
         params: {index: "2"},
         image: MicroservicesProvision,
         technologies: [
             {
-                icon: ReactIcon,
-                profileUrl: "https://github.com/dillionverma",
-                label: 'ReactJs',
+                icon: SpringBoot,
+                url: "https://spring.io/",
+                label: 'SpringBoot',
             },
             {
-                icon: Spring,
-                profileUrl: "https://github.com/tomonarifeehan",
-                label: 'SpringBoot',
-            }
+                icon: MicrosoftAzure,
+                url: "https://azure.microsoft.com",
+                label: 'Azure',
+            },
+            {
+                icon: Kubernetes,
+                url: "https://kubernetes.io/",
+                label: 'Kubernetes',
+            },
+            {
+                icon: Helm,
+                url: "https://helm.sh/",
+                label: 'Helm',
+            },
+            {
+                icon: Jenkins,
+                url: "https://www.jenkins.io/",
+                label: 'Jenkins',
+            },
+            {
+                icon: Terraform,
+                url: "https://developer.hashicorp.com/terraform",
+                label: 'Terraform',
+            },
+            {
+                icon: ArgoCD,
+                url: "https://argo-cd.readthedocs.io/en/stable/",
+                label: 'ArgoCD',
+            },
+            {
+                icon: Vault,
+                url: "https://www.hashicorp.com/en/products/vault",
+                label: 'Vault',
+            },
+            {
+                icon: Gitlab,
+                url: "https://gitlab.com/",
+                label: 'Gitlab',
+            },
+            {
+                icon: Prometheus,
+                url: "https://prometheus.io/",
+                label: 'Prometheus',
+            },
+            {
+                icon: Grafana,
+                url: "https://grafana.com/grafana/",
+                label: 'Grafana',
+            },
+
         ]
     },
     {
@@ -105,52 +196,25 @@ export const projects: ProjectItem[] = [
         image: PDS,
         technologies: [
             {
-                icon: ReactIcon,
-                profileUrl: "https://github.com/dillionverma",
+                icon: ReactJs,
+                url: "https://react.dev/",
                 label: 'ReactJs',
             },
             {
-                icon: Spring,
-                profileUrl: "https://github.com/tomonarifeehan",
+                icon: SpringBoot,
+                url: "https://spring.io/",
                 label: 'SpringBoot',
             },
             {
-                icon: GitLab,
-                profileUrl: "https://github.com/BankkRoll",
-                label: 'Gitlab',
+                icon: Flask,
+                url: "https://flask.palletsprojects.com/en/stable/",
+                label: 'Flask',
             },
             {
-                icon: Kubernetes,
-                profileUrl: "https://github.com/safethecode",
-                label: 'Kubernetes',
+                icon: MySQL,
+                url: "https://www.mysql.com/",
+                label: 'MySQL',
             },
-            {
-                icon: Keycloak,
-                profileUrl: "https://github.com/sanjay-mali",
-                label: 'Keycloak',
-            },
-            {
-                icon: Tekton,
-                profileUrl: "https://github.com/sanjay-mali",
-                label: 'Tekton',
-            },
-            {
-                icon: Vault,
-                profileUrl: "https://github.com/sanjay-mali",
-                label: 'Vault',
-            },
-            {
-                icon: Prometheus,
-                profileUrl: "https://github.com/sanjay-mali",
-                label: 'Prometheus',
-            },
-
-            {
-                icon: Loki,
-                profileUrl: "https://github.com/sanjay-mali",
-                label: 'Loki',
-            },
-
         ]
     },
     {
@@ -163,52 +227,25 @@ export const projects: ProjectItem[] = [
         image: CloudWebAppBuilder,
         technologies: [
             {
-                icon: ReactIcon,
-                profileUrl: "https://github.com/dillionverma",
-                label: 'ReactJs',
+                icon: AmazonWebServices,
+                url: "https://aws.amazon.com/",
+                label: 'AWS',
             },
             {
-                icon: Spring,
-                profileUrl: "https://github.com/tomonarifeehan",
-                label: 'SpringBoot',
+                icon: Cloud9,
+                url: "https://aws.amazon.com/cloud9/",
+                label: 'Cloud9',
             },
             {
-                icon: GitLab,
-                profileUrl: "https://github.com/BankkRoll",
-                label: 'Gitlab',
+                icon: Terraform,
+                url: "https://developer.hashicorp.com/terraform",
+                label: 'Terraform',
             },
             {
-                icon: Kubernetes,
-                profileUrl: "https://github.com/safethecode",
-                label: 'Kubernetes',
+                icon: MySQL,
+                url: "https://www.mysql.com/",
+                label: 'MySQL',
             },
-            {
-                icon: Keycloak,
-                profileUrl: "https://github.com/sanjay-mali",
-                label: 'Keycloak',
-            },
-            {
-                icon: Tekton,
-                profileUrl: "https://github.com/sanjay-mali",
-                label: 'Tekton',
-            },
-            {
-                icon: Vault,
-                profileUrl: "https://github.com/sanjay-mali",
-                label: 'Vault',
-            },
-            {
-                icon: Prometheus,
-                profileUrl: "https://github.com/sanjay-mali",
-                label: 'Prometheus',
-            },
-
-            {
-                icon: Loki,
-                profileUrl: "https://github.com/sanjay-mali",
-                label: 'Loki',
-            },
-
         ]
     },
     {
@@ -221,52 +258,20 @@ export const projects: ProjectItem[] = [
         image: HRIndustries,
         technologies: [
             {
-                icon: ReactIcon,
-                profileUrl: "https://github.com/dillionverma",
-                label: 'ReactJs',
+                icon: Angular,
+                url: "https://angular.dev/",
+                label: 'Angular',
             },
             {
-                icon: Spring,
-                profileUrl: "https://github.com/tomonarifeehan",
-                label: 'SpringBoot',
+                icon: EmailJS,
+                url: "https://www.emailjs.com/",
+                label: 'EmailJS',
             },
             {
-                icon: GitLab,
-                profileUrl: "https://github.com/BankkRoll",
-                label: 'Gitlab',
-            },
-            {
-                icon: Kubernetes,
-                profileUrl: "https://github.com/safethecode",
-                label: 'Kubernetes',
-            },
-            {
-                icon: Keycloak,
-                profileUrl: "https://github.com/sanjay-mali",
-                label: 'Keycloak',
-            },
-            {
-                icon: Tekton,
-                profileUrl: "https://github.com/sanjay-mali",
-                label: 'Tekton',
-            },
-            {
-                icon: Vault,
-                profileUrl: "https://github.com/sanjay-mali",
-                label: 'Vault',
-            },
-            {
-                icon: Prometheus,
-                profileUrl: "https://github.com/sanjay-mali",
-                label: 'Prometheus',
-            },
-
-            {
-                icon: Loki,
-                profileUrl: "https://github.com/sanjay-mali",
-                label: 'Loki',
-            },
-
+                icon: Netlify,
+                url: "https://www.netlify.com/",
+                label: 'Netlify',
+            }
         ]
     },
     {
@@ -279,52 +284,45 @@ export const projects: ProjectItem[] = [
         image: XsustainInternship,
         technologies: [
             {
-                icon: ReactIcon,
-                profileUrl: "https://github.com/dillionverma",
-                label: 'ReactJs',
+                icon: ReactJs,
+                url: "https://react.dev/",
+                label: 'ReactJS',
             },
             {
-                icon: Spring,
-                profileUrl: "https://github.com/tomonarifeehan",
-                label: 'SpringBoot',
+                icon: NodeJs,
+                url: "https://nodejs.org/en",
+                label: 'NodeJS',
             },
             {
-                icon: GitLab,
-                profileUrl: "https://github.com/BankkRoll",
-                label: 'Gitlab',
+                icon: Expressjs,
+                url: "https://expressjs.com/",
+                label: 'ExpressJS',
             },
             {
-                icon: Kubernetes,
-                profileUrl: "https://github.com/safethecode",
-                label: 'Kubernetes',
+                icon: MongoDB,
+                url: "https://www.mongodb.com/",
+                label: 'MongoDB',
             },
             {
-                icon: Keycloak,
-                profileUrl: "https://github.com/sanjay-mali",
-                label: 'Keycloak',
+                icon: GitHub,
+                url: "https://react.dev/",
+                label: 'ExpressJS',
             },
             {
-                icon: Tekton,
-                profileUrl: "https://github.com/sanjay-mali",
-                label: 'Tekton',
+                icon: MicrosoftAzure,
+                url: "https://azure.microsoft.com",
+                label: 'Azure',
             },
             {
-                icon: Vault,
-                profileUrl: "https://github.com/sanjay-mali",
-                label: 'Vault',
+                icon: Terraform,
+                url: "https://developer.hashicorp.com/terraform",
+                label: 'Terraform',
             },
             {
-                icon: Prometheus,
-                profileUrl: "https://github.com/sanjay-mali",
-                label: 'Prometheus',
+                icon: Jenkins,
+                url: "https://www.jenkins.io/",
+                label: 'Jenkins',
             },
-
-            {
-                icon: Loki,
-                profileUrl: "https://github.com/sanjay-mali",
-                label: 'Loki',
-            },
-
         ]
     },
     {
@@ -337,50 +335,29 @@ export const projects: ProjectItem[] = [
         image: MondeEnBouche,
         technologies: [
             {
-                icon: ReactIcon,
-                profileUrl: "https://github.com/dillionverma",
-                label: 'ReactJs',
+                icon: ReactJs,
+                url: "https://react.dev/",
+                label: 'ReactJS',
             },
             {
-                icon: Spring,
-                profileUrl: "https://github.com/tomonarifeehan",
-                label: 'SpringBoot',
+                icon: MicrosoftAzure,
+                url: "https://azure.microsoft.com",
+                label: 'Azure',
             },
             {
-                icon: GitLab,
-                profileUrl: "https://github.com/BankkRoll",
-                label: 'Gitlab',
+                icon: Terraform,
+                url: "https://developer.hashicorp.com/terraform",
+                label: 'Terraform',
             },
             {
-                icon: Kubernetes,
-                profileUrl: "https://github.com/safethecode",
-                label: 'Kubernetes',
+                icon: GitHub,
+                url: "https://react.dev/",
+                label: 'ExpressJS',
             },
             {
-                icon: Keycloak,
-                profileUrl: "https://github.com/sanjay-mali",
-                label: 'Keycloak',
-            },
-            {
-                icon: Tekton,
-                profileUrl: "https://github.com/sanjay-mali",
-                label: 'Tekton',
-            },
-            {
-                icon: Vault,
-                profileUrl: "https://github.com/sanjay-mali",
-                label: 'Vault',
-            },
-            {
-                icon: Prometheus,
-                profileUrl: "https://github.com/sanjay-mali",
-                label: 'Prometheus',
-            },
-
-            {
-                icon: Loki,
-                profileUrl: "https://github.com/sanjay-mali",
-                label: 'Loki',
+                icon: GithubActions,
+                url: "https://github.com/features/actions",
+                label: 'Github Actions',
             },
 
         ]
@@ -395,52 +372,25 @@ export const projects: ProjectItem[] = [
         image: Portfolio2,
         technologies: [
             {
-                icon: ReactIcon,
-                profileUrl: "https://github.com/dillionverma",
-                label: 'ReactJs',
+                icon: ReactJs,
+                url: "https://react.dev/",
+                label: 'ReactJS',
             },
             {
-                icon: Spring,
-                profileUrl: "https://github.com/tomonarifeehan",
-                label: 'SpringBoot',
+                icon: Figma,
+                url: "https://www.figma.com",
+                label: 'Figma',
             },
             {
-                icon: GitLab,
-                profileUrl: "https://github.com/BankkRoll",
-                label: 'Gitlab',
+                icon: EmailJS,
+                url: "https://www.emailjs.com/",
+                label: 'EmailJS',
             },
             {
-                icon: Kubernetes,
-                profileUrl: "https://github.com/safethecode",
-                label: 'Kubernetes',
-            },
-            {
-                icon: Keycloak,
-                profileUrl: "https://github.com/sanjay-mali",
-                label: 'Keycloak',
-            },
-            {
-                icon: Tekton,
-                profileUrl: "https://github.com/sanjay-mali",
-                label: 'Tekton',
-            },
-            {
-                icon: Vault,
-                profileUrl: "https://github.com/sanjay-mali",
-                label: 'Vault',
-            },
-            {
-                icon: Prometheus,
-                profileUrl: "https://github.com/sanjay-mali",
-                label: 'Prometheus',
-            },
-
-            {
-                icon: Loki,
-                profileUrl: "https://github.com/sanjay-mali",
-                label: 'Loki',
-            },
-
+                icon: Netlify,
+                url: "https://www.netlify.com/",
+                label: 'Netlify',
+            }
         ]
     },
     {
@@ -453,52 +403,30 @@ export const projects: ProjectItem[] = [
         image: AmanaInsurances,
         technologies: [
             {
-                icon: ReactIcon,
-                profileUrl: "https://github.com/dillionverma",
-                label: 'ReactJs',
+                icon: Angular,
+                url: "https://angular.dev/",
+                label: 'Angular',
             },
             {
-                icon: Spring,
-                profileUrl: "https://github.com/tomonarifeehan",
-                label: 'SpringBoot',
+                icon: NodeJs,
+                url: "https://nodejs.org/en",
+                label: 'NodeJS',
             },
             {
-                icon: GitLab,
-                profileUrl: "https://github.com/BankkRoll",
-                label: 'Gitlab',
+                icon: Expressjs,
+                url: "https://expressjs.com/",
+                label: 'ExpressJS',
             },
             {
-                icon: Kubernetes,
-                profileUrl: "https://github.com/safethecode",
-                label: 'Kubernetes',
+                icon: MySQL,
+                url: "https://www.mysql.com/",
+                label: 'MySQL',
             },
             {
-                icon: Keycloak,
-                profileUrl: "https://github.com/sanjay-mali",
-                label: 'Keycloak',
+                icon: CPanel,
+                url: "https://www.cpanel.net/products/cpanel-whm-features/",
+                label: 'CPanel',
             },
-            {
-                icon: Tekton,
-                profileUrl: "https://github.com/sanjay-mali",
-                label: 'Tekton',
-            },
-            {
-                icon: Vault,
-                profileUrl: "https://github.com/sanjay-mali",
-                label: 'Vault',
-            },
-            {
-                icon: Prometheus,
-                profileUrl: "https://github.com/sanjay-mali",
-                label: 'Prometheus',
-            },
-
-            {
-                icon: Loki,
-                profileUrl: "https://github.com/sanjay-mali",
-                label: 'Loki',
-            },
-
         ]
     },
     {
@@ -511,52 +439,20 @@ export const projects: ProjectItem[] = [
         image: ConfledisInternship,
         technologies: [
             {
-                icon: ReactIcon,
-                profileUrl: "https://github.com/dillionverma",
-                label: 'ReactJs',
+                icon: ReactJs,
+                url: "https://react.dev/",
+                label: 'ReactJS',
             },
             {
-                icon: Spring,
-                profileUrl: "https://github.com/tomonarifeehan",
-                label: 'SpringBoot',
+                icon: Django,
+                url: "https://www.djangoproject.com/",
+                label: 'Django',
             },
             {
-                icon: GitLab,
-                profileUrl: "https://github.com/BankkRoll",
-                label: 'Gitlab',
+                icon: AmazonWebServices,
+                url: "https://aws.amazon.com/",
+                label: 'AWS',
             },
-            {
-                icon: Kubernetes,
-                profileUrl: "https://github.com/safethecode",
-                label: 'Kubernetes',
-            },
-            {
-                icon: Keycloak,
-                profileUrl: "https://github.com/sanjay-mali",
-                label: 'Keycloak',
-            },
-            {
-                icon: Tekton,
-                profileUrl: "https://github.com/sanjay-mali",
-                label: 'Tekton',
-            },
-            {
-                icon: Vault,
-                profileUrl: "https://github.com/sanjay-mali",
-                label: 'Vault',
-            },
-            {
-                icon: Prometheus,
-                profileUrl: "https://github.com/sanjay-mali",
-                label: 'Prometheus',
-            },
-
-            {
-                icon: Loki,
-                profileUrl: "https://github.com/sanjay-mali",
-                label: 'Loki',
-            },
-
         ]
     },
     {
@@ -569,52 +465,20 @@ export const projects: ProjectItem[] = [
         image: InfogeranceInternship,
         technologies: [
             {
-                icon: ReactIcon,
-                profileUrl: "https://github.com/dillionverma",
-                label: 'ReactJs',
+                icon: Angular,
+                url: "https://angular.dev/",
+                label: 'Angular',
             },
             {
-                icon: Spring,
-                profileUrl: "https://github.com/tomonarifeehan",
+                icon: SpringBoot,
+                url: "https://spring.io/",
                 label: 'SpringBoot',
             },
             {
-                icon: GitLab,
-                profileUrl: "https://github.com/BankkRoll",
-                label: 'Gitlab',
+                icon: Oracle,
+                url: "https://www.oracle.com/database/",
+                label: 'OracleDB',
             },
-            {
-                icon: Kubernetes,
-                profileUrl: "https://github.com/safethecode",
-                label: 'Kubernetes',
-            },
-            {
-                icon: Keycloak,
-                profileUrl: "https://github.com/sanjay-mali",
-                label: 'Keycloak',
-            },
-            {
-                icon: Tekton,
-                profileUrl: "https://github.com/sanjay-mali",
-                label: 'Tekton',
-            },
-            {
-                icon: Vault,
-                profileUrl: "https://github.com/sanjay-mali",
-                label: 'Vault',
-            },
-            {
-                icon: Prometheus,
-                profileUrl: "https://github.com/sanjay-mali",
-                label: 'Prometheus',
-            },
-
-            {
-                icon: Loki,
-                profileUrl: "https://github.com/sanjay-mali",
-                label: 'Loki',
-            },
-
         ]
     },
 ]

@@ -5,9 +5,9 @@ import {cn} from "@/lib/utils.ts";
 import {useMaxLogos} from "@/hooks/useMaxLogos.tsx";
 
 export interface Avatar {
-    icon: ElementType
+    icon: string | ElementType
     color?: string
-    profileUrl: string
+    url: string
     label: string
 }
 
@@ -32,12 +32,12 @@ export const AvatarCircles = ({
             {visible.map((item, index) => (
                 <motion.a
                     key={index}
-                    href={item.profileUrl}
+                    href={item.url}
                     target="_blank"
                     rel="noopener noreferrer"
                     onMouseEnter={() => setHovered(index)}
                     onMouseLeave={() => setHovered(null)}
-                    style={{ backgroundColor: item.color }}
+                    style={{backgroundColor: item.color}}
                     className={"relative z-10 flex items-center justify-center rounded-full border-2 bg-muted overflow-hidden hover:z-50"}
                     initial={{width: "2.2rem", height: "2.2rem"}} // size-10
                     animate={{
@@ -51,8 +51,8 @@ export const AvatarCircles = ({
                         alt={item.label}
                         className="size-8 rounded-full object-cover"
                     />*/}
-                    <div className={"size-8 p-2.5 flex items-center justify-center"}>
-                        <item.icon className={"text-white"}/>
+                    <div className={"size-8 p-2 flex items-center justify-center"}>
+                        {typeof item.icon==="string" ? <img src={item.icon} alt={item.label}/> : <item.icon/>}
                     </div>
 
 
@@ -73,7 +73,8 @@ export const AvatarCircles = ({
                 </motion.a>
             ))}
             {remaining > 0 && (
-                <div className="flex z-20 size-9 items-center justify-center rounded-full border-2 border-white bg-black text-xs font-medium text-white dark:bg-white dark:text-black">
+                <div
+                    className="flex z-20 size-9 items-center justify-center rounded-full border-2 border-white bg-black text-xs font-medium text-white dark:bg-white dark:text-black">
                     +{remaining}
                 </div>
             )}

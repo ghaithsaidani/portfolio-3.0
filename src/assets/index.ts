@@ -4,20 +4,24 @@ export {default as PersonalImage} from './images/personal-image.png'
 export {default as KubepilotDemo} from './videos/Kubepilot.mp4'
 
 //certifications
-export {default as ITSpecialistJava} from './images/ITS_Java.png'
-export {default as ITSpecialistCloudComputing} from './images/ITS_Cloud_Computing.png'
+export {default as ITSpecialistJava} from './images/certifications/ITS_Java.png'
+export {default as ITSpecialistCloudComputing} from './images/certifications/ITS_Cloud_Computing.png'
+export {default as CloudFoundations} from './images/certifications/cloud-foundations.png'
+export {default as CloudWebAppBuilderCertificate} from './images/certifications/cloud-web-app-builder.png'
+export {default as IntroToLinux} from './images/certifications/introduction-to-linux.png'
+
 
 //experience
-export {default as Infogerance} from './images/infogerance.png'
-export {default as Confledis} from './images/confledis-sas.png'
-export {default as Xsustain} from './images/xsustain.jpg'
-export {default as Sofiatech} from './images/sofiatech.jpg'
+export {default as Infogerance} from './images/experience/infogerance.png'
+export {default as Confledis} from './images/experience/confledis-sas.png'
+export {default as Xsustain} from './images/experience/xsustain.jpg'
+export {default as Sofiatech} from './images/experience/sofiatech.jpg'
 
 //education
-export {default as Marburg} from './images/marburg.jpeg'
-export {default as Sesame} from './images/sesame.png'
-export {default as FSB} from './images/fsb.png'
-export {default as LJFB} from './images/ljfb.png'
+export {default as Marburg} from './images/education/marburg.jpeg'
+export {default as Sesame} from './images/education/sesame.png'
+export {default as FSB} from './images/education/fsb.png'
+export {default as LJFB} from './images/education/ljfb.png'
 
 // projects
 export {default as Kubepilot} from './images/projects/kubepilot.png'
@@ -33,4 +37,44 @@ export {default as AmanaInsurances} from './images/projects/amana-insurances.png
 export {default as InfogeranceInternship} from './images/projects/infogérance-internship.png'
 
 //diagrams
-export {default as KubePilotDetailedArchitecture} from './images/projects/diagrams/diagrams-detailed architecture diagram - english.svg'
+export {default as KubePilotDetailedArchitecture} from './images/projects/diagrams/diagrams-detailed architecture diagram.svg'
+export {default as MicroservicesProvisionCICD} from './images/projects/diagrams/CICD Pipeline.png'
+export {default as MicroservicesProvisionClusterArchitecture} from './images/projects/diagrams/Kubernetes cluster architecture.png'
+export {default as MicroservicesProvisionAzureArchitecture} from './images/projects/diagrams/Microsoft Azure architecture.png'
+
+
+//technologies
+export {default as MicrosoftAzure} from './images/technologies/azure.svg'
+export {default as ReactJs} from './images/technologies/react.svg'
+export {default as SpringBoot} from './images/technologies/spring.svg'
+export {default as AWS} from './images/technologies/aws.svg'
+export {default as Gitlab} from './images/technologies/gitlab.svg'
+export {default as Loki} from './images/technologies/grafana-loki.svg'
+export {default as Keycloak} from './images/technologies/keycloak.svg'
+export {default as Kubernetes} from './images/technologies/kubernetes.svg'
+export {default as LinuxFoundation} from './images/technologies/linux-foundations.svg'
+export {default as Meta} from './images/technologies/meta.svg'
+export {default as Prometheus} from './images/technologies/prometheus.svg'
+export {default as Tekton} from './images/technologies/tekton.svg'
+export {default as Vault} from './images/technologies/vault.svg'
+export {default as Terraform} from './images/technologies/terraform.svg'
+export {default as ArgoCD} from './images/technologies/argocd.svg'
+export {default as Jenkins} from './images/technologies/jenkins.svg'
+export {default as Helm} from './images/technologies/helm.svg'
+export {default as Grafana} from './images/technologies/grafana.svg'
+export {default as Cloud9} from './images/technologies/cloud9.svg'
+export {default as Angular} from './images/technologies/angular.svg'
+export {default as Netlify} from './images/technologies/netlify.svg'
+export {default as EmailJS} from './images/technologies/emailjs.svg'
+export {default as NodeJs} from './images/technologies/nodejs.svg'
+export {default as MongoDB} from './images/technologies/mongodb.svg'
+export {default as GithubActions} from './images/technologies/githubactions.svg'
+export {default as Figma} from './images/technologies/figma.svg'
+export {default as AfterEffects} from './images/technologies/after-effects.svg'
+export {default as PostgreSQL} from './images/technologies/postgresql.svg'
+export {default as Redis} from './images/technologies/redis.svg'
+export {default as CPanel} from './images/technologies/cpanel.svg'
+export {default as Django} from './images/technologies/django.svg'
+export {default as Oracle} from './images/technologies/oracle.svg'
+
+

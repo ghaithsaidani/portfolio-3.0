@@ -3,54 +3,63 @@ import React from "react";
 import {Button} from "@/components/ui/button";
 import {Separator} from "@/components/ui/separator";
 import type {ListProps} from "@/types/certificate.ts";
-import {AmazonWebServices, LinuxFoundation, Meta} from "@/const/icons.tsx";
-import {ITSpecialistCloudComputing, ITSpecialistJava} from "@/assets";
+import {
+    CloudFoundations,
+    CloudWebAppBuilderCertificate,
+    IntroToLinux,
+    ITSpecialistCloudComputing,
+    ITSpecialistJava,
+    Meta
+} from "@/assets";
 
 
 const Certificates = ({
                           heading = "Certificates",
                           items = [
                               {
-                                  icon: <LinuxFoundation className={"size-8"}/>,
-                                  title: "Excellence Award",
-                                  category: "Recognition",
-                                  description: "Best in Category Winner.",
-                                  link: "#",
+                                  icon: <img src={IntroToLinux} className={"size-10"}/>,
+                                  title: "The Linux Foundation",
+                                  category: "Issued Oct 11, 2025",
+                                  description: "Introduction to Linux",
+                                  link: "https://www.credly.com/badges/a30a36b4-c77f-41e5-9650-dffc38a0cb32/public_url",
                               },
                               {
-                                  icon: <AmazonWebServices className={"size-8 dark:"}/>,
-                                  title: "Industry Recognition",
-                                  category: "Achievement",
-                                  description: "Outstanding Performance Award.",
-                                  link: "#",
+                                  icon: <img src={CloudWebAppBuilderCertificate} className={"size-12"}/>,
+                                  title: "Amazon Web Services",
+                                  category: "Issued Dec 09, 2024",
+                                  description: "AWS Academy Graduate - Cloud Web Application Builder",
+                                  link: "https://www.credly.com/badges/d1b3d936-f76b-4d55-bdf6-e81565acc8d4/public_url",
                               },
                               {
-                                  icon: <AmazonWebServices className={"size-8 dark:"}/>,
-                                  title: "Industry Recognition",
-                                  category: "Achievement",
-                                  description: "Outstanding Performance Award.",
-                                  link: "#",
+                                  icon: <img src={CloudFoundations} className={"size-12"}/>,
+                                  title: "Amazon Web Services",
+                                  category: "Issued Oct 28, 2024",
+                                  description: "AWS Academy Graduate - Cloud Foundations",
+                                  link: "https://www.credly.com/badges/2725eebe-5bc0-4ca5-ac5c-f00c4a4d0e1e/public_url",
                               },
                               {
-                                  icon: <img src={ITSpecialistCloudComputing} alt={"ITSpecialist Cloud Computing certificate Logo"} className={"size-8"}/>,
-                                  title: "Customer Success",
-                                  category: "Service",
-                                  description: "Top-Rated Solution Provider.",
-                                  link: "#",
+                                  icon: <img src={ITSpecialistCloudComputing}
+                                             alt={"ITSpecialist Cloud Computing certificate Logo"}
+                                             className={"size-10"}/>,
+                                  title: "Information Technology Specialist",
+                                  category: "Issued Mar 8, 2024",
+                                  description: "Cloud Computing",
+                                  link: "https://drive.google.com/file/d/1c-mdY-EEp4gCWOHgZZbgWF6ERi5Pe-RF/view?usp=sharing",
                               },
                               {
-                                  icon: <Meta className={"size-8"}/>,
+                                  icon: <img src={Meta} className={"size-10"}/>,
                                   title: "Global Leadership",
-                                  category: "Management",
-                                  description: "Executive Team of the Year.",
-                                  link: "#",
+                                  category: "Issued Apr 14, 2023",
+                                  description: "Meta Front-End Developer",
+                                  link: "https://www.coursera.org/account/accomplishments/specialization/certificate/QGHFDWY3X79A",
                               },
                               {
-                                  icon: <img src={ITSpecialistJava} alt={"ITSpecialist Java certificate Logo"} className={"size-8"}/>,
-                                  title: "Innovation Prize",
-                                  category: "Technology",
-                                  description: "Breakthrough Solution of the Year.",
-                                  link: "#",
+                                  icon: <img src={ITSpecialistJava} alt={"ITSpecialist Java certificate Logo"}
+                                             className={"size-10"}/>,
+                                  title: "Information Technology Specialist",
+                                  category: "Issued Jan 20, 2023",
+                                  description: "Java",
+                                  link: "https://drive.google.com/file/d/1jAHGMy2RlydqBZeK0FqMVU8qat9AfRzC/view?usp=sharing",
                               }
                           ],
                       }: ListProps) => {
@@ -84,8 +93,9 @@ const Certificates = ({
                                     <a
                                         className="order-3 ml-auto w-fit gap-2 md:order-none"
                                         href={item.link}
+                                        target={"_blank"}
                                     >
-                                        <span>View project</span>
+                                        <span>View certificate</span>
                                         <ArrowRight className="h-4 w-4"/>
                                     </a>
                                 </Button>

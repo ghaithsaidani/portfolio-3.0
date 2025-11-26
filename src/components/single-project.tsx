@@ -2,18 +2,17 @@ import {useEffect, useRef, useState} from "react";
 import {cn} from "@/lib/utils";
 import type {ProjectPageProps} from "@/types/project.ts";
 import {Badge} from "@/components/ui/badge.tsx";
-import {AlignLeft, LinkIcon} from "lucide-react";
+import {AlignLeft} from "lucide-react";
+import {Separator} from "@/components/ui/separator.tsx";
 
 
-
-export function Project({
-                            badge,
-                            title,
-                            link,
-                            description,
-                            image,
-                            sections,
-                        }: ProjectPageProps) {
+export function SingleProject({
+                                  badge,
+                                  title,
+                                  description,
+                                  image,
+                                  sections,
+                              }: ProjectPageProps) {
     const [activeSection, setActiveSection] = useState<string | null>(null);
     const sectionRefs = useRef<Record<string, HTMLElement>>({});
 
@@ -67,15 +66,10 @@ export function Project({
             <div className="container max-w-7xl">
                 <div className="relative grid-cols-3 gap-20 lg:grid">
                     {/* LEFT — CONTENT */}
-                    <div className="lg:col-span-2">
+                    <div className="lg:col-span-2 gap-2">
                         {badge && <Badge variant={"outline"}>{badge}</Badge>}
-                        <div className={"flex items-center gap-5 mt-3"}>
-                            <h1 className="text-3xl font-extrabold">{title}</h1>
-                            {link && <a className={"w-4 h-4"} href={link} target="_blank">
-                                <LinkIcon size={18}/>
-                                </a>
-                            }
-                        </div>
+
+                        <h1 className="text-3xl font-extrabold mt-2 mb-4">{title}</h1>
 
                         <p className="text-muted-foreground mt-2 text-lg">{description}</p>
 
@@ -83,7 +77,7 @@ export function Project({
                             <img
                                 src={image}
                                 alt={title}
-                                className="my-8 aspect-video w-full border rounded-md object-cover"
+                                className="my-8 aspect-video w-full border rounded-2xl object-cover"
                             />
                         )}
 
@@ -94,7 +88,8 @@ export function Project({
                                 ref={(ref) => addSectionRef(id, ref)}
                                 className="prose dark:prose-invert mb-8"
                             >
-                                <h2>{title}</h2>
+                                <h2 className={"!mb-5"}>{title}</h2>
+                                <Separator/>
                                 {content}
                             </section>
                         ))}

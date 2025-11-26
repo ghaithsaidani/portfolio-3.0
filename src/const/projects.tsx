@@ -1,7 +1,7 @@
 import type {ProjectItem} from "@/types/project.ts";
 import {
     AfterEffects,
-    AmanaInsurances,
+    AmanaInsurances, Android,
     Angular,
     ArgoCD,
     Cloud9,
@@ -26,17 +26,17 @@ import {
     MondeEnBouche,
     MongoDB,
     Netlify,
-    NodeJs, Oracle,
+    NodeJs, NodeRed, Oracle,
     PDS,
     Portfolio2,
     PostgreSQL,
-    Prometheus,
+    Prometheus, Python,
     ReactJs,
     Redis,
     SpringBoot,
     Tekton,
     Terraform,
-    Vault,
+    Vault, VotingAppNodeRed,
     XsustainInternship
 } from "@/assets";
 import {AmazonWebServices, Expressjs, Flask, GitHub, MySQL} from "@/const/icons.tsx";
@@ -189,8 +189,7 @@ export const projects: ProjectItem[] = [
     {
         id: "item-3",
         title: "Predictive Maintenance System",
-        summary:
-            "Self-improving algorithms that learn from data patterns to automate complex tasks and make intelligent decisions with minimal human intervention.",
+        summary: "A real-time predictive maintenance platform that analyzes IoT vehicle sensor data to detect anomalies early and prevent equipment failures.",
         url: "/projects/$index",
         params: {index: "3"},
         image: PDS,
@@ -221,66 +220,91 @@ export const projects: ProjectItem[] = [
         id: "item-4",
         title: "Cloud Web App Builder",
         summary:
-            "Advanced forecasting capabilities that analyze historical data to predict future trends and outcomes, helping businesses make data-driven decisions.",
+            "Automated AWS infrastructure that provisions scalable web applications using Terraform, EC2, RDS, and load balancing.",
         url: "/projects/$index",
-        params: {index: "4"},
+        params: { index: "4" },
         image: CloudWebAppBuilder,
         technologies: [
             {
                 icon: AmazonWebServices,
                 url: "https://aws.amazon.com/",
-                label: 'AWS',
+                label: "AWS",
             },
             {
                 icon: Cloud9,
                 url: "https://aws.amazon.com/cloud9/",
-                label: 'Cloud9',
+                label: "Cloud9",
             },
             {
                 icon: Terraform,
                 url: "https://developer.hashicorp.com/terraform",
-                label: 'Terraform',
+                label: "Terraform",
             },
             {
                 icon: MySQL,
                 url: "https://www.mysql.com/",
-                label: 'MySQL',
+                label: "MySQL",
+            },
+        ],
+    },
+    {
+        id: "item-5",
+        title: "Voting App with Node Red",
+        summary:
+            "An IoT-based voting platform using Node-RED and MQTT for real-time vote casting and visualization.",
+        url: "/projects/$index",
+        params: {index: "5"},
+        image: VotingAppNodeRed,
+        technologies: [
+            {
+                icon: Python,
+                url: "https://www.python.org/",
+                label: 'Python',
+            },
+            {
+                icon: Flask,
+                url: "https://flask.palletsprojects.com/en/stable/",
+                label: 'Flask',
+            },
+            {
+                icon: NodeRed,
+                url: "https://nodered.org/",
+                label: 'Node-Red',
             },
         ]
     },
     {
-        id: "item-5",
+        id: "item-6",
         title: "HR Industries Website",
         summary:
-            "Sophisticated AI models inspired by human brain structure, capable of solving complex problems through deep learning and pattern recognition.",
+            "A modern corporate website built with Angular, featuring dynamic content, EmailJS integration, and a fast, secure Netlify deployment.",
         url: "/projects/$index",
-        params: {index: "5"},
+        params: { index: "6" },
         image: HRIndustries,
         technologies: [
             {
                 icon: Angular,
                 url: "https://angular.dev/",
-                label: 'Angular',
+                label: "Angular",
             },
             {
                 icon: EmailJS,
                 url: "https://www.emailjs.com/",
-                label: 'EmailJS',
+                label: "EmailJS",
             },
             {
                 icon: Netlify,
                 url: "https://www.netlify.com/",
-                label: 'Netlify',
-            }
-        ]
+                label: "Netlify",
+            },
+        ],
     },
     {
-        id: "item-6",
+        id: "item-7",
         title: "Smart Menu",
         summary:
-            "Sophisticated AI models inspired by human brain structure, capable of solving complex problems through deep learning and pattern recognition.",
-        url: "/projects/$index",
-        params: {index: "6"},
+            "A full digital restaurant platform enabling online menus, real-time ordering, and a complete management dashboard for products, agents, and revenues.",        url: "/projects/$index",
+        params: {index: "7"},
         image: XsustainInternship,
         technologies: [
             {
@@ -326,12 +350,12 @@ export const projects: ProjectItem[] = [
         ]
     },
     {
-        id: "item-7",
+        id: "item-8",
         title: "Le Monde En Bouche",
         summary:
             "Sophisticated AI models inspired by human brain structure, capable of solving complex problems through deep learning and pattern recognition.",
         url: "/projects/$index",
-        params: {index: "7"},
+        params: {index: "8"},
         image: MondeEnBouche,
         technologies: [
             {
@@ -363,12 +387,12 @@ export const projects: ProjectItem[] = [
         ]
     },
     {
-        id: "item-8",
+        id: "item-9",
         title: "Portfolio 2.0",
         summary:
             "Sophisticated AI models inspired by human brain structure, capable of solving complex problems through deep learning and pattern recognition.",
         url: "/projects/$index",
-        params: {index: "8"},
+        params: {index: "9"},
         image: Portfolio2,
         technologies: [
             {
@@ -394,12 +418,12 @@ export const projects: ProjectItem[] = [
         ]
     },
     {
-        id: "item-9",
-        title: "Insurance Agency Management",
+        id: "item-10",
+        title: "Amana Insurance Management",
         summary:
             "Sophisticated AI models inspired by human brain structure, capable of solving complex problems through deep learning and pattern recognition.",
         url: "/projects/$index",
-        params: {index: "9"},
+        params: {index: "10"},
         image: AmanaInsurances,
         technologies: [
             {
@@ -430,12 +454,12 @@ export const projects: ProjectItem[] = [
         ]
     },
     {
-        id: "item-10",
+        id: "item-11",
         title: "InnERP",
         summary:
             "Sophisticated AI models inspired by human brain structure, capable of solving complex problems through deep learning and pattern recognition.",
         url: "/projects/$index",
-        params: {index: "10"},
+        params: {index: "11"},
         image: ConfledisInternship,
         technologies: [
             {
@@ -456,12 +480,12 @@ export const projects: ProjectItem[] = [
         ]
     },
     {
-        id: "item-11",
+        id: "item-12",
         title: "Hotel Management System",
         summary:
             "Sophisticated AI models inspired by human brain structure, capable of solving complex problems through deep learning and pattern recognition.",
         url: "/projects/$index",
-        params: {index: "11"},
+        params: {index: "12"},
         image: InfogeranceInternship,
         technologies: [
             {
@@ -478,6 +502,11 @@ export const projects: ProjectItem[] = [
                 icon: Oracle,
                 url: "https://www.oracle.com/database/",
                 label: 'OracleDB',
+            },
+            {
+                icon: Android,
+                url: "https://www.android.com/",
+                label: 'Android',
             },
         ]
     },

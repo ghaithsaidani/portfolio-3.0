@@ -48,7 +48,7 @@ const Certificates = ({
                               },
                               {
                                   icon: <img src={Meta} className={"size-10"}/>,
-                                  title: "Global Leadership",
+                                  title: "Meta",
                                   category: "Issued Apr 14, 2023",
                                   description: "Meta Front-End Developer",
                                   link: "https://www.coursera.org/account/accomplishments/specialization/certificate/QGHFDWY3X79A",

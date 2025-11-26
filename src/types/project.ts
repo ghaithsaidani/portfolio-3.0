@@ -26,7 +26,6 @@ interface ProjectSection {
 interface ProjectPageProps {
     badge?: string;
     title: string;
-    link?: string,
     description: string;
     image?: string;
     sections: ProjectSection[];

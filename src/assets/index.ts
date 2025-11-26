@@ -26,9 +26,10 @@ export {default as LJFB} from './images/education/ljfb.png'
 // projects
 export {default as Kubepilot} from './images/projects/kubepilot.png'
 export {default as PDS} from './images/projects/pds.png'
+export {default as VotingAppNodeRed} from './images/projects/voting-app-node-red.png'
 export {default as Portfolio2} from './images/projects/portfolio-2.0.png'
 export {default as MondeEnBouche} from './images/projects/monde-en-bouche.png'
-export {default as CloudWebAppBuilder} from './images/projects/cloud-web-app-builder.png'
+export {default as CloudWebAppBuilder} from './images/projects/cloud-web-app-builder.jpg'
 export {default as MicroservicesProvision} from './images/projects/microservices-provisioning.png'
 export {default as ConfledisInternship} from './images/projects/confledis-internship.png'
 export {default as XsustainInternship} from './images/projects/xsustain-internship.png'
@@ -37,10 +38,13 @@ export {default as AmanaInsurances} from './images/projects/amana-insurances.png
 export {default as InfogeranceInternship} from './images/projects/infogérance-internship.png'
 
 //diagrams
-export {default as KubePilotDetailedArchitecture} from './images/projects/diagrams/diagrams-detailed architecture diagram.svg'
+export {default as KubePilotDetailedArchitecture} from './images/projects/diagrams/kubepilot-detailed-architecture.webp'
 export {default as MicroservicesProvisionCICD} from './images/projects/diagrams/CICD Pipeline.png'
 export {default as MicroservicesProvisionClusterArchitecture} from './images/projects/diagrams/Kubernetes cluster architecture.png'
 export {default as MicroservicesProvisionAzureArchitecture} from './images/projects/diagrams/Microsoft Azure architecture.png'
+export {default as PDSDetailedArchitectureDiagram} from './images/projects/diagrams/pds-architecture-diagram.png'
+export {default as CloudWebAppBuilderArchitecture} from './images/projects/diagrams/cloud-app-builder-aws-architecture.png'
+export {default as VotingAppNodeRedSequenceDiagram} from './images/projects/diagrams/voting-app-node-red-sequence-diagram.png'
 
 
 //technologies
@@ -52,7 +56,6 @@ export {default as Gitlab} from './images/technologies/gitlab.svg'
 export {default as Loki} from './images/technologies/grafana-loki.svg'
 export {default as Keycloak} from './images/technologies/keycloak.svg'
 export {default as Kubernetes} from './images/technologies/kubernetes.svg'
-export {default as LinuxFoundation} from './images/technologies/linux-foundations.svg'
 export {default as Meta} from './images/technologies/meta.svg'
 export {default as Prometheus} from './images/technologies/prometheus.svg'
 export {default as Tekton} from './images/technologies/tekton.svg'
@@ -76,5 +79,6 @@ export {default as Redis} from './images/technologies/redis.svg'
 export {default as CPanel} from './images/technologies/cpanel.svg'
 export {default as Django} from './images/technologies/django.svg'
 export {default as Oracle} from './images/technologies/oracle.svg'
-
-
+export {default as NodeRed} from './images/technologies/node-red.svg'
+export {default as Python} from './images/technologies/python.svg'
+export {default as Android} from './images/technologies/android.svg'

@@ -1,4 +1,4 @@
-import {ArrowLeft, ArrowRight, ArrowUpRight} from "lucide-react";
+import {ArrowLeft, ArrowRight} from "lucide-react";
 import {useEffect, useState} from "react";
 
 import {Button} from "@/components/ui/button";
@@ -116,7 +116,7 @@ const Projects = ({
                                                 className="flex items-center text-sm"
                                             >
                                                 Read more{" "}
-                                                <ArrowUpRight
+                                                <ArrowRight
                                                     className="ml-2 size-5 transition-transform group-hover:translate-x-1"/>
                                             </Link>
                                         </div>

@@ -1,11 +1,14 @@
 import {createRootRoute, Outlet} from "@tanstack/react-router";
 import {ThemeProvider} from "@/providers/theme-provider.tsx";
+import {AnimatedNavbar} from "@/components/animated-navbar.tsx";
 
 
 const RootLayout = () => (
     <ThemeProvider defaultTheme="dark" storageKey="vite-ui-theme">
-        <Outlet/>
-        {/*<TanStackRouterDevtools />*/}
+        <AnimatedNavbar>
+            <Outlet/>
+            {/*<TanStackRouterDevtools />*/}
+        </AnimatedNavbar>
     </ThemeProvider>
 )
 

@@ -1,5 +1,4 @@
 import {createFileRoute} from '@tanstack/react-router'
-import {AnimatedNavbar} from "@/components/animated-navbar.tsx";
 import {Hero} from "@/components/hero.tsx";
 import {Experience} from "@/components/experience.tsx";
 import {Certificates} from "@/components/certificates.tsx";
@@ -16,22 +15,19 @@ export const Route = createFileRoute('/')({
 
 function Index() {
     return (
+        <main>
+            <Hero/>
+            <Experience/>
+            <Education/>
+            <Projects/>
+            <Skills/>
+            <Certificates/>
+            <Logos/>
 
-        <AnimatedNavbar>
-            <main>
-                <Hero/>
-                <Experience/>
-                <Education/>
-                <Projects/>
-                <Skills/>
-                <Certificates/>
-                <Logos/>
-
-                {/*<Content/>*/}
-                <Contact/>
-                <Footer/>
-                {/*<Content1/>*/}
-            </main>
-        </AnimatedNavbar>
+            {/*<Content/>*/}
+            <Contact/>
+            <Footer/>
+            {/*<Content1/>*/}
+        </main>
     )
 }

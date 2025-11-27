@@ -26,6 +26,7 @@ export {default as LJFB} from './images/education/ljfb.png'
 // projects
 export {default as Kubepilot} from './images/projects/kubepilot.png'
 export {default as PDS} from './images/projects/pds.png'
+export {default as Homelab} from './images/projects/homelab.webp'
 export {default as VotingAppNodeRed} from './images/projects/voting-app-node-red.png'
 export {default as Portfolio2} from './images/projects/portfolio-2.0.png'
 export {default as MondeEnBouche} from './images/projects/monde-en-bouche.png'
@@ -45,6 +46,11 @@ export {default as MicroservicesProvisionAzureArchitecture} from './images/proje
 export {default as PDSDetailedArchitectureDiagram} from './images/projects/diagrams/pds-architecture-diagram.png'
 export {default as CloudWebAppBuilderArchitecture} from './images/projects/diagrams/cloud-app-builder-aws-architecture.png'
 export {default as VotingAppNodeRedSequenceDiagram} from './images/projects/diagrams/voting-app-node-red-sequence-diagram.png'
+export {default as SmartMenuKubernetesClusterArchitecture} from './images/projects/diagrams/smart-menu-kubernetes-cluster-architecture.png'
+export {default as SmartMenuAzureArchitecture} from './images/projects/diagrams/smart-menu-azure-architecture.png'
+export {default as MondeEnBoucheAzureArchitecture} from './images/projects/diagrams/monde-en-bouche-azure-infra-architecture.png'
+export {default as MondeEnBoucheCICDWorkflow} from './images/projects/diagrams/monde-en-bouche-workflow-diagram.png'
+export {default as InnERPUseCaseDiagram} from './images/projects/diagrams/innerp-use-case-diagram.jpg'
 
 
 //technologies
@@ -82,3 +88,6 @@ export {default as Oracle} from './images/technologies/oracle.svg'
 export {default as NodeRed} from './images/technologies/node-red.svg'
 export {default as Python} from './images/technologies/python.svg'
 export {default as Android} from './images/technologies/android.svg'
+export {default as Ansible} from './images/technologies/ansible.svg'
+export {default as Vagrant} from './images/technologies/vagrant.svg'
+export {default as Bash} from './images/technologies/bash.svg'

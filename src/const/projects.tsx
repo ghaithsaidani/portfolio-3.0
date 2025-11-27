@@ -2,8 +2,8 @@ import type {ProjectItem} from "@/types/project.ts";
 import {
     AfterEffects,
     AmanaInsurances, Android,
-    Angular,
-    ArgoCD,
+    Angular, Ansible,
+    ArgoCD, Bash,
     Cloud9,
     CloudWebAppBuilder,
     ConfledisInternship,
@@ -13,7 +13,7 @@ import {
     GithubActions,
     Gitlab,
     Grafana,
-    Helm,
+    Helm, Homelab,
     HRIndustries,
     InfogeranceInternship,
     Jenkins,
@@ -35,11 +35,11 @@ import {
     Redis,
     SpringBoot,
     Tekton,
-    Terraform,
+    Terraform, Vagrant,
     Vault, VotingAppNodeRed,
     XsustainInternship
 } from "@/assets";
-import {AmazonWebServices, Expressjs, Flask, GitHub, MySQL} from "@/const/icons.tsx";
+import {AmazonWebServices, Expressjs, Flask, GitHub, MySQL, Qemu} from "@/const/icons.tsx";
 
 
 export const projects: ProjectItem[] = [
@@ -70,7 +70,7 @@ export const projects: ProjectItem[] = [
             {
                 icon: Redis,
                 url: "https://redis.io/",
-                label: 'PostgreSQL',
+                label: 'Redis',
             },
             {
                 icon: Kubernetes,
@@ -121,11 +121,47 @@ export const projects: ProjectItem[] = [
     },
     {
         id: "item-2",
+        title: "Homelab",
+        summary:
+            "Automated HomeLab deployment that boots 3 KVM VMs via Vagrant and provisions a 3-node Kubernetes cluster (1 master, 2 workers) using Ansible.",
+        url: "/projects/$index",
+        params: {index: "2"},
+        image: Homelab,
+        technologies: [
+            {
+                icon: Ansible,
+                url: "https://docs.ansible.com/",
+                label: 'Ansible',
+            },
+            {
+                icon: Bash,
+                url: "https://www.gnu.org/software/bash/",
+                label: 'Bash',
+            },
+            {
+                icon: Vagrant,
+                url: "https://developer.hashicorp.com/vagrant",
+                label: 'Vagrant',
+            },
+            {
+                icon: Qemu,
+                url: "https://www.qemu.org/",
+                label: 'Qemu',
+            },
+            {
+                icon: Kubernetes,
+                url: "https://kubernetes.io/",
+                label: 'Kubernetes',
+            },
+        ]
+    },
+    {
+        id: "item-3",
         title: "Microservices Deployment",
         summary:
             "Automated deployment pipeline and cloud infrastructure provisioning for microservices running on Kubernetes.",
         url: "/projects/$index",
-        params: {index: "2"},
+        params: {index: "3"},
         image: MicroservicesProvision,
         technologies: [
             {
@@ -187,11 +223,11 @@ export const projects: ProjectItem[] = [
         ]
     },
     {
-        id: "item-3",
+        id: "item-4",
         title: "Predictive Maintenance System",
         summary: "A real-time predictive maintenance platform that analyzes IoT vehicle sensor data to detect anomalies early and prevent equipment failures.",
         url: "/projects/$index",
-        params: {index: "3"},
+        params: {index: "4"},
         image: PDS,
         technologies: [
             {
@@ -217,12 +253,12 @@ export const projects: ProjectItem[] = [
         ]
     },
     {
-        id: "item-4",
+        id: "item-5",
         title: "Cloud Web App Builder",
         summary:
             "Automated AWS infrastructure that provisions scalable web applications using Terraform, EC2, RDS, and load balancing.",
         url: "/projects/$index",
-        params: { index: "4" },
+        params: { index: "5" },
         image: CloudWebAppBuilder,
         technologies: [
             {
@@ -248,12 +284,12 @@ export const projects: ProjectItem[] = [
         ],
     },
     {
-        id: "item-5",
+        id: "item-6",
         title: "Voting App with Node Red",
         summary:
             "An IoT-based voting platform using Node-RED and MQTT for real-time vote casting and visualization.",
         url: "/projects/$index",
-        params: {index: "5"},
+        params: {index: "6"},
         image: VotingAppNodeRed,
         technologies: [
             {
@@ -274,12 +310,12 @@ export const projects: ProjectItem[] = [
         ]
     },
     {
-        id: "item-6",
+        id: "item-7",
         title: "HR Industries Website",
         summary:
             "A modern corporate website built with Angular, featuring dynamic content, EmailJS integration, and a fast, secure Netlify deployment.",
         url: "/projects/$index",
-        params: { index: "6" },
+        params: { index: "7" },
         image: HRIndustries,
         technologies: [
             {
@@ -300,11 +336,12 @@ export const projects: ProjectItem[] = [
         ],
     },
     {
-        id: "item-7",
+        id: "item-8",
         title: "Smart Menu",
         summary:
-            "A full digital restaurant platform enabling online menus, real-time ordering, and a complete management dashboard for products, agents, and revenues.",        url: "/projects/$index",
-        params: {index: "7"},
+            "A full digital restaurant platform enabling online menus, real-time ordering, and a complete management dashboard for products, agents, and revenues.",
+        url: "/projects/$index",
+        params: {index: "8"},
         image: XsustainInternship,
         technologies: [
             {
@@ -347,15 +384,20 @@ export const projects: ProjectItem[] = [
                 url: "https://www.jenkins.io/",
                 label: 'Jenkins',
             },
+            {
+                icon: ArgoCD,
+                url: "https://argo-cd.readthedocs.io/en/stable/",
+                label: 'ArgoCD',
+            },
         ]
     },
     {
-        id: "item-8",
+        id: "item-9",
         title: "Le Monde En Bouche",
         summary:
-            "Sophisticated AI models inspired by human brain structure, capable of solving complex problems through deep learning and pattern recognition.",
+            "A static ReactJS website showcasing traditional dishes, integrated with automated Azure provisioning and CI/CD pipelines.",
         url: "/projects/$index",
-        params: {index: "8"},
+        params: {index: "9"},
         image: MondeEnBouche,
         technologies: [
             {
@@ -387,12 +429,12 @@ export const projects: ProjectItem[] = [
         ]
     },
     {
-        id: "item-9",
+        id: "item-10",
         title: "Portfolio 2.0",
         summary:
-            "Sophisticated AI models inspired by human brain structure, capable of solving complex problems through deep learning and pattern recognition.",
+            "Personal developer portfolio showcasing skills, projects, and background. Built with modern web technologies and deployed for a sleek, responsive user experience.",
         url: "/projects/$index",
-        params: {index: "9"},
+        params: {index: "10"},
         image: Portfolio2,
         technologies: [
             {
@@ -418,12 +460,12 @@ export const projects: ProjectItem[] = [
         ]
     },
     {
-        id: "item-10",
+        id: "item-11",
         title: "Amana Insurance Management",
         summary:
-            "Sophisticated AI models inspired by human brain structure, capable of solving complex problems through deep learning and pattern recognition.",
+            "Insurance agency management system developed for a Libyan insurance company, improving workflow efficiency and reliability with modern web technologies.",
         url: "/projects/$index",
-        params: {index: "10"},
+        params: {index: "11"},
         image: AmanaInsurances,
         technologies: [
             {
@@ -454,12 +496,12 @@ export const projects: ProjectItem[] = [
         ]
     },
     {
-        id: "item-11",
+        id: "item-12",
         title: "InnERP",
         summary:
-            "Sophisticated AI models inspired by human brain structure, capable of solving complex problems through deep learning and pattern recognition.",
+            "Finance web application enhanced and deployed during a remote internship at Confledis SAS, improving reliability and scalability using modern web technologies.",
         url: "/projects/$index",
-        params: {index: "11"},
+        params: {index: "12"},
         image: ConfledisInternship,
         technologies: [
             {
@@ -480,12 +522,12 @@ export const projects: ProjectItem[] = [
         ]
     },
     {
-        id: "item-12",
+        id: "item-13",
         title: "Hotel Management System",
         summary:
-            "Sophisticated AI models inspired by human brain structure, capable of solving complex problems through deep learning and pattern recognition.",
+            "Full web & mobile solution developed as my Bachelor's final project, enabling efficient management of hotel maintenance and complaints.",
         url: "/projects/$index",
-        params: {index: "12"},
+        params: {index: "13"},
         image: InfogeranceInternship,
         technologies: [
             {

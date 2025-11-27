@@ -3,8 +3,10 @@ import {
     CloudWebAppBuilder,
     CloudWebAppBuilderArchitecture,
     ConfledisInternship,
+    Homelab,
     HRIndustries,
     InfogeranceInternship,
+    InnERPUseCaseDiagram,
     Kubepilot,
     KubepilotDemo,
     KubePilotDetailedArchitecture,
@@ -13,15 +15,20 @@ import {
     MicroservicesProvisionCICD,
     MicroservicesProvisionClusterArchitecture,
     MondeEnBouche,
+    MondeEnBoucheAzureArchitecture,
+    MondeEnBoucheCICDWorkflow,
     PDS,
     PDSDetailedArchitectureDiagram,
     Portfolio2,
+    SmartMenuAzureArchitecture,
+    SmartMenuKubernetesClusterArchitecture,
     VotingAppNodeRed,
     VotingAppNodeRedSequenceDiagram,
     XsustainInternship
 } from "@/assets";
 import type {ProjectPageProps} from "@/types/project.ts";
 import {HeroVideoDialog} from "@/components/ui/hero-video-dialog.tsx";
+import {Badge} from "@/components/ui/badge.tsx";
 
 export const singleProjects: ProjectPageProps[] = [
     {
@@ -138,6 +145,124 @@ export const singleProjects: ProjectPageProps[] = [
                 ),
             },
         ]
+    },
+    {
+        badge: "🔧 Personal Project",
+        title: "HomeLab — KVM VM Automation & Kubernetes Provisioning",
+        description:
+            "Automates creation of a 3-node Kubernetes cluster by launching KVM virtual machines with Vagrant and performing full provisioning and configuration with Ansible.",
+        image: Homelab,
+        sections: [
+            {
+                id: "overview",
+                title: "📘 Overview",
+                content: (
+                    <p>
+                        This HomeLab project automates the end-to-end setup of a local Kubernetes environment.
+                        Vagrant is used to create three KVM virtual machines, then Ansible provisions and configures
+                        them
+                        into a Kubernetes cluster composed of one master node and two worker nodes. The result is a
+                        reproducible, local cluster ideal for testing, learning, and experimenting with cloud-native
+                        tooling.
+                    </p>
+                ),
+            },
+            {
+                id: "features",
+                title: "✨ Key Features",
+                content: (
+                    <ul>
+                        <li>Automated VM creation on KVM using Vagrant</li>
+                        <li>Full provisioning and idempotent configuration with Ansible</li>
+                        <li>Automatic Kubernetes bootstrap: 1 master + 2 workers</li>
+                        <li>Reproducible environment for CI, testing, and learning Kubernetes</li>
+                        <li>Simple teardown and rebuild with Vagrant commands</li>
+                    </ul>
+                ),
+            },
+            {
+                id: "howitworks",
+                title: "⚙️ How it works",
+                content: (
+                    <ol>
+                        <li>Run `vagrant up` to create three KVM virtual machines from configured boxes.</li>
+                        <li>Vagrant triggers Ansible playbooks as the provisioner.</li>
+                        <li>Ansible installs container runtime, configures networking, and bootstraps Kubernetes.</li>
+                        <li>The master node initializes the cluster (kubeadm) and generates the join token.</li>
+                        <li>Worker nodes join the cluster automatically, producing a ready 3-node Kubernetes
+                            environment.
+                        </li>
+                    </ol>
+                ),
+            },
+            {
+                id: "technologies",
+                title: "🛠️ Technologies Used",
+                content: (
+                    <table>
+                        <thead>
+                        <tr>
+                            <th>Category</th>
+                            <th>Tools</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <tr className="even:bg-muted m-0 border-t p-0">
+                            <td>VM Orchestration</td>
+                            <td>Vagrant, KVM/QEMU</td>
+                        </tr>
+                        <tr className="even:bg-muted m-0 border-t p-0">
+                            <td>Provisioning</td>
+                            <td>Ansible</td>
+                        </tr>
+                        <tr className="even:bg-muted m-0 border-t p-0">
+                            <td>Container Orchestration</td>
+                            <td>Kubernetes (kubeadm)</td>
+                        </tr>
+                        <tr className="even:bg-muted m-0 border-t p-0">
+                            <td>OS / Tools</td>
+                            <td>Linux, systemd, Docker/containerd</td>
+                        </tr>
+                        </tbody>
+                    </table>
+                ),
+            },
+            {
+                id: "architecture",
+                title: "🏗️ Architecture",
+                content: (
+                    <article>
+                        <p>
+                            Architecture: a single hypervisor host runs three KVM virtual machines provisioned by
+                            Vagrant.
+                            Ansible configures each VM and bootstraps Kubernetes using kubeadm. The cluster topology is:
+                        </p>
+                        <ul>
+                            <li>Master — control plane (API server, controller, scheduler, etcd)</li>
+                            <li>Worker-1 — workload node</li>
+                            <li>Worker-2 — workload node</li>
+                        </ul>
+                    </article>
+                ),
+            },
+            {
+                id: "repository",
+                title: "📂 Repository & Source Code",
+                content: (
+                    <p>
+                        Full automation scripts and documentation are available on GitHub: {" "}
+                        <a
+                            href="https://github.com/ghaithsaidani/homelab"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="text-primary underline"
+                        >
+                            Homelab Repository
+                        </a>
+                    </p>
+                ),
+            },
+        ],
     },
     {
         badge: "♾️ DevOps Project",
@@ -762,8 +887,8 @@ export const singleProjects: ProjectPageProps[] = [
                         </tr>
 
                         <tr className="even:bg-muted m-0 border-t p-0">
-                            <td>CI/CD</td>
-                            <td>Jenkins</td>
+                            <td>DevOps</td>
+                            <td>Jenkins, ArgoCD</td>
                         </tr>
 
                         <tr className="even:bg-muted m-0 border-t p-0">
@@ -796,6 +921,37 @@ export const singleProjects: ProjectPageProps[] = [
                             and CI/CD workflow, while frontend and backend codebases are
                             maintained privately for security and commercial reasons.
                         </p>
+                        <ol>
+                            <li>
+                                <h3>Microsoft Azure Infrastructure Architecture</h3>
+                                <p>The system architecture is built on Microsoft Azure, providing a scalable and
+                                    flexible cloud infrastructure tailored to the application’s needs. Azure Kubernetes
+                                    Service (AKS) serves as the core platform, managing container deployments
+                                    efficiently with high availability across multiple nodes. Docker images are securely
+                                    stored in Azure Container Registry (ACR), enabling version control and smooth
+                                    automated deployments. Additionally, a virtual machine hosts monitoring tools like
+                                    Prometheus and Grafana, while a dedicated Virtual Network (VNet) and Network
+                                    Security Group (NSG) ensure secure traffic management and infrastructure
+                                    isolation.</p>
+                                <img src={SmartMenuAzureArchitecture}
+                                     alt={"Smart Menu Microsoft Azure Infrastructure Architecture"}/>
+                            </li>
+
+                            <li>
+                                <h3>Kubernetes cluster Architecture</h3>
+                                <p>The Kubernetes infrastructure is organized to efficiently support the application and
+                                    its associated services. Multiple namespaces are used for modular resource
+                                    management, ensuring clarity and separation of concerns.
+                                    The <Badge>default</Badge> namespace hosts
+                                    the main application pods and exposes services via LoadBalancers or Ingresses.
+                                    Additional namespaces manage DevOps tools <Badge>devops-tools</Badge>, SSL/TLS
+                                    certificates <Badge>cert-manager</Badge>, and the NGINX Ingress
+                                    controller <Badge>ingress-nginx</Badge> to handle routing,
+                                    access rules, and load balancing.</p>
+                                <img src={SmartMenuKubernetesClusterArchitecture}
+                                     alt={"Smart Menu Kubernetes Cluster Architecture"}/>
+                            </li>
+                        </ol>
                     </article>
                 ),
             },
@@ -813,7 +969,7 @@ export const singleProjects: ProjectPageProps[] = [
                     </ul>
                 ),
             },
-            {
+            /*{
                 id: "confidentiality",
                 title: "🔒 Confidentiality Notice",
                 content: (
@@ -824,7 +980,7 @@ export const singleProjects: ProjectPageProps[] = [
                         because it is done on my own cloud resources.
                     </p>
                 ),
-            },
+            },*/
             {
                 id: "repo",
                 title: "📦 Public Deployment Repository",
@@ -845,41 +1001,464 @@ export const singleProjects: ProjectPageProps[] = [
         ],
     },
     {
-        badge: "End of Year Project",
+        badge: "🎓 End of Year Project",
         title: "Le Monde En Bouche",
-        description: "A unified Kubernetes automation platform streamlining deployments, observability, and CI/CD.",
+        description:
+            "Le Monde En Bouche is a ReactJS static website that presents traditional dishes and recipes. The project features automated provisioning of Azure infrastructure and a fully integrated CI/CD workflow to deploy the website efficiently and securely.",
         image: MondeEnBouche,
-        sections: []
+        sections: [
+            {
+                id: "overview",
+                title: "📘 Overview",
+                content: (
+                    <p>
+                        Le Monde En Bouche is a static website built with ReactJS to showcase traditional dishes,
+                        recipes, and restaurants. The project focuses on frontend development while automating
+                        cloud provisioning and deployment using Azure, Terraform, Docker, and GitHub Actions.
+                    </p>
+                ),
+            },
+            {
+                id: "features",
+                title: "✨ Key Features",
+                content: (
+                    <ul>
+                        <li>ReactJS frontend for exploring dishes and recipes</li>
+                        <li>Automated Azure infrastructure provisioning with Terraform</li>
+                        <li>Dockerized application for consistent deployments</li>
+                        <li>CI/CD pipelines with GitHub Actions for automated build and deployment</li>
+                        <li>Virtual Machines hosted on Azure with networking and firewall configurations</li>
+                    </ul>
+                ),
+            },
+            {
+                id: "technologies",
+                title: "🛠️ Technologies Used",
+                content: (
+                    <table>
+                        <thead>
+                        <tr>
+                            <th>Category</th>
+                            <th>Tools</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <tr className="even:bg-muted m-0 border-t p-0">
+                            <td>Frontend</td>
+                            <td>ReactJS, Tailwind CSS</td>
+                        </tr>
+                        <tr className="even:bg-muted m-0 border-t p-0">
+                            <td>Infrastructure</td>
+                            <td>Azure, Terraform, VMs, Virtual Networks</td>
+                        </tr>
+                        <tr className="even:bg-muted m-0 border-t p-0">
+                            <td>CI/CD</td>
+                            <td>GitHub Actions</td>
+                        </tr>
+                        <tr className="even:bg-muted m-0 border-t p-0">
+                            <td>Containerization</td>
+                            <td>Docker</td>
+                        </tr>
+                        </tbody>
+                    </table>
+                ),
+            },
+            {
+                id: "architecture",
+                title: "🏗️ Architecture",
+                content: (
+                    <article>
+                        <p>
+                            The project uses a modular architecture with ReactJS for the frontend and Docker containers
+                            deployed on Azure Virtual Machines. Terraform automates the creation of the infrastructure,
+                            including VMs, Virtual Networks, and firewall rules. CI/CD pipelines built with GitHub
+                            Actions
+                            automatically deploy the latest changes whenever code is pushed to the repository.
+                        </p>
+                        <img src={MondeEnBoucheAzureArchitecture}
+                             alt="Le Monde En Bouche Azure Infrastructure Diagram"/>
+                    </article>
+                ),
+            },
+            {
+                id: "cicd",
+                title: "🔁 CI/CD Workflow",
+                content: (
+                    <article>
+                        <p>
+                            The CI/CD pipeline is fully automated using GitHub Actions. Each commit triggers the
+                            build of Docker images, tests the ReactJS application, provisions or updates Azure
+                            infrastructure via Terraform, and deploys the application to Azure Virtual Machines.
+                        </p>
+                        <img src={MondeEnBoucheCICDWorkflow} alt="Le Monde En Bouche CI/CD Diagram"/>
+                    </article>
+                ),
+            },
+            {
+                id: "repository",
+                title: "📂 Repository & Source Code",
+                content: (
+                    <p>
+                        The complete source code, infrastructure configuration, and CI/CD pipeline are publicly
+                        available on GitHub:{" "}
+                        <a
+                            href="https://github.com/ghaithsaidani/monde-en-bouche-auto-provisioning"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="text-primary underline"
+                        >
+                            Le Monde En Bouche Repository
+                        </a>
+                    </p>
+                ),
+            },
+        ]
     },
     {
-        badge: "Personal Project",
+        badge: "🌐 Personal Portfolio",
         title: "Portfolio 2.0",
-        description: "A unified Kubernetes automation platform streamlining deployments, observability, and CI/CD.",
+        description:
+            "My personal website to present my skills, background, and projects — designed to be clean, responsive and modern, showcasing my developer journey.",
         image: Portfolio2,
-        sections: []
+        sections: [
+            {
+                id: "overview",
+                title: "📘 Overview",
+                content: (
+                    <p>
+                        Portfolio 2.0 is a personal website created to highlight my skills, education, projects and
+                        contact information.
+                        It acts as a central hub representing my professional profile, combining design, responsiveness
+                        and modern front-end practices.
+                    </p>
+                ),
+            },
+            {
+                id: "features",
+                title: "✨ Key Features",
+                content: (
+                    <ul>
+                        <li>Responsive layout for desktop and mobile devices</li>
+                        <li>Clear sections: About Me, Skills, Projects, Contact</li>
+                        <li>Easy navigation and smooth scrolling between sections</li>
+                        <li>Showcase of projects with links to repositories and live demos</li>
+                        <li>Clean design using Tailwind CSS and modern UI conventions</li>
+                    </ul>
+                ),
+            },
+            {
+                id: "technologies",
+                title: "🛠️ Technologies Used",
+                content: (
+                    <table>
+                        <thead>
+                        <tr>
+                            <th>Category</th>
+                            <th>Tools</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <tr className="even:bg-muted m-0 border-t p-0">
+                            <td>Frontend</td>
+                            <td>ReactJS, TypeScript, Tailwind CSS</td>
+                        </tr>
+                        <tr className="even:bg-muted m-0 border-t p-0">
+                            <td>Hosting / Deployment</td>
+                            <td>Netlify / GitHub Pages</td>
+                        </tr>
+                        <tr className="even:bg-muted m-0 border-t p-0">
+                            <td>Version Control</td>
+                            <td>GitHub</td>
+                        </tr>
+                        </tbody>
+                    </table>
+                ),
+            },
+            {
+                id: "structure",
+                title: "🧩 Structure & Organization",
+                content: (
+                    <p>
+                        The portfolio is organized into clear, modular sections (About, Skills, Projects, Contact) to
+                        provide a seamless user experience.
+                        Code is structured for readability and maintainability, making it easy to add new projects or
+                        update content over time.
+                    </p>
+                ),
+            },
+            {
+                id: "demo",
+                title: "🌐 Live Website",
+                content: (
+                    <p>
+                        Visit my official old Portfolio: {" "}
+                        <a
+                            href="https://ghaithsaidani.netlify.app/"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="text-primary underline"
+                        >
+                            Website
+                        </a>
+                    </p>
+                ),
+            },
+        ],
     },
     {
-        badge: "Freelance Project",
-        title: "Amana Insurance Management",
-        //link: "https://github.com/ghaithsaidani/portfolio-2.0",
-        description: "A unified Kubernetes automation platform streamlining deployments, observability, and CI/CD.",
+        badge: "🏢 Freelance Project",
+        title: "Amana Insurance",
+        description:
+            "A comprehensive insurance management system built for a Libyan insurance agency to improve efficiency, streamline workflow, and ensure reliable uptime.",
         image: AmanaInsurances,
-        sections: []
+        sections: [
+            {
+                id: "overview",
+                title: "📘 Overview",
+                content: (
+                    <p>
+                        Amana Insurance is a custom-built management system designed to streamline insurance agency
+                        operations.
+                        It allows agents to manage policies, clients, and claims efficiently, resulting in a 70%
+                        improvement in workflow efficiency.
+                    </p>
+                ),
+            },
+            {
+                id: "features",
+                title: "✨ Key Features",
+                content: (
+                    <ul>
+                        <li>Comprehensive management of clients, policies, and insurance claims</li>
+                        <li>Automated workflow processes to reduce manual work and errors</li>
+                        <li>Reliable deployment on a Linux server using Nginx and PM2</li>
+                        <li>Secure backend with Node.js, Express, and MySQL</li>
+                    </ul>
+                ),
+            },
+            {
+                id: "technologies",
+                title: "🛠️ Technologies Used",
+                content: (
+                    <table>
+                        <thead>
+                        <tr>
+                            <th>Category</th>
+                            <th>Tools</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <tr className="even:bg-muted m-0 border-t p-0">
+                            <td>Frontend</td>
+                            <td>Angular</td>
+                        </tr>
+                        <tr className="even:bg-muted m-0 border-t p-0">
+                            <td>Backend</td>
+                            <td>Node.js, Express</td>
+                        </tr>
+                        <tr className="even:bg-muted m-0 border-t p-0">
+                            <td>Database</td>
+                            <td>MySQL</td>
+                        </tr>
+                        <tr className="even:bg-muted m-0 border-t p-0">
+                            <td>Deployment / Server</td>
+                            <td>Nginx, PM2, Linux (WHM / CPanel)</td>
+                        </tr>
+                        </tbody>
+                    </table>
+                ),
+            },
+            {
+                id: "impact",
+                title: "📈 Impact & Outcome",
+                content: (
+                    <p>
+                        The system increased operational efficiency by 70%, reduced errors in insurance management
+                        processes, and provided a reliable, maintainable solution for the agency.
+                    </p>
+                ),
+            },
+            {
+                id: "repository",
+                title: "📂 Repository & Source Code",
+                content: (
+                    <p>
+                        The source code for this project is confidential due to client privacy agreements.
+                        The system is deployed on the agency’s private Linux server for internal use.
+                    </p>
+                ),
+            },
+        ],
     },
     {
-        badge: "Summer Internship",
-        title: "InnERP",
-        //link: "https://github.com/ghaithsaidani/portfolio-2.0",
-        description: "A unified Kubernetes automation platform streamlining deployments, observability, and CI/CD.",
+        badge: "💼 Internship Project",
+        title: "Confledis Finance Platform",
+        description:
+            "During my software development internship at Confledis SAS, I contributed to enhancing and deploying a finance web application, improving its reliability, scalability, and user experience.",
         image: ConfledisInternship,
-        sections: []
+        sections: [
+            {
+                id: "overview",
+                title: "📘 Overview",
+                content: (
+                    <p>
+                        The Confledis Finance Platform is a web application for financial management.
+                        During the internship, I focused on debugging, extending features, and ensuring the system’s
+                        stability and scalability.
+                    </p>
+                ),
+            },
+            {
+                id: "features",
+                title: "✨ Key Contributions",
+                content: (
+                    <ul>
+                        <li>Debugged and extended features in a ReactJS & Django finance app, improving reliability and
+                            user retention
+                        </li>
+                        <li>Containerized and deployed the platform on AWS EC2 using Docker</li>
+                        <li>Improved uptime, scalability, and maintainability of the application</li>
+                        <li>Collaborated remotely with the team to ensure smooth feature delivery and bug fixes</li>
+                    </ul>
+                ),
+            },
+            {
+                id: "technologies",
+                title: "🛠️ Technologies Used",
+                content: (
+                    <table>
+                        <thead>
+                        <tr>
+                            <th>Category</th>
+                            <th>Tools</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <tr className="even:bg-muted m-0 border-t p-0">
+                            <td>Frontend</td>
+                            <td>ReactJS</td>
+                        </tr>
+                        <tr className="even:bg-muted m-0 border-t p-0">
+                            <td>Backend</td>
+                            <td>Django, PostgreSQL</td>
+                        </tr>
+                        <tr className="even:bg-muted m-0 border-t p-0">
+                            <td>Deployment</td>
+                            <td>AWS EC2, Docker</td>
+                        </tr>
+                        </tbody>
+                    </table>
+                ),
+            },
+            {
+                id: "diagram",
+                title: "📊 Use Case Diagram",
+                content: (
+                    <article>
+                        <p>
+                            Although the source code is confidential, here’s a high-level use case diagram showing the
+                            system’s main actors and functionalities:
+                        </p>
+                        <img src={InnERPUseCaseDiagram} alt={"InnERP use case diagram"}/>
+                    </article>
+                ),
+            },
+            {
+                id: "repository",
+                title: "📂 Repository & Source Code",
+                content: (
+                    <p>
+                        The code is confidential due to the client agreement, but key contributions and deployment work
+                        are highlighted above.
+                    </p>
+                ),
+            },
+        ],
     },
     {
-        badge: "End Of Study Internship (Bachelor)",
-        title: "Hotel Management System",
-        description: "A unified Kubernetes automation platform streamlining deployments, observability, and CI/CD.",
+        badge: "🎓 Bachelor Final Project",
+        title: "Hotel Complaints Management System",
+        description:
+            "As my final-year Bachelor's project, I designed and developed a complete hotel complaints and maintenance management system, including a web application for administrators and a mobile application for housekeepers.",
         image: InfogeranceInternship,
-        sections: []
-    },
+        sections: [
+            {
+                id: "overview",
+                title: "📘 Overview",
+                content: (
+                    <p>
+                        This capstone project focused on improving maintenance operations
+                        and complaint handling within a hotel environment. I created a
+                        web application for managing guest complaints and maintenance tasks,
+                        and a dedicated mobile application for housekeepers responsible for
+                        identifying and submitting room-related issues.
+                        The system significantly enhances communication and reduces
+                        response time between hotel teams.
+                    </p>
+                ),
+            },
+            {
+                id: "features",
+                title: "✨ Key Features",
+                content: (
+                    <ul>
+                        <li>Web platform for managing maintenance operations and tracking complaints</li>
+                        <li>Mobile app allowing housekeepers to report defects directly from rooms</li>
+                        <li>Real-time synchronization between web and mobile applications</li>
+                        <li>Role-based access for administrators, maintenance staff, and housekeepers</li>
+                        <li>Dashboard for monitoring complaint resolution progress</li>
+                    </ul>
+                ),
+            },
+            {
+                id: "technologies",
+                title: "🛠️ Technologies Used",
+                content: (
+                    <table>
+                        <thead>
+                        <tr>
+                            <th>Category</th>
+                            <th>Tools</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <tr className="even:bg-muted m-0 border-t p-0">
+                            <td>Frontend (Web)</td>
+                            <td>Angular</td>
+                        </tr>
+                        <tr className="even:bg-muted m-0 border-t p-0">
+                            <td>Backend</td>
+                            <td>Spring Boot</td>
+                        </tr>
+                        <tr className="even:bg-muted m-0 border-t p-0">
+                            <td>Database</td>
+                            <td>OracleDB</td>
+                        </tr>
+                        <tr className="even:bg-muted m-0 border-t p-0">
+                            <td>Mobile Development</td>
+                            <td>Android</td>
+                        </tr>
+                        </tbody>
+                    </table>
+                ),
+            },
+            {
+                id: "repository",
+                title: "📂 Repository & Source Code",
+                content: (
+                    <p>
+                        The full source code for this project is publicly available on GitHub:{" "}
 
+                        <a
+                            href="https://github.com/ghaithsaidani/complaints-management-for-an-hotel"
+                            target="_blank"
+                            className="text-primary underline"
+                        >
+                            Hotel complaint management Repository
+                        </a>
+                    </p>
+                ),
+            },
+        ],
+    }
 ]

@@ -1,6 +1,5 @@
 import {Confledis, Infogerance, Sofiatech, Xsustain} from "@/assets";
-import {Button} from "@/components/ui/button.tsx";
-import {Download} from "lucide-react";
+import Component from "@/components/comp-131.tsx";
 
 interface ExperienceItem {
     title: string;
@@ -68,9 +67,10 @@ const Experience = ({
                         <h1 className="text-3xl md:text-5xl font-semibold tracking-tighter lg:text-6xl">
                             Experience
                         </h1>
-                        <Button variant="ghost" size="lg" className="text-sm font-semibold">
+                        {/*<Button variant="ghost" size="lg" className="text-sm font-semibold">
                             Download CV <Download className="size-4" />
-                        </Button>
+                        </Button>*/}
+                        <Component/>
                     </div>
 
                     <div className="space-y-8">

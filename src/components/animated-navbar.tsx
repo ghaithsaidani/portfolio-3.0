@@ -10,6 +10,14 @@ import {
 } from "@/components/ui/resizable-navbar";
 import {type ReactNode, useState} from "react";
 import {AnimatedThemeToggler} from "@/components/ui/animated-theme-toggler.tsx";
+import {
+    DropdownMenu,
+    DropdownMenuContent,
+    DropdownMenuItem,
+    DropdownMenuTrigger
+} from "@/components/ui/dropdown-menu.tsx";
+import {Button} from "@/components/ui/button.tsx";
+import {MonitorIcon, MoonIcon, SunIcon} from "lucide-react";
 
 export function AnimatedNavbar({ children }: { children: ReactNode }) {
     const navItems = [
@@ -69,6 +77,32 @@ export function AnimatedNavbar({ children }: { children: ReactNode }) {
                             </a>
                         ))}
                         <div className="flex w-full flex-col gap-4">
+                            <DropdownMenu>
+                                <DropdownMenuTrigger asChild>
+                                    <Button aria-label="Select theme" size="icon" variant="outline">
+                                        {/*{displayTheme === "light" && (
+                                            <SunIcon aria-hidden="true" size={16} />
+                                        )}
+                                        {displayTheme === "dark" && (
+                                            <MoonIcon aria-hidden="true" size={16} />
+                                        )}*/}
+                                    </Button>
+                                </DropdownMenuTrigger>
+                                <DropdownMenuContent className="min-w-32">
+                                    <DropdownMenuItem>
+                                        <SunIcon aria-hidden="true" className="opacity-60" size={16} />
+                                        <span>Light</span>
+                                    </DropdownMenuItem>
+                                    <DropdownMenuItem>
+                                        <MoonIcon aria-hidden="true" className="opacity-60" size={16} />
+                                        <span>Dark</span>
+                                    </DropdownMenuItem>
+                                    <DropdownMenuItem>
+                                        <MonitorIcon aria-hidden="true" className="opacity-60" size={16} />
+                                        <span>System</span>
+                                    </DropdownMenuItem>
+                                </DropdownMenuContent>
+                            </DropdownMenu>
                             <AnimatedThemeToggler className={"z-20"}/>
                             {/*<NavbarButton
                                 onClick={() => setIsMobileMenuOpen(false)}

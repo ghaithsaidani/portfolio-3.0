@@ -1,13 +1,12 @@
 import {createFileRoute} from '@tanstack/react-router'
-import {Hero} from "@/components/hero.tsx";
 import {Experience} from "@/components/experience.tsx";
 import {Certificates} from "@/components/certificates.tsx";
 import {Projects} from "@/components/projects.tsx";
 import Contact from "@/components/contact.tsx";
 import {Footer} from "@/components/footer.tsx";
-import {Logos} from "@/components/logos.tsx";
 import {Education} from "@/components/education.tsx";
-import {Skills} from "@/components/skills.tsx";
+import {Hero} from "@/components/hero.tsx";
+import ExpandableTabsDemo from "@/components/shadcn-studio/tabs/tabs-28.tsx";
 
 export const Route = createFileRoute('/')({
     component: Index,
@@ -20,9 +19,8 @@ function Index() {
             <Experience/>
             <Education/>
             <Projects/>
-            <Skills/>
+            <ExpandableTabsDemo/>
             <Certificates/>
-            <Logos/>
 
             {/*<Content/>*/}
             <Contact/>

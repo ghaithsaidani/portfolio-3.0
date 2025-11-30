@@ -19,6 +19,7 @@ import {
     MondeEnBoucheCICDWorkflow,
     PDS,
     PDSDetailedArchitectureDiagram,
+    Portfolio1,
     Portfolio2,
     SmartMenuAzureArchitecture,
     SmartMenuKubernetesClusterArchitecture,
@@ -1296,6 +1297,91 @@ export const singleProjects: ProjectPageProps[] = [
         description:
             "During my software development internship at Confledis SAS, I contributed to enhancing and deploying a finance web application, improving its reliability, scalability, and user experience.",
         image: ConfledisInternship,
+        sections: [
+            {
+                id: "overview",
+                title: "📘 Overview",
+                content: (
+                    <p>
+                        The Confledis Finance Platform is a web application for financial management.
+                        During the internship, I focused on debugging, extending features, and ensuring the system’s
+                        stability and scalability.
+                    </p>
+                ),
+            },
+            {
+                id: "features",
+                title: "✨ Key Contributions",
+                content: (
+                    <ul>
+                        <li>Debugged and extended features in a ReactJS & Django finance app, improving reliability and
+                            user retention
+                        </li>
+                        <li>Containerized and deployed the platform on AWS EC2 using Docker</li>
+                        <li>Improved uptime, scalability, and maintainability of the application</li>
+                        <li>Collaborated remotely with the team to ensure smooth feature delivery and bug fixes</li>
+                    </ul>
+                ),
+            },
+            {
+                id: "technologies",
+                title: "🛠️ Technologies Used",
+                content: (
+                    <table>
+                        <thead>
+                        <tr>
+                            <th>Category</th>
+                            <th>Tools</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <tr className="even:bg-muted m-0 border-t p-0">
+                            <td>Frontend</td>
+                            <td>ReactJS</td>
+                        </tr>
+                        <tr className="even:bg-muted m-0 border-t p-0">
+                            <td>Backend</td>
+                            <td>Django, PostgreSQL</td>
+                        </tr>
+                        <tr className="even:bg-muted m-0 border-t p-0">
+                            <td>Deployment</td>
+                            <td>AWS EC2, Docker</td>
+                        </tr>
+                        </tbody>
+                    </table>
+                ),
+            },
+            {
+                id: "diagram",
+                title: "📊 Use Case Diagram",
+                content: (
+                    <article>
+                        <p>
+                            Although the source code is confidential, here’s a high-level use case diagram showing the
+                            system’s main actors and functionalities:
+                        </p>
+                        <img src={InnERPUseCaseDiagram} alt={"InnERP use case diagram"}/>
+                    </article>
+                ),
+            },
+            {
+                id: "repository",
+                title: "📂 Repository & Source Code",
+                content: (
+                    <p>
+                        The code is confidential due to the client agreement, but key contributions and deployment work
+                        are highlighted above.
+                    </p>
+                ),
+            },
+        ],
+    },
+    {
+        badge: "💼 Internship Project",
+        title: "Portfolio 1.0",
+        description:
+            "During my software development internship at Confledis SAS, I contributed to enhancing and deploying a finance web application, improving its reliability, scalability, and user experience.",
+        image: Portfolio1,
         sections: [
             {
                 id: "overview",

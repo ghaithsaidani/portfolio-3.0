@@ -1,5 +1,5 @@
 import {Confledis, Infogerance, Sofiatech, Xsustain} from "@/assets";
-import Component from "@/components/comp-131.tsx";
+import MultiChoicesButton from "@/components/ui/multi-choices-button.tsx";
 
 interface ExperienceItem {
     title: string;
@@ -25,7 +25,7 @@ const Experience = ({
                                 company: "Sofiatech",
                                 logo: Sofiatech,
                                 description:
-                                    "Led development of scalable web applications using React, Node.js, and PostgreSQL. Architected microservices infrastructure serving 100K+ users. Mentored junior developers and established coding standards.",
+                                    "Built Kubepilot, a unified Kubernetes management platform. Designed a drag-and-drop CI/CD builder with Tekton and React Flow, deployed full observability with Prometheus and Loki, and secured the platform using Keycloak and Vault with strong RBAC policies.",
                             },
                             {
                                 title: "Software Engineer",
@@ -34,26 +34,25 @@ const Experience = ({
                                 company: "XSUSTAIN",
                                 logo: Xsustain,
                                 description:
-                                    "Led development of scalable web applications using React, Node.js, and PostgreSQL. Architected microservices infrastructure serving 100K+ users. Mentored junior developers and established coding standards.",
+                                    "Developed a full-stack restaurant management system using the MERN stack. Automated cloud infrastructure on Azure using Terraform and Ansible, and implemented a Jenkins CI/CD pipeline deploying containerized services to AKS through ACR.",
                             },
                             {
                                 title: "Software Developer",
-                                details: "Full-Time • Remote • Paris, France",
+                                details: "Internship • Remote • Paris, France",
                                 period: "Aug 2023 - Oct 2023",
                                 company: "Confledis SAS",
                                 logo: Confledis,
                                 description:
-                                    "Developed full-stack applications using JavaScript, Python, and MySQL. Participated in agile development process and code reviews. Contributed to open-source projects and internal tooling.",
+                                    "Improved a financial web platform by debugging and extending features using React and Django. Containerized services with Docker and deployed the application on AWS EC2, enhancing scalability and platform reliability.",
                             },
                             {
-                                title: "Junior Web Developer",
-                                details: "Full-Time • Hybrid • Ariana, Tunisia",
+                                title: "Software Developer",
+                                details: "Internship • Hybrid • Ariana, Tunisia",
                                 period: "Feb 2022 - Jun 2022",
                                 company: "Infogérance",
                                 logo: Infogerance,
                                 description:
-                                    "Created responsive websites using HTML, CSS, and JavaScript. Worked with WordPress and PHP for content management. Assisted in debugging and testing web applications.",
-                            },
+                                    "Engineered a hotel maintenance web application using Angular, Spring Boot, and MySQL. Developed a companion mobile app for housekeepers, enabling centralized and efficient fault reporting across hotel operations.",                            },
                         ],
                     }: ExperienceProps) => {
     return (
@@ -70,7 +69,7 @@ const Experience = ({
                         {/*<Button variant="ghost" size="lg" className="text-sm font-semibold">
                             Download CV <Download className="size-4" />
                         </Button>*/}
-                        <Component/>
+                        <MultiChoicesButton/>
                     </div>
 
                     <div className="space-y-8">

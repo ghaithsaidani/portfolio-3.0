@@ -1,5 +1,5 @@
 import {Button} from "@/components/ui/button.tsx";
-import {Github, Instagram, Twitter, Youtube} from "lucide-react";
+import {LuGithub, LuInstagram, LuTwitter, LuYoutube} from "react-icons/lu";
 
 
 const YEAR = new Date().getFullYear()
@@ -11,27 +11,27 @@ export function Footer() {
                 <div
                     className="flex flex-row flex-wrap items-center !justify-center gap-x-10 gap-y-2 md:!justify-between">
                     <p className="text-foreground text-center text-sm font-medium">
-                        All rights reserved. Copyright &copy; {YEAR} Creative Tim.
+                        All rights reserved. Copyright &copy; {YEAR} Ghaith Saidani.
                     </p>
                     <div className="flex gap-1">
                         <Button asChild variant="ghost" size="icon" className="h-8 w-8">
                             <a href="#" aria-label="Twitter">
-                                <Twitter className="h-4 w-4"/>
+                                <LuTwitter className="h-4 w-4"/>
                             </a>
                         </Button>
                         <Button asChild variant="ghost" size="icon" className="h-8 w-8">
                             <a href="#" aria-label="YouTube">
-                                <Youtube className="h-4 w-4"/>
+                                <LuYoutube className="h-4 w-4"/>
                             </a>
                         </Button>
                         <Button asChild variant="ghost" size="icon" className="h-8 w-8">
                             <a href="#" aria-label="Instagram">
-                                <Instagram className="h-4 w-4"/>
+                                <LuInstagram className="h-4 w-4"/>
                             </a>
                         </Button>
                         <Button asChild variant="ghost" size="icon" className="h-8 w-8">
                             <a href="#" aria-label="GitHub">
-                                <Github className="h-4 w-4"/>
+                                <LuGithub className="h-4 w-4"/>
                             </a>
                         </Button>
                     </div>

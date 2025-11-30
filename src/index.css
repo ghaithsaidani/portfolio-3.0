@@ -65,7 +65,6 @@
     --font-serif: var(--font-serif);*/
     /*--font-sans: var(--font-sans);
 
-
     --font-caveat: var(--font-caveat);
     --font-calSans: var(--font-calSans);
     --font-bebas-neue: var(--font-bebas-neue);
@@ -78,6 +77,15 @@
     --font-poppins: var(--font-poppins);
     --font-hedvigLettersSerif: var(--font-hedvigLettersSerif);
     --font-antonio: var(--font-antonio);*/
+    --animate-orbit: orbit calc(var(--duration)*1s) linear infinite;
+  @keyframes orbit {
+  0% {
+    transform: rotate(calc(var(--angle) * 1deg)) translateY(calc(var(--radius) * 1px)) rotate(calc(var(--angle) * -1deg));
+        }
+  100% {
+    transform: rotate(calc(var(--angle) * 1deg + 360deg)) translateY(calc(var(--radius) * 1px)) rotate(calc((var(--angle) * -1deg) - 360deg));
+        }
+    }
 }
 
 :root {
@@ -182,18 +190,16 @@
     }
 }
 
-
 html body[data-scroll-locked] {
     overflow-y: scroll !important;
     --removed-body-scroll-bar-size: 0 !important;
     margin-right: 0 !important;
-    margin-top: 60px !important;
+    margin-top: 0px !important;
 
     &#explorer {
         margin-top: 0px !important;
     }
 }
-
 
 ::view-transition-old(root), ::view-transition-new(root) {
     animation: none;

@@ -1,19 +1,24 @@
 import type {ProjectItem} from "@/types/project.ts";
 import {
     AfterEffects,
-    AmanaInsurances, Android,
-    Angular, Ansible,
-    ArgoCD, Bash,
+    AmanaInsurances,
+    Android,
+    Angular,
+    Ansible,
+    ArgoCD,
+    Bash,
     Cloud9,
     CloudWebAppBuilder,
     ConfledisInternship,
-    CPanel, Django,
+    CPanel,
+    Django,
     EmailJS,
     Figma,
     GithubActions,
     Gitlab,
     Grafana,
-    Helm, Homelab,
+    Helm,
+    Homelab,
     HRIndustries,
     InfogeranceInternship,
     Jenkins,
@@ -26,20 +31,26 @@ import {
     MondeEnBouche,
     MongoDB,
     Netlify,
-    NodeJs, NodeRed, Oracle,
+    NodeJs,
+    NodeRed,
+    Oracle,
     PDS,
+    Portfolio1,
     Portfolio2,
     PostgreSQL,
-    Prometheus, Python,
+    Prometheus,
+    Python,
     ReactJs,
     Redis,
     SpringBoot,
     Tekton,
-    Terraform, Vagrant,
-    Vault, VotingAppNodeRed,
+    Terraform,
+    Vagrant,
+    Vault,
+    VotingAppNodeRed,
     XsustainInternship
 } from "@/assets";
-import {AmazonWebServices, Expressjs, Flask, GitHub, MySQL, Qemu} from "@/const/icons.tsx";
+import {Icons} from "@/const/icons.tsx";
 
 
 export const projects: ProjectItem[] = [
@@ -144,7 +155,7 @@ export const projects: ProjectItem[] = [
                 label: 'Vagrant',
             },
             {
-                icon: Qemu,
+                icon: Icons.qemu,
                 url: "https://www.qemu.org/",
                 label: 'Qemu',
             },
@@ -241,12 +252,12 @@ export const projects: ProjectItem[] = [
                 label: 'SpringBoot',
             },
             {
-                icon: Flask,
+                icon: Icons.flask,
                 url: "https://flask.palletsprojects.com/en/stable/",
                 label: 'Flask',
             },
             {
-                icon: MySQL,
+                icon: Icons.mySQL,
                 url: "https://www.mysql.com/",
                 label: 'MySQL',
             },
@@ -258,11 +269,11 @@ export const projects: ProjectItem[] = [
         summary:
             "Automated AWS infrastructure that provisions scalable web applications using Terraform, EC2, RDS, and load balancing.",
         url: "/projects/$index",
-        params: { index: "5" },
+        params: {index: "5"},
         image: CloudWebAppBuilder,
         technologies: [
             {
-                icon: AmazonWebServices,
+                icon: Icons.amazonWebServices,
                 url: "https://aws.amazon.com/",
                 label: "AWS",
             },
@@ -277,7 +288,7 @@ export const projects: ProjectItem[] = [
                 label: "Terraform",
             },
             {
-                icon: MySQL,
+                icon: Icons.mySQL,
                 url: "https://www.mysql.com/",
                 label: "MySQL",
             },
@@ -298,7 +309,7 @@ export const projects: ProjectItem[] = [
                 label: 'Python',
             },
             {
-                icon: Flask,
+                icon: Icons.flask,
                 url: "https://flask.palletsprojects.com/en/stable/",
                 label: 'Flask',
             },
@@ -315,7 +326,7 @@ export const projects: ProjectItem[] = [
         summary:
             "A modern corporate website built with Angular, featuring dynamic content, EmailJS integration, and a fast, secure Netlify deployment.",
         url: "/projects/$index",
-        params: { index: "7" },
+        params: {index: "7"},
         image: HRIndustries,
         technologies: [
             {
@@ -355,7 +366,7 @@ export const projects: ProjectItem[] = [
                 label: 'NodeJS',
             },
             {
-                icon: Expressjs,
+                icon: Icons.expressjs,
                 url: "https://expressjs.com/",
                 label: 'ExpressJS',
             },
@@ -365,7 +376,7 @@ export const projects: ProjectItem[] = [
                 label: 'MongoDB',
             },
             {
-                icon: GitHub,
+                icon: Icons.gitHub,
                 url: "https://react.dev/",
                 label: 'ExpressJS',
             },
@@ -416,7 +427,7 @@ export const projects: ProjectItem[] = [
                 label: 'Terraform',
             },
             {
-                icon: GitHub,
+                icon: Icons.gitHub,
                 url: "https://react.dev/",
                 label: 'ExpressJS',
             },
@@ -479,12 +490,12 @@ export const projects: ProjectItem[] = [
                 label: 'NodeJS',
             },
             {
-                icon: Expressjs,
+                icon: Icons.expressjs,
                 url: "https://expressjs.com/",
                 label: 'ExpressJS',
             },
             {
-                icon: MySQL,
+                icon: Icons.mySQL,
                 url: "https://www.mysql.com/",
                 label: 'MySQL',
             },
@@ -515,7 +526,7 @@ export const projects: ProjectItem[] = [
                 label: 'Django',
             },
             {
-                icon: AmazonWebServices,
+                icon: Icons.amazonWebServices,
                 url: "https://aws.amazon.com/",
                 label: 'AWS',
             },
@@ -523,11 +534,42 @@ export const projects: ProjectItem[] = [
     },
     {
         id: "item-13",
+        title: "Portfolio 1.0",
+        summary:
+            "Personal developer portfolio showcasing skills, projects, and background. Built with modern web technologies and deployed for a sleek, responsive user experience.",
+        url: "/projects/$index",
+        params: {index: "13"},
+        image: Portfolio1,
+        technologies: [
+            {
+                icon: ReactJs,
+                url: "https://react.dev/",
+                label: 'ReactJS',
+            },
+            {
+                icon: Figma,
+                url: "https://www.figma.com",
+                label: 'Figma',
+            },
+            {
+                icon: EmailJS,
+                url: "https://www.emailjs.com/",
+                label: 'EmailJS',
+            },
+            {
+                icon: Netlify,
+                url: "https://www.netlify.com/",
+                label: 'Netlify',
+            }
+        ]
+    },
+    {
+        id: "item-14",
         title: "Hotel Management System",
         summary:
             "Full web & mobile solution developed as my Bachelor's final project, enabling efficient management of hotel maintenance and complaints.",
         url: "/projects/$index",
-        params: {index: "13"},
+        params: {index: "14"},
         image: InfogeranceInternship,
         technologies: [
             {

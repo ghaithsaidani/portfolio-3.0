@@ -12,12 +12,12 @@ type University = {
 
 const educationsData: University[] = [
     {
-        date: "2025 - 2026  ",
+        date: "2025 - 2026",
         name: "Marburg University, Marburg",
         degree: "Exchange Program",
         logo: Marburg,
         content:
-            "The term 'Artificial Intelligence' was coined at the Dartmouth Conference, marking official beginning of AI as a field. John McCarthy, Marvin Minsky, Nathaniel Rochester, and Claude Shannon organized this seminal event, setting stage for decades research development.",
+            "Selected for an academic exchange program focused on advanced software engineering and research exposure. Strengthened expertise in distributed systems, cloud technologies, and applied computer science through coursework and international collaboration.",
     },
     {
         date: "2022 - 2025",
@@ -25,7 +25,7 @@ const educationsData: University[] = [
         degree: "Engineer's Degree",
         logo: Sesame,
         content:
-            "The early years saw significant optimism with programs like ELIZA (the first chatbot) and SHRDLU (a natural language understanding system). However, by the 1970s, funding dried up as researchers faced limitations of computing power complexity human intelligence.",
+            "Completed an engineering degree specializing in Cloud Computing and Cybersecurity. Developed strong foundations in DevOps, distributed systems, and modern software architectures through hands-on projects and academic research.",
     },
     {
         date: "2019 - 2022",
@@ -33,7 +33,7 @@ const educationsData: University[] = [
         degree: "Bachelor Degree",
         logo: FSB,
         content:
-            "AI experienced a revival with the development of expert systems like MYCIN (for medical diagnosis) and DENDRAL chemical analysis). These used rule-based approaches to mimic human decision-making in specific domains, leading renewed interest funding research.",
+            "Earned a bachelor's degree in Software Engineering and Information Systems with honors. Built a solid background in programming, data structures, algorithms, and full-stack development while completing several academic and personal projects.",
     },
     {
         date: "2019",
@@ -41,8 +41,9 @@ const educationsData: University[] = [
         degree: "Baccalaureate",
         logo: LJFB,
         content:
-            "IBM's Deep Blue became the first computer system to defeat a reigning world chess champion, Garry Kasparov, in six-game match. This milestone demonstrated AI's potential outperform humans complex strategic games and captured public's imagination.",
+            "Earned a Baccalaureate specialized in Mathematics, developing strong analytical and problem-solving skills that formed the foundation for advanced studies in software engineering.",
     },
+
 ];
 
 const Education = () => {
@@ -76,9 +77,9 @@ const Education = () => {
                                 {entry.date}
                             </h5>
 
-                            <Card className="my-5 border-none shadow-none">
+                            <Card className="my-5 border-none shadow-none bg-transparent">
                                 <CardContent className="px-0 xl:px-2">
-                                    <div
+                                    <p
                                         className="prose dark:prose-invert text-neutral-950 dark:text-neutral-50"
                                         dangerouslySetInnerHTML={{__html: entry.content}}
                                     />

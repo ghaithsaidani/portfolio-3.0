@@ -1,0 +1,77 @@
+import {ChevronDownIcon, FileDown} from "lucide-react";
+import {useState} from "react";
+
+import {Button} from "@/components/ui/button";
+import {
+    DropdownMenu,
+    DropdownMenuContent,
+    DropdownMenuRadioGroup,
+    DropdownMenuRadioItem,
+    DropdownMenuTrigger,
+} from "@/components/ui/dropdown-menu";
+
+const options = [
+    {
+        description: "All commits from this branch will be added to the base via a commit version.",
+        label: "Resume (DevOps Role)",
+    },
+    {
+        description: "The 6 commits from this branch will be combined into one commit in the base branch.",
+        label: "Resume (Cloud Role)",
+    },
+    {
+        description: "The 6 commits from this branch will be rebased and added to the base branch.",
+        label: "Resume (Fullstack Role)",
+    },
+];
+
+export default function MultiChoicesButton() {
+    const [selectedIndex, setSelectedIndex] = useState("0");
+
+    return (
+        <div className="inline-flex divide-x divide-primary-foreground/30 rounded-md shadow-xs rtl:space-x-reverse">
+            <Button
+                    className="rounded-none shadow-none first:rounded-s-md last:rounded-e-md focus-visible:z-20">
+                {options[Number(selectedIndex)].label}
+                <FileDown/>
+            </Button>
+            <DropdownMenu>
+                <DropdownMenuTrigger asChild>
+                    <Button
+                        aria-label="Options"
+                        className="rounded-none shadow-none first:rounded-s-md last:rounded-e-md focus-visible:z-10"
+                        size="icon"
+                    >
+                        <ChevronDownIcon aria-hidden="true" size={16}/>
+                    </Button>
+                </DropdownMenuTrigger>
+                <DropdownMenuContent
+                    align="end"
+                    className="max-w-64 md:max-w-xs"
+                    side="bottom"
+                    sideOffset={4}
+                >
+                    <DropdownMenuRadioGroup
+                        onValueChange={setSelectedIndex}
+                        value={selectedIndex}
+                    >
+                        {options.map((option, index) => (
+                            <DropdownMenuRadioItem
+                                className="items-start [&>span]:pt-1.5"
+                                key={option.label}
+                                value={String(index)}
+                            >
+                                <div className="flex flex-col gap-1">
+                                    <span className="font-medium text-sm">{option.label}</span>
+                                    <span className="text-neutral-500 text-xs dark:text-neutral-400">
+                    {option.description}
+                  </span>
+                                </div>
+                            </DropdownMenuRadioItem>
+                        ))}
+                    </DropdownMenuRadioGroup>
+                </DropdownMenuContent>
+            </DropdownMenu>
+        </div>
+    )
+}

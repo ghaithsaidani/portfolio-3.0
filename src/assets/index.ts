@@ -1,7 +1,9 @@
 export {default as PersonalImage} from './images/personal-image.png'
 
+
 //videos
 export {default as KubepilotDemo} from './videos/Kubepilot.mp4'
+
 
 //certifications
 export {default as ITSpecialistJava} from './images/certifications/ITS_Java.png'
@@ -17,17 +19,20 @@ export {default as Confledis} from './images/experience/confledis-sas.png'
 export {default as Xsustain} from './images/experience/xsustain.jpg'
 export {default as Sofiatech} from './images/experience/sofiatech.jpg'
 
+
 //education
 export {default as Marburg} from './images/education/marburg.jpeg'
 export {default as Sesame} from './images/education/sesame.png'
 export {default as FSB} from './images/education/fsb.png'
 export {default as LJFB} from './images/education/ljfb.png'
 
+
 // projects
 export {default as Kubepilot} from './images/projects/kubepilot.png'
 export {default as PDS} from './images/projects/pds.png'
 export {default as Homelab} from './images/projects/homelab.webp'
 export {default as VotingAppNodeRed} from './images/projects/voting-app-node-red.png'
+export {default as Portfolio1} from './images/projects/portfolio-1.0.png'
 export {default as Portfolio2} from './images/projects/portfolio-2.0.png'
 export {default as MondeEnBouche} from './images/projects/monde-en-bouche.png'
 export {default as CloudWebAppBuilder} from './images/projects/cloud-web-app-builder.jpg'
@@ -37,6 +42,7 @@ export {default as XsustainInternship} from './images/projects/xsustain-internsh
 export {default as HRIndustries} from './images/projects/hr-industries.png'
 export {default as AmanaInsurances} from './images/projects/amana-insurances.png'
 export {default as InfogeranceInternship} from './images/projects/infogérance-internship.png'
+
 
 //diagrams
 export {default as KubePilotDetailedArchitecture} from './images/projects/diagrams/kubepilot-detailed-architecture.webp'
@@ -91,3 +97,9 @@ export {default as Android} from './images/technologies/android.svg'
 export {default as Ansible} from './images/technologies/ansible.svg'
 export {default as Vagrant} from './images/technologies/vagrant.svg'
 export {default as Bash} from './images/technologies/bash.svg'
+
+
+//Resumes
+export {default as DevOpsResume} from './docs/Ghaith Saidani DevOps.pdf'
+export {default as FullstackResume} from './docs/Ghaith Saidani Fullstack.pdf'
+export {default as CloudResume} from './docs/Ghaith Saidani Cloud.pdf'

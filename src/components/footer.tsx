@@ -1,5 +1,6 @@
 import {Button} from "@/components/ui/button.tsx";
-import {LuGithub, LuInstagram, LuTwitter, LuYoutube} from "react-icons/lu";
+import {LuGithub, LuLinkedin} from "react-icons/lu";
+import {SiNotion} from "react-icons/si";
 
 
 const YEAR = new Date().getFullYear()
@@ -15,23 +16,19 @@ const Footer = () => {
                     </p>
                     <div className="flex gap-1">
                         <Button asChild variant="ghost" size="icon" className="h-8 w-8">
-                            <a href="#" aria-label="Twitter">
-                                <LuTwitter className="h-4 w-4"/>
+                            <a href="https://www.linkedin.com/in/ghaithsaidani/" aria-label="linkedin" target="_blank">
+                                <LuLinkedin className="h-4 w-4"/>
                             </a>
                         </Button>
                         <Button asChild variant="ghost" size="icon" className="h-8 w-8">
-                            <a href="#" aria-label="YouTube">
-                                <LuYoutube className="h-4 w-4"/>
-                            </a>
-                        </Button>
-                        <Button asChild variant="ghost" size="icon" className="h-8 w-8">
-                            <a href="#" aria-label="Instagram">
-                                <LuInstagram className="h-4 w-4"/>
-                            </a>
-                        </Button>
-                        <Button asChild variant="ghost" size="icon" className="h-8 w-8">
-                            <a href="#" aria-label="GitHub">
+                            <a href="https://github.com/ghaithsaidani" aria-label="GitHub" target="_blank">
                                 <LuGithub className="h-4 w-4"/>
+                            </a>
+                        </Button>
+                        <Button asChild variant="ghost" size="icon" className="h-8 w-8">
+                            <a href="https://www.notion.so/marketplace/profiles/ghaithsaidani" aria-label="notion"
+                               target="_blank">
+                                <SiNotion className="h-4 w-4"/>
                             </a>
                         </Button>
                     </div>

@@ -11,7 +11,8 @@ import {
     SiGithub,
     SiGitlab,
     SiGnubash,
-    SiGrafana, SiHelm,
+    SiGrafana,
+    SiHelm,
     SiJavascript,
     SiJenkins,
     SiKubernetes,
@@ -19,12 +20,16 @@ import {
     SiMongodb,
     SiMysql,
     SiPostgresql,
-    SiPrometheus, SiQemu,
+    SiPrometheus,
+    SiQemu,
     SiReact,
     SiSpring,
     SiTekton,
     SiTerraform,
-    SiTypescript, SiVagrant, SiVault, SiVmware
+    SiTypescript,
+    SiVagrant,
+    SiVault,
+    SiVmware
 } from "react-icons/si";
 import {useState} from "react";
 import {Tabs, TabsContent, TabsList, TabsTrigger} from "@/components/ui/tabs.tsx";
@@ -45,9 +50,11 @@ const Skills = () => {
                 <>
                     <div className={"flex flex-col gap-2 mb-10 lg:mb-0"}>
                         <h2 className={"text-2xl font-semibold md:text-3xl lg:text-4xl"}>Build, Automate & Deliver</h2>
-                        <p className={"text-muted-foreground"}>I design fast, reliable, and scalable CI/CD pipelines using modern DevOps tools to streamline software delivery.</p>
-                        <div className={"flex flex-col lg:flex-row justify-center lg:justify-between items-center bg-muted py-6 px-0 lg:px-5 gap-5 rounded-lg mt-5 lg:mt-24"}>
-                            <h4 className={"text-lg font-medium"}>Want to know more?</h4>
+                        <p className={"text-muted-foreground"}>I design fast, reliable, and scalable CI/CD pipelines
+                            using modern DevOps tools to streamline software delivery.</p>
+                        <div
+                            className={"flex flex-col lg:flex-row justify-center lg:justify-between items-center bg-muted py-6 px-0 lg:px-5 gap-5 rounded-lg mt-5 lg:mt-18"}>
+                            <h4 className={"text-lg font-medium"}>Want to know more about me?</h4>
                             <MultiChoicesButton/>
                         </div>
                     </div>
@@ -118,11 +125,14 @@ const Skills = () => {
             content: (
                 <>
                     <div className={"flex flex-col gap-2 mb-10 lg:mb-0"}>
-                        <h2 className={"text-2xl font-semibold md:text-3xl lg:text-4xl"}>Secure, Scalable & Cloud-Ready</h2>
-                        <p className={"text-muted-foreground"}>I create and manage robust cloud infrastructures, leveraging automation and IaC to ensure performance and reliability.</p>
-                        <div className={"flex flex-col lg:flex-row justify-center lg:justify-between items-center bg-muted py-6 px-0 lg:px-5 gap-5 rounded-lg mt-5 lg:mt-24"}>
-                            <h4 className={"text-lg font-medium"}>Want to know more?</h4>
-                            <MultiChoicesButton/>
+                        <h2 className={"text-2xl font-semibold md:text-3xl lg:text-4xl"}>Secure, Scalable &
+                            Cloud-Ready</h2>
+                        <p className={"text-muted-foreground"}>I create and manage robust cloud infrastructures,
+                            leveraging automation and IaC to ensure performance and reliability.</p>
+                        <div
+                            className={"flex flex-col lg:flex-row justify-center lg:justify-between items-center bg-muted py-6 px-0 lg:px-5 gap-5 rounded-lg mt-5 lg:mt-18"}>
+                            <h4 className={"text-lg font-medium"}>Want to know more about me?</h4>
+                            <MultiChoicesButton defaultSelected={"1"}/>
                         </div>
                     </div>
                     <div
@@ -184,11 +194,14 @@ const Skills = () => {
             content: (
                 <>
                     <div className={"flex flex-col gap-2 mb-10 lg:mb-0"}>
-                        <h2 className={"text-2xl font-semibold md:text-3xl lg:text-4xl"}>Clean Code & Smart Solutions</h2>
-                        <p className={"text-muted-foreground"}>I develop responsive, efficient, and scalable applications using modern frameworks and best engineering practices.</p>
-                        <div className={"flex flex-col lg:flex-row justify-center lg:justify-between items-center bg-muted py-6 px-0 lg:px-5 gap-5 rounded-lg mt-5 lg:mt-24"}>
-                            <h4 className={"text-lg font-medium"}>Want to know more?</h4>
-                            <MultiChoicesButton/>
+                        <h2 className={"text-2xl font-semibold md:text-3xl lg:text-4xl"}>Clean Code & Smart
+                            Solutions</h2>
+                        <p className={"text-muted-foreground"}>I develop responsive, efficient, and scalable
+                            applications using modern frameworks and best engineering practices.</p>
+                        <div
+                            className={"flex flex-col lg:flex-row justify-center lg:justify-between items-center bg-muted py-6 px-0 lg:px-5 gap-5 rounded-lg mt-5 lg:mt-18"}>
+                            <h4 className={"text-lg font-medium"}>Want to know more about me?</h4>
+                            <MultiChoicesButton defaultSelected={"2"}/>
                         </div>
                     </div>
                     <div
@@ -249,69 +262,71 @@ const Skills = () => {
 
 
     return (
-        <section className={"px-7 lg:px-40"}>
-            <h2 className="mb-3 text-neutral-950 mb-10 text-3xl font-bold tracking-tighter sm:text-6xl dark:text-neutral-50">Skills</h2>
-            <Tabs value={activeTab} onValueChange={setActiveTab} className='flex justify-between'>
-                <TabsList className='h-fit gap-2 rounded-xl p-1 w-56'>
-                    {tabs.map(({icon: Icon, name, value}) => {
-                        const isActive = activeTab === value
+        <section id={"skills"} className={"py-10 lg:py-24"}>
+            <div className="container">
+                <h2 className="mb-3 text-neutral-950 mb-10 text-3xl font-bold tracking-tighter sm:text-6xl dark:text-neutral-50">Skills</h2>
+                <Tabs value={activeTab} onValueChange={setActiveTab} className='flex justify-between'>
+                    <TabsList className='h-fit gap-2 rounded-xl p-1 w-56'>
+                        {tabs.map(({icon: Icon, name, value}) => {
+                            const isActive = activeTab === value
 
-                        return (
-                            <motion.div
-                                key={value}
-                                layout
-                                className={cn(
-                                    'flex h-8 items-center justify-center overflow-hidden rounded-md w-full',
-                                    isActive ? 'flex-1' : 'flex-none'
-                                )}
-                                onClick={() => setActiveTab(value)}
-                                initial={false}
-                                animate={{
-                                    width: isActive ? 120 : 32
-                                }}
-                                transition={{
-                                    type: 'tween',
-                                    stiffness: 400,
-                                    damping: 25
-                                }}
-                            >
-                                <TabsTrigger value={value} asChild>
-                                    <motion.div
-                                        className='flex h-8 w-full items-center justify-center cursor-pointer'
-                                        animate={{filter: 'blur(0px)'}}
-                                        exit={{filter: 'blur(2px)'}}
-                                        transition={{duration: 0.25, ease: 'easeOut'}}
-                                    >
-                                        <Icon className='aspect-square size-4 shrink-0'/>
-                                        <AnimatePresence initial={false}>
-                                            {isActive && (
-                                                <motion.span
-                                                    className='font-medium'
-                                                    initial={{opacity: 0, scaleX: 0.8}}
-                                                    animate={{opacity: 1, scaleX: 1}}
-                                                    transition={{duration: 0.25, ease: 'easeOut'}}
-                                                    style={{originX: 0}}
-                                                >
-                                                    {name}
-                                                </motion.span>
-                                            )}
-                                        </AnimatePresence>
-                                    </motion.div>
-                                </TabsTrigger>
-                            </motion.div>
-                        )
-                    })}
-                </TabsList>
+                            return (
+                                <motion.div
+                                    key={value}
+                                    layout
+                                    className={cn(
+                                        'flex h-8 items-center justify-center overflow-hidden rounded-md w-full',
+                                        isActive ? 'flex-1' : 'flex-none'
+                                    )}
+                                    onClick={() => setActiveTab(value)}
+                                    initial={false}
+                                    animate={{
+                                        width: isActive ? 120 : 32
+                                    }}
+                                    transition={{
+                                        type: 'tween',
+                                        stiffness: 400,
+                                        damping: 25
+                                    }}
+                                >
+                                    <TabsTrigger value={value} asChild>
+                                        <motion.div
+                                            className='flex h-8 w-full items-center justify-center cursor-pointer'
+                                            animate={{filter: 'blur(0px)'}}
+                                            exit={{filter: 'blur(2px)'}}
+                                            transition={{duration: 0.25, ease: 'easeOut'}}
+                                        >
+                                            <Icon className='aspect-square size-4 shrink-0'/>
+                                            <AnimatePresence initial={false}>
+                                                {isActive && (
+                                                    <motion.span
+                                                        className='font-medium'
+                                                        initial={{opacity: 0, scaleX: 0.8}}
+                                                        animate={{opacity: 1, scaleX: 1}}
+                                                        transition={{duration: 0.25, ease: 'easeOut'}}
+                                                        style={{originX: 0}}
+                                                    >
+                                                        {name}
+                                                    </motion.span>
+                                                )}
+                                            </AnimatePresence>
+                                        </motion.div>
+                                    </TabsTrigger>
+                                </motion.div>
+                            )
+                        })}
+                    </TabsList>
 
-                {tabs.map(tab => (
-                    <TabsContent key={tab.value} value={tab.value}
-                                 className={"flex flex-col lg:flex-row justify-center items-center w-full lg:gap-52 mt-5"}>
-                        {tab.content}
+                    {tabs.map(tab => (
+                        <TabsContent key={tab.value} value={tab.value}
+                                     className={"flex flex-col lg:flex-row justify-center items-center w-full lg:gap-52 mt-5"}>
+                            {tab.content}
 
-                        {/*<p className='text-neutral-500 text-sm dark:text-neutral-400'>{tab.content}</p>*/}
-                    </TabsContent>
-                ))}
-            </Tabs>
+                            {/*<p className='text-neutral-500 text-sm dark:text-neutral-400'>{tab.content}</p>*/}
+                        </TabsContent>
+                    ))}
+                </Tabs>
+            </div>
         </section>
     )
 }

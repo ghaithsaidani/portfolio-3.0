@@ -1,7 +1,7 @@
-import {ChevronDownIcon, FileDown} from "lucide-react";
-import {useState} from "react";
+import { ChevronDownIcon, FileDown } from "lucide-react";
+import { useState } from "react";
 
-import {Button} from "@/components/ui/button";
+import { Button } from "@/components/ui/button";
 import {
     DropdownMenu,
     DropdownMenuContent,
@@ -9,32 +9,49 @@ import {
     DropdownMenuRadioItem,
     DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu";
+import { CloudResume, DevOpsResume, FullstackResume } from "@/assets";
 
 const options = [
     {
-        description: "All commits from this branch will be added to the base via a commit version.",
+        description: "Optimized resume tailored for DevOps & CI/CD roles.",
         label: "Resume (DevOps Role)",
+        file: DevOpsResume,
     },
     {
-        description: "The 6 commits from this branch will be combined into one commit in the base branch.",
+        description: "Resume adapted for Cloud Engineering & Architecture positions.",
         label: "Resume (Cloud Role)",
+        file: CloudResume,
     },
     {
-        description: "The 6 commits from this branch will be rebased and added to the base branch.",
+        description: "Full-stack oriented resume for frontend & backend roles.",
         label: "Resume (Fullstack Role)",
+        file: FullstackResume,
     },
 ];
 
-export default function MultiChoicesButton() {
-    const [selectedIndex, setSelectedIndex] = useState("0");
+export default function MultiChoicesButton({ defaultSelected = "0" }) {
+    const [selectedIndex, setSelectedIndex] = useState(defaultSelected);
+
+    const handleDownload = () => {
+        const selected = options[Number(selectedIndex)];
+
+        const link = document.createElement("a");
+        link.href = selected.file;
+        link.download = selected.label.replace(/\s+/g, "_") + ".pdf";
+        link.click();
+    };
 
     return (
         <div className="inline-flex divide-x divide-primary-foreground/30 rounded-md shadow-xs rtl:space-x-reverse">
+            {/* MAIN BUTTON (DOWNLOAD) */}
             <Button
-                    className="rounded-none shadow-none first:rounded-s-md last:rounded-e-md focus-visible:z-20">
+                onClick={handleDownload}
+                className="rounded-none shadow-none first:rounded-s-md last:rounded-e-md focus-visible:z-20 flex items-center gap-2"
+            >
                 {options[Number(selectedIndex)].label}
-                <FileDown/>
+                <FileDown />
             </Button>
+
             <DropdownMenu>
                 <DropdownMenuTrigger asChild>
                     <Button
@@ -42,7 +59,7 @@ export default function MultiChoicesButton() {
                         className="rounded-none shadow-none first:rounded-s-md last:rounded-e-md focus-visible:z-10"
                         size="icon"
                     >
-                        <ChevronDownIcon aria-hidden="true" size={16}/>
+                        <ChevronDownIcon aria-hidden="true" size={16} />
                     </Button>
                 </DropdownMenuTrigger>
                 <DropdownMenuContent
@@ -64,8 +81,8 @@ export default function MultiChoicesButton() {
                                 <div className="flex flex-col gap-1">
                                     <span className="font-medium text-sm">{option.label}</span>
                                     <span className="text-neutral-500 text-xs dark:text-neutral-400">
-                    {option.description}
-                  </span>
+                                        {option.description}
+                                    </span>
                                 </div>
                             </DropdownMenuRadioItem>
                         ))}
@@ -73,5 +90,5 @@ export default function MultiChoicesButton() {
                 </DropdownMenuContent>
             </DropdownMenu>
         </div>
-    )
+    );
 }

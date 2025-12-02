@@ -1,39 +1,35 @@
-
-import { FileText, Headphones, MessageSquare } from "lucide-react"
-import { useForm } from "react-hook-form"
-import { z } from "zod"
-import { zodResolver } from "@hookform/resolvers/zod"
+import {Mail, Map, Phone} from "lucide-react"
+import {useForm} from "react-hook-form"
+import {z} from "zod"
+import {zodResolver} from "@hookform/resolvers/zod"
 import emailjs from "@emailjs/browser"
-import { Button } from "@/components/ui/button"
-import { Card } from "@/components/ui/card"
-import { Input } from "@/components/ui/input"
-import { Label } from "@/components/ui/label"
-import { Textarea } from "@/components/ui/textarea"
-import { useState } from "react"
+import {Button} from "@/components/ui/button"
+import {Card} from "@/components/ui/card"
+import {Input} from "@/components/ui/input"
+import {Label} from "@/components/ui/label"
+import {Textarea} from "@/components/ui/textarea"
+import {useState} from "react"
 import {toast} from "sonner";
 import CustomSonner from "@/components/ui/custom-sonner.tsx";
 
 
 const CONTACT_OPTIONS = [
     {
-        icon: MessageSquare,
-        title: "Chat with Sales",
-        description: "Speak to our sales team",
-        action: "Start Chat",
+        icon: Map,
+        title: "Address",
+        description: "Hamburg, Germany",
     },
     {
-        icon: Headphones,
-        title: "Get Support",
-        description: "We're here to help",
-        action: "Contact Support",
+        icon: Phone,
+        title: "Phone",
+        description: "+49 1551 1330351",
     },
     {
-        icon: FileText,
-        title: "Documentation",
-        description: "Browse our docs",
-        action: "View Docs",
+        icon: Mail,
+        title: "Email",
+        description: "ghaith.saidani.contact@gmail.com",
     },
-]
+];
 
 
 const ContactSchema = z.object({
@@ -45,7 +41,7 @@ const ContactSchema = z.object({
 
 type ContactFormValues = z.infer<typeof ContactSchema>
 
-const Contact = ()=> {
+const Contact = () => {
     const [isLoading, setIdLoading] = useState<boolean>(false)
 
     const form = useForm<z.infer<typeof ContactSchema>>({
@@ -72,20 +68,20 @@ const Contact = ()=> {
                     message: values.inquiry,
                 },
                 import.meta.env.VITE_APP_PUBLIC_KEY
-            ).then(()=>{
-                toast.custom((t)=> (<CustomSonner id={t} status={'success'} message={'Message sent successfully'}/>))
+            ).then(() => {
+                toast.custom((t) => (<CustomSonner id={t} status={'success'} message={'Message sent successfully'}/>))
                 form.reset()
             })
         } catch (error) {
             console.error(error)
-            toast.custom((t)=> (<CustomSonner id={t} status={'error'} message={'Error sending message'}/>))
+            toast.custom((t) => (<CustomSonner id={t} status={'error'} message={'Error sending message'}/>))
         } finally {
             setIdLoading(false)
         }
     }
 
     return (
-        <section className="py-16">
+        <section className="py-16" id={"contact"}>
             <div className="container mx-auto">
                 <div className="grid items-center gap-12 lg:grid-cols-2">
                     <div>
@@ -99,19 +95,20 @@ const Contact = ()=> {
 
                         <div className="space-y-6">
                             {CONTACT_OPTIONS.map(
-                                ({ icon: Icon, title, description, action }, key) => (
+                                ({icon: Icon, title, description}, key) => (
                                     <div key={key} className="flex items-start gap-4">
-                                        <div className="bg-primary/10 grid h-12 w-12 shrink-0 place-items-center rounded-lg">
-                                            <Icon className="text-primary h-6 w-6" />
+                                        <div
+                                            className="bg-primary/10 grid h-12 w-12 shrink-0 place-items-center rounded-lg">
+                                            <Icon className="text-primary h-6 w-6"/>
                                         </div>
                                         <div className="flex-1">
                                             <h3 className="mb-1 font-semibold">{title}</h3>
                                             <p className="text-muted-foreground mb-3 text-sm">
                                                 {description}
                                             </p>
-                                            <Button variant="link" className="h-auto p-0">
+                                            {/*<Button variant="link" className="h-auto p-0">
                                                 {action} →
-                                            </Button>
+                                            </Button>*/}
                                         </div>
                                     </div>
                                 )

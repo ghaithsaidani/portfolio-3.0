@@ -32,7 +32,7 @@ const Projects = ({
     }, [carouselApi]);
 
     return (
-        <section className="py-32">
+        <section id={"projects"} className="py-32">
             <div className="container">
                 <div className="mb-8 flex flex-col justify-between md:mb-14 md:flex-row md:items-end lg:mb-16">
                     <h2 className="mb-3 text-neutral-950 mb-10 text-center text-3xl font-bold tracking-tighter sm:text-6xl dark:text-neutral-50">

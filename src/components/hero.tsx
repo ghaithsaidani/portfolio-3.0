@@ -10,7 +10,7 @@ import {SiNotion} from "react-icons/si";
 
 const Hero = () => {
     return (
-        <section className={"py-5 lg:py-40 xl:py-28"}>
+        <section id={"hero"} className={"py-5 lg:py-40 xl:py-28"}>
             <div className="container">
                 <div className="grid w-fit items-center gap-4 md:gap-8 lg:gap-28 lg:grid-cols-2">
                     <div className="flex flex-col items-center text-center lg:items-start lg:text-left">
@@ -33,13 +33,13 @@ const Hero = () => {
                         </p>
                         <div className="flex w-full flex-col justify-center gap-2 sm:flex-row lg:justify-start">
                             <Button asChild className="w-full sm:w-auto">
-                                <a href={""}>
+                                <a href={"#contact"}>
                                     Say Hi 👋
                                     {/*<ArrowRight className="size-4"/>*/}
                                 </a>
                             </Button>
                             <Button variant={"outline"} asChild className="w-full sm:w-auto">
-                                <a href={""}>
+                                <a href={"#projects"}>
                                     Explore my work
                                     <ArrowRight className="size-4"/>
                                 </a>

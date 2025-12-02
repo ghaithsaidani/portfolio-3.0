@@ -1,6 +1,6 @@
 export {default as AnimatedNavbar} from './animated-navbar'
 export {default as Certificates} from './certificates'
-export {default as Contact} from './contact'
+export {default as Contact} from './contact.tsx'
 export {default as Education} from './education'
 export {default as Experience} from './experience'
 export {default as Footer} from './footer'

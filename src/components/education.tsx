@@ -48,7 +48,7 @@ const educationsData: University[] = [
 
 const Education = () => {
     return (
-        <section className="bg-white py-32 dark:bg-neutral-950">
+        <section id={"education"} className="bg-white py-32 dark:bg-neutral-950">
             <div className="container">
                 <h1 className="text-neutral-950 mb-10 text-center text-3xl font-bold tracking-tighter sm:text-6xl dark:text-neutral-50">
                     Education

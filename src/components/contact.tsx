@@ -45,7 +45,7 @@ const ContactSchema = z.object({
 
 type ContactFormValues = z.infer<typeof ContactSchema>
 
-export default function Contact() {
+const Contact = ()=> {
     const [isLoading, setIdLoading] = useState<boolean>(false)
 
     const form = useForm<z.infer<typeof ContactSchema>>({
@@ -194,3 +194,5 @@ export default function Contact() {
         </section>
     )
 }
+
+export default Contact;

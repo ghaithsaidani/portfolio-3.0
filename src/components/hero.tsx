@@ -5,8 +5,8 @@ import {Button} from "@/components/ui/button";
 import {PersonalImage} from "@/assets";
 import {motion} from "framer-motion";
 import {LayoutTextFlip} from "@/components/ui/layout-text-flip.tsx";
-import {FaDiscord} from "react-icons/fa6";
 import {LuGithub, LuLinkedin} from "react-icons/lu";
+import {SiNotion} from "react-icons/si";
 
 const Hero = () => {
     return (
@@ -74,11 +74,11 @@ const Hero = () => {
                             </Button>
                             <Button size="lg" variant="outline" asChild>
                                 <a
-                                    href="https://shadcnblocks.com"
+                                    href="https://www.notion.so/marketplace/profiles/ghaithsaidani"
                                     target="_blank"
                                     className="size-10"
                                 >
-                                    <FaDiscord/>
+                                    <SiNotion/>
                                 </a>
                             </Button>
                         </div>
@@ -89,4 +89,4 @@ const Hero = () => {
     );
 };
 
-export {Hero};
+export default Hero;

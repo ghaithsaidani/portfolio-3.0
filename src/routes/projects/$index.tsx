@@ -1,6 +1,6 @@
 import {createFileRoute} from '@tanstack/react-router'
 import {singleProjects} from "@/const/single-projects-pages.tsx";
-import {SingleProject} from "@/components/single-project.tsx";
+import {SingleProject} from "@/components";
 
 
 export const Route = createFileRoute('/projects/$index')({

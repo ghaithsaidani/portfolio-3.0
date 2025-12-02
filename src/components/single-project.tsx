@@ -6,13 +6,13 @@ import {AlignLeft} from "lucide-react";
 import {Separator} from "@/components/ui/separator.tsx";
 
 
-export function SingleProject({
+const SingleProject = ({
                                   badge,
                                   title,
                                   description,
                                   image,
                                   sections,
-                              }: ProjectPageProps) {
+                              }: ProjectPageProps)=> {
     const [activeSection, setActiveSection] = useState<string | null>(null);
     const sectionRefs = useRef<Record<string, HTMLElement>>({});
 
@@ -126,3 +126,6 @@ export function SingleProject({
         </section>
     );
 }
+
+
+export default SingleProject

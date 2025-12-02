@@ -93,4 +93,4 @@ const Education = () => {
     );
 };
 
-export {Education};
+export default Education;

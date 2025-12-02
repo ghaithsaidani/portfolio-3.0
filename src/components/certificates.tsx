@@ -109,4 +109,4 @@ const Certificates = ({
     )
 };
 
-export {Certificates};
+export default Certificates;

@@ -4,7 +4,7 @@ import {LuGithub, LuInstagram, LuTwitter, LuYoutube} from "react-icons/lu";
 
 const YEAR = new Date().getFullYear()
 
-export function Footer() {
+const Footer = () => {
     return (
         <footer className="pt-16 pb-8">
             <div className="container mx-auto">
@@ -40,3 +40,5 @@ export function Footer() {
         </footer>
     )
 }
+
+export default Footer

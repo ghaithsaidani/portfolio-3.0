@@ -1,5 +1,4 @@
 import {Confledis, Infogerance, Sofiatech, Xsustain} from "@/assets";
-import MultiChoicesButton from "@/components/ui/multi-choices-button.tsx";
 
 interface ExperienceItem {
     title: string;
@@ -52,7 +51,8 @@ const Experience = ({
                                 company: "Infogérance",
                                 logo: Infogerance,
                                 description:
-                                    "Engineered a hotel maintenance web application using Angular, Spring Boot, and MySQL. Developed a companion mobile app for housekeepers, enabling centralized and efficient fault reporting across hotel operations.",                            },
+                                    "Engineered a hotel maintenance web application using Angular, Spring Boot, and MySQL. Developed a companion mobile app for housekeepers, enabling centralized and efficient fault reporting across hotel operations.",
+                            },
                         ],
                     }: ExperienceProps) => {
     return (
@@ -62,16 +62,10 @@ const Experience = ({
                     {/*<h2 className="mb-12 text-4xl font-medium leading-tight md:text-7xl">
                         {title}
                     </h2>*/}
-                    <div className="flex w-full items-center justify-between mb-16">
-                        <h1 className="text-3xl md:text-5xl font-semibold tracking-tighter lg:text-6xl">
-                            Experience
-                        </h1>
-                        {/*<Button variant="ghost" size="lg" className="text-sm font-semibold">
-                            Download CV <Download className="size-4" />
-                        </Button>*/}
-                        <MultiChoicesButton/>
-                    </div>
 
+                    <h1 className="text-3xl md:text-5xl font-semibold tracking-tighter lg:text-6xl mb-16">
+                        Experience
+                    </h1>
                     <div className="space-y-8">
                         {experience.map(
                             ({title, details, period, company, logo, description}, idx) => (
@@ -111,4 +105,4 @@ const Experience = ({
     );
 };
 
-export {Experience};
+export default Experience;

@@ -1,6 +1,6 @@
 import {createRootRoute, Outlet} from "@tanstack/react-router";
 import {ThemeProvider} from "@/providers/theme-provider.tsx";
-import {AnimatedNavbar} from "@/components/animated-navbar.tsx";
+import {AnimatedNavbar} from "@/components";
 import {Toaster} from "@/components/ui/sonner";
 
 

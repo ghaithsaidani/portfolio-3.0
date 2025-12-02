@@ -19,7 +19,7 @@ import {
 import {Button} from "@/components/ui/button.tsx";
 import {MonitorIcon, MoonIcon, SunIcon} from "lucide-react";
 
-export function AnimatedNavbar({ children }: { children: ReactNode }) {
+const AnimatedNavbar = ({ children }: { children: ReactNode })=> {
     const navItems = [
         {
             name: "Features",
@@ -129,6 +129,8 @@ export function AnimatedNavbar({ children }: { children: ReactNode }) {
         </div>
     );
 }
+
+export default AnimatedNavbar;
 
 /*
 const DummyContent = () => {

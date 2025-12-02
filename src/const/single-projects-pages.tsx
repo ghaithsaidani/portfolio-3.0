@@ -72,29 +72,29 @@ export const singleProjects: ProjectPageProps[] = [
                             <th>Tools</th>
                         </tr>
                         </thead>
-                        <tbody>
+                        <tbody >
                         <tr className="even:bg-muted m-0 border-t p-0">
-                            <td>Frontend</td>
+                            <td className={"pl-2"}>Frontend</td>
                             <td>React, TypeScript, Tailwind, Shadcn</td>
                         </tr>
                         <tr className="even:bg-muted m-0 border-t p-0">
-                            <td>Backend</td>
+                            <td className={"pl-2"}>Backend</td>
                             <td>SpringBoot, PostgreSQL, Redis</td>
                         </tr>
                         <tr className="even:bg-muted m-0 border-t p-0">
-                            <td>DevOps</td>
+                            <td className={"pl-2"}>DevOps</td>
                             <td>Kubernetes, Tekton, Helm, Vault, Keycloak</td>
                         </tr>
                         <tr className="even:bg-muted m-0 border-t p-0">
-                            <td>Observability</td>
+                            <td className={"pl-2"}>Observability</td>
                             <td>Prometheus, Loki</td>
                         </tr>
                         <tr className="even:bg-muted m-0 border-t p-0">
-                            <td>Security</td>
+                            <td className={"pl-2"}>Security</td>
                             <td>Vault, Keycloak</td>
                         </tr>
                         <tr className="even:bg-muted m-0 border-t p-0">
-                            <td>Design</td>
+                            <td className={"pl-2"}>Design</td>
                             <td>Figma, Adobe After Effects</td>
                         </tr>
                         </tbody>
@@ -209,19 +209,19 @@ export const singleProjects: ProjectPageProps[] = [
                         </thead>
                         <tbody>
                         <tr className="even:bg-muted m-0 border-t p-0">
-                            <td>VM Orchestration</td>
+                            <td className={"pl-2"}>VM Orchestration</td>
                             <td>Vagrant, KVM/QEMU</td>
                         </tr>
                         <tr className="even:bg-muted m-0 border-t p-0">
-                            <td>Provisioning</td>
+                            <td className={"pl-2"}>Provisioning</td>
                             <td>Ansible</td>
                         </tr>
                         <tr className="even:bg-muted m-0 border-t p-0">
-                            <td>Container Orchestration</td>
+                            <td className={"pl-2"}>Container Orchestration</td>
                             <td>Kubernetes (kubeadm)</td>
                         </tr>
                         <tr className="even:bg-muted m-0 border-t p-0">
-                            <td>OS / Tools</td>
+                            <td className={"pl-2"}>OS / Tools</td>
                             <td>Linux, systemd, Docker/containerd</td>
                         </tr>
                         </tbody>
@@ -312,23 +312,23 @@ export const singleProjects: ProjectPageProps[] = [
                         </thead>
                         <tbody>
                         <tr className="even:bg-muted m-0 border-t p-0">
-                            <td>Infrastructure</td>
+                            <td className={"pl-2"}>Infrastructure</td>
                             <td>Terraform, Azure, Kubernetes</td>
                         </tr>
                         <tr className="even:bg-muted m-0 border-t p-0">
-                            <td>CI/CD</td>
+                            <td className={"pl-2"}>CI/CD</td>
                             <td>Jenkins, ArgoCD, Helm</td>
                         </tr>
                         <tr className="even:bg-muted m-0 border-t p-0">
-                            <td>Application</td>
+                            <td className={"pl-2"}>Application</td>
                             <td>Spring Boot, Docker</td>
                         </tr>
                         <tr className="even:bg-muted m-0 border-t p-0">
-                            <td>Security</td>
+                            <td className={"pl-2"}>Security</td>
                             <td>Vault</td>
                         </tr>
                         <tr className="even:bg-muted m-0 border-t p-0">
-                            <td>Observability</td>
+                            <td className={"pl-2"}>Observability</td>
                             <td>Prometheus, Grafana</td>
                         </tr>
                         </tbody>
@@ -464,19 +464,19 @@ export const singleProjects: ProjectPageProps[] = [
                         </thead>
                         <tbody>
                         <tr>
-                            <td>Frontend</td>
+                            <td className={"pl-2"}>Frontend</td>
                             <td>ReactJS, TypeScript, Tailwind</td>
                         </tr>
                         <tr className="even:bg-muted m-0 border-t p-0">
-                            <td>Backend</td>
+                            <td className={"pl-2"}>Backend</td>
                             <td>Spring Boot, Swagger, WebSocket</td>
                         </tr>
                         <tr className="even:bg-muted m-0 border-t p-0">
-                            <td>Data & Simulation</td>
+                            <td className={"pl-2"}>Data & Simulation</td>
                             <td>Python, MQTT, Paho MQTT Client</td>
                         </tr>
                         <tr className="even:bg-muted m-0 border-t p-0">
-                            <td>Database</td>
+                            <td className={"pl-2"}>Database</td>
                             <td>MySQL</td>
                         </tr>
                         </tbody>
@@ -564,6 +564,34 @@ export const singleProjects: ProjectPageProps[] = [
                         <li>Multi-tier VPC architecture with public & private subnets</li>
                         <li>Reusable modules enabling fast new-environment creation</li>
                     </ul>
+                ),
+            },
+            {
+                id: "technologies",
+                title: "🛠️ Technologies Used",
+                content: (
+                    <table>
+                        <thead>
+                        <tr>
+                            <th>Category</th>
+                            <th>Tools</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <tr>
+                            <td className={"pl-2"}>Cloud</td>
+                            <td>AWS, Cloud9</td>
+                        </tr>
+                        <tr className="even:bg-muted m-0 border-t p-0">
+                            <td className={"pl-2"}>DevOps</td>
+                            <td>Terraform</td>
+                        </tr>
+                        <tr className="even:bg-muted m-0 border-t p-0">
+                            <td className={"pl-2"}>Database</td>
+                            <td>MySQL</td>
+                        </tr>
+                        </tbody>
+                    </table>
                 ),
             },
             {
@@ -659,19 +687,19 @@ export const singleProjects: ProjectPageProps[] = [
                         </thead>
                         <tbody>
                         <tr className="even:bg-muted m-0 border-t p-0">
-                            <td>Frontend</td>
+                            <td className={"pl-2"}>Frontend</td>
                             <td>Node-RED Dashboard</td>
                         </tr>
                         <tr className="even:bg-muted m-0 border-t p-0">
-                            <td>Backend</td>
+                            <td className={"pl-2"}>Backend</td>
                             <td>Flask (Python)</td>
                         </tr>
                         <tr className="even:bg-muted m-0 border-t p-0">
-                            <td>Messaging</td>
+                            <td className={"pl-2"}>Messaging</td>
                             <td>MQTT Broker</td>
                         </tr>
                         <tr className="even:bg-muted m-0 border-t p-0">
-                            <td>IoT Flow Orchestration</td>
+                            <td className={"pl-2"}>IoT Flow Orchestration</td>
                             <td>Node-RED</td>
                         </tr>
                         </tbody>
@@ -776,17 +804,17 @@ export const singleProjects: ProjectPageProps[] = [
                         </thead>
                         <tbody>
                         <tr className="even:bg-muted m-0 border-t p-0">
-                            <td>Frontend</td>
+                            <td className={"pl-2"}>Frontend</td>
                             <td>Angular</td>
                         </tr>
 
                         <tr className="even:bg-muted m-0 border-t p-0">
-                            <td>Form Handling</td>
+                            <td className={"pl-2"}>Form Handling</td>
                             <td>EmailJS</td>
                         </tr>
 
                         <tr className="even:bg-muted m-0 border-t p-0">
-                            <td>Hosting / Deployment</td>
+                            <td className={"pl-2"}>Hosting / Deployment</td>
                             <td>Netlify (CDN, automatic deploys)</td>
                         </tr>
                         </tbody>
@@ -873,32 +901,32 @@ export const singleProjects: ProjectPageProps[] = [
                         </thead>
                         <tbody>
                         <tr className="even:bg-muted m-0 border-t p-0">
-                            <td>Frontend</td>
+                            <td className={"pl-2"}>Frontend</td>
                             <td>ReactJS</td>
                         </tr>
 
                         <tr className="even:bg-muted m-0 border-t p-0">
-                            <td>Backend</td>
+                            <td className={"pl-2"}>Backend</td>
                             <td>Node.js, Express.js</td>
                         </tr>
 
                         <tr className="even:bg-muted m-0 border-t p-0">
-                            <td>Database</td>
+                            <td className={"pl-2"}>Database</td>
                             <td>MongoDB</td>
                         </tr>
 
                         <tr className="even:bg-muted m-0 border-t p-0">
-                            <td>DevOps</td>
+                            <td className={"pl-2"}>DevOps</td>
                             <td>Jenkins, ArgoCD</td>
                         </tr>
 
                         <tr className="even:bg-muted m-0 border-t p-0">
-                            <td>Infrastructure</td>
+                            <td className={"pl-2"}>Infrastructure</td>
                             <td>Azure, Terraform</td>
                         </tr>
 
                         <tr className="even:bg-muted m-0 border-t p-0">
-                            <td>Version Control</td>
+                            <td className={"pl-2"}>Version Control</td>
                             <td>GitHub</td>
                         </tr>
 
@@ -1045,19 +1073,19 @@ export const singleProjects: ProjectPageProps[] = [
                         </thead>
                         <tbody>
                         <tr className="even:bg-muted m-0 border-t p-0">
-                            <td>Frontend</td>
+                            <td className={"pl-2"}>Frontend</td>
                             <td>ReactJS, Tailwind CSS</td>
                         </tr>
                         <tr className="even:bg-muted m-0 border-t p-0">
-                            <td>Infrastructure</td>
+                            <td className={"pl-2"}>Infrastructure</td>
                             <td>Azure, Terraform, VMs, Virtual Networks</td>
                         </tr>
                         <tr className="even:bg-muted m-0 border-t p-0">
-                            <td>CI/CD</td>
+                            <td className={"pl-2"}>CI/CD</td>
                             <td>GitHub Actions</td>
                         </tr>
                         <tr className="even:bg-muted m-0 border-t p-0">
-                            <td>Containerization</td>
+                            <td className={"pl-2"}>Containerization</td>
                             <td>Docker</td>
                         </tr>
                         </tbody>
@@ -1160,15 +1188,19 @@ export const singleProjects: ProjectPageProps[] = [
                         </thead>
                         <tbody>
                         <tr className="even:bg-muted m-0 border-t p-0">
-                            <td>Frontend</td>
+                            <td className={"pl-2"}>Frontend</td>
                             <td>ReactJS, TypeScript, Tailwind CSS</td>
                         </tr>
                         <tr className="even:bg-muted m-0 border-t p-0">
-                            <td>Hosting / Deployment</td>
+                            <td className={"pl-2"}>Hosting / Deployment</td>
                             <td>Netlify / GitHub Pages</td>
                         </tr>
                         <tr className="even:bg-muted m-0 border-t p-0">
-                            <td>Version Control</td>
+                            <td className={"pl-2"}>Form Handling</td>
+                            <td>EmailJS</td>
+                        </tr>
+                        <tr className="even:bg-muted m-0 border-t p-0">
+                            <td className={"pl-2"}>Version Control</td>
                             <td>GitHub</td>
                         </tr>
                         </tbody>
@@ -1250,19 +1282,19 @@ export const singleProjects: ProjectPageProps[] = [
                         </thead>
                         <tbody>
                         <tr className="even:bg-muted m-0 border-t p-0">
-                            <td>Frontend</td>
+                            <td className={"pl-2"}>Frontend</td>
                             <td>Angular</td>
                         </tr>
                         <tr className="even:bg-muted m-0 border-t p-0">
-                            <td>Backend</td>
+                            <td className={"pl-2"}>Backend</td>
                             <td>Node.js, Express</td>
                         </tr>
                         <tr className="even:bg-muted m-0 border-t p-0">
-                            <td>Database</td>
+                            <td className={"pl-2"}>Database</td>
                             <td>MySQL</td>
                         </tr>
                         <tr className="even:bg-muted m-0 border-t p-0">
-                            <td>Deployment / Server</td>
+                            <td className={"pl-2"}>Deployment / Server</td>
                             <td>Nginx, PM2, Linux (WHM / CPanel)</td>
                         </tr>
                         </tbody>
@@ -1336,15 +1368,15 @@ export const singleProjects: ProjectPageProps[] = [
                         </thead>
                         <tbody>
                         <tr className="even:bg-muted m-0 border-t p-0">
-                            <td>Frontend</td>
+                            <td className={"pl-2"}>Frontend</td>
                             <td>ReactJS</td>
                         </tr>
                         <tr className="even:bg-muted m-0 border-t p-0">
-                            <td>Backend</td>
+                            <td className={"pl-2"}>Backend</td>
                             <td>Django, PostgreSQL</td>
                         </tr>
                         <tr className="even:bg-muted m-0 border-t p-0">
-                            <td>Deployment</td>
+                            <td className={"pl-2"}>Deployment</td>
                             <td>AWS EC2, Docker</td>
                         </tr>
                         </tbody>
@@ -1377,10 +1409,10 @@ export const singleProjects: ProjectPageProps[] = [
         ],
     },
     {
-        badge: "💼 Internship Project",
+        badge: "🌐 Personal Portfolio",
         title: "Portfolio 1.0",
         description:
-            "During my software development internship at Confledis SAS, I contributed to enhancing and deploying a finance web application, improving its reliability, scalability, and user experience.",
+            "The first version of my personal portfolio — a simple and responsive website built to present my background, skills, and early projects.",
         image: Portfolio1,
         sections: [
             {
@@ -1388,23 +1420,21 @@ export const singleProjects: ProjectPageProps[] = [
                 title: "📘 Overview",
                 content: (
                     <p>
-                        The Confledis Finance Platform is a web application for financial management.
-                        During the internship, I focused on debugging, extending features, and ensuring the system’s
-                        stability and scalability.
+                        Portfolio 1.0 is the first personal website I created to introduce myself as a software engineering
+                        student. It includes sections about my education, experiences, and early projects. This version
+                        helped me establish an online presence and begin showcasing my work.
                     </p>
                 ),
             },
             {
                 id: "features",
-                title: "✨ Key Contributions",
+                title: "✨ Key Features",
                 content: (
                     <ul>
-                        <li>Debugged and extended features in a ReactJS & Django finance app, improving reliability and
-                            user retention
-                        </li>
-                        <li>Containerized and deployed the platform on AWS EC2 using Docker</li>
-                        <li>Improved uptime, scalability, and maintainability of the application</li>
-                        <li>Collaborated remotely with the team to ensure smooth feature delivery and bug fixes</li>
+                        <li>Responsive design optimized for desktop and mobile</li>
+                        <li>Clean and simple UI focused on readability</li>
+                        <li>Sections for About, Skills, Projects, and Contact</li>
+                        <li>Deployed and accessible publicly</li>
                     </ul>
                 ),
             },
@@ -1421,32 +1451,51 @@ export const singleProjects: ProjectPageProps[] = [
                         </thead>
                         <tbody>
                         <tr className="even:bg-muted m-0 border-t p-0">
-                            <td>Frontend</td>
-                            <td>ReactJS</td>
+                            <td className={"pl-2"}>Frontend</td>
+                            <td>ReactJS, TypeScript, Tailwind CSS</td>
                         </tr>
                         <tr className="even:bg-muted m-0 border-t p-0">
-                            <td>Backend</td>
-                            <td>Django, PostgreSQL</td>
+                            <td className={"pl-2"}>Hosting / Deployment</td>
+                            <td>Netlify</td>
                         </tr>
                         <tr className="even:bg-muted m-0 border-t p-0">
-                            <td>Deployment</td>
-                            <td>AWS EC2, Docker</td>
+                            <td className={"pl-2"}>Form Handling</td>
+                            <td>EmailJS</td>
+                        </tr>
+                        <tr className="even:bg-muted m-0 border-t p-0">
+                            <td className={"pl-2"}>Version Control</td>
+                            <td>GitHub</td>
                         </tr>
                         </tbody>
                     </table>
                 ),
             },
             {
-                id: "diagram",
-                title: "📊 Use Case Diagram",
+                id: "structure",
+                title: "🧩 Structure & Organization",
                 content: (
-                    <article>
-                        <p>
-                            Although the source code is confidential, here’s a high-level use case diagram showing the
-                            system’s main actors and functionalities:
-                        </p>
-                        <img src={InnERPUseCaseDiagram} alt={"InnERP use case diagram"}/>
-                    </article>
+                    <p>
+                        The website is built with simple static HTML pages, minimal CSS styling, and Bootstrap components.
+                        It was designed as an early step in my journey to learn web development, building structured and
+                        maintainable layouts from scratch.
+                    </p>
+                ),
+            },
+            {
+                id: "demo",
+                title: "🌐 Live Website",
+                content: (
+                    <p>
+                        Visit the live Portfolio 1.0 website:{" "}
+                        <a
+                            href="https://ghaith-saidani.netlify.app/"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="text-primary underline"
+                        >
+                            Portfolio 1.0 — Live
+                        </a>
+                    </p>
                 ),
             },
             {
@@ -1454,8 +1503,15 @@ export const singleProjects: ProjectPageProps[] = [
                 title: "📂 Repository & Source Code",
                 content: (
                     <p>
-                        The code is confidential due to the client agreement, but key contributions and deployment work
-                        are highlighted above.
+                        The full source code is open and available on GitHub:{" "}
+                        <a
+                            href="https://github.com/ghaithsaidani/portfolio-1.0"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="text-primary underline"
+                        >
+                            Portfolio 1.0 Repository
+                        </a>
                     </p>
                 ),
             },
@@ -1509,19 +1565,19 @@ export const singleProjects: ProjectPageProps[] = [
                         </thead>
                         <tbody>
                         <tr className="even:bg-muted m-0 border-t p-0">
-                            <td>Frontend (Web)</td>
+                            <td className={"pl-2"}>Frontend (Web)</td>
                             <td>Angular</td>
                         </tr>
                         <tr className="even:bg-muted m-0 border-t p-0">
-                            <td>Backend</td>
+                            <td className={"pl-2"}>Backend</td>
                             <td>Spring Boot</td>
                         </tr>
                         <tr className="even:bg-muted m-0 border-t p-0">
-                            <td>Database</td>
+                            <td className={"pl-2"}>Database</td>
                             <td>OracleDB</td>
                         </tr>
                         <tr className="even:bg-muted m-0 border-t p-0">
-                            <td>Mobile Development</td>
+                            <td className={"pl-2"}>Mobile Development</td>
                             <td>Android</td>
                         </tr>
                         </tbody>

@@ -10,6 +10,7 @@ import {
 } from "@/components/ui/resizable-navbar";
 import {type ReactNode, useState} from "react";
 import {AnimatedThemeToggler} from "@/components/ui/animated-theme-toggler.tsx";
+import {Link} from "@tanstack/react-router";
 
 interface NavProps {
     name: string
@@ -20,17 +21,18 @@ const AnimatedNavbar = ({children}: { children: ReactNode }) => {
     const navItems: NavProps[] = [
         {
             name: "Home",
-            link: "#hero"
+            link: "/#hero"
         },
         {
             name: "Projects",
-            link: "#projects",
+            link: "/#projects",
         },
         {
             name: "Contact",
-            link: "#contact",
+            link: "/#contact",
         },
     ];
+
 
 
     const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
@@ -69,14 +71,14 @@ const AnimatedNavbar = ({children}: { children: ReactNode }) => {
                         onClose={() => setIsMobileMenuOpen(false)}
                     >
                         {navItems.map((item, idx) => (
-                            <a
+                            <Link
                                 key={`mobile-link-${idx}`}
-                                href={item.link}
+                                to={item.link}
                                 onClick={() => setIsMobileMenuOpen(false)}
                                 className="relative text-neutral-600 dark:text-neutral-300"
                             >
                                 <span className="block">{item.name}</span>
-                            </a>
+                            </Link>
                         ))}
                         {/*<div className="flex w-full flex-col gap-4">
                             <DropdownMenu>

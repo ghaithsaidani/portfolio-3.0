@@ -1226,7 +1226,7 @@ export const singleProjects: ProjectPageProps[] = [
                     <p>
                         Visit my official old Portfolio: {" "}
                         <a
-                            href="https://ghaithsaidani.netlify.app/"
+                            href="https://ghaithsaidani2.netlify.app/"
                             target="_blank"
                             rel="noopener noreferrer"
                             className="text-primary underline"

@@ -7,7 +7,7 @@ export const Route = createFileRoute('/contact')({
 
 function RouteComponent() {
     return (
-        <section>
+        <section className={"flex flex-col h-[90vh] gap-20 lg:justify-center"}>
             <Contact/>
             <Footer/>
         </section>

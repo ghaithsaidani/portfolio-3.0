@@ -1,3 +1,4 @@
+// personal image
 export {default as PersonalImage} from './images/personal-image.png'
 
 

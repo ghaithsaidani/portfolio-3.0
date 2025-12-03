@@ -10,14 +10,6 @@ import {
 } from "@/components/ui/resizable-navbar";
 import {type ReactNode, useState} from "react";
 import {AnimatedThemeToggler} from "@/components/ui/animated-theme-toggler.tsx";
-import {
-    DropdownMenu,
-    DropdownMenuContent,
-    DropdownMenuItem,
-    DropdownMenuTrigger
-} from "@/components/ui/dropdown-menu.tsx";
-import {Button} from "@/components/ui/button.tsx";
-import {MonitorIcon, MoonIcon, SunIcon} from "lucide-react";
 
 interface NavProps {
     name: string
@@ -28,17 +20,18 @@ const AnimatedNavbar = ({children}: { children: ReactNode }) => {
     const navItems: NavProps[] = [
         {
             name: "Home",
-            link: "/"
+            link: "#hero"
         },
         {
             name: "Projects",
-            link: "/",
+            link: "#projects",
         },
         {
             name: "Contact",
-            link: "/contact",
+            link: "#contact",
         },
     ];
+
 
     const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 

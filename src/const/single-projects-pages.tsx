@@ -107,7 +107,7 @@ export const singleProjects: ProjectPageProps[] = [
                 content: (
                     <article>
                         <p>
-                            KubePilot follows a modular microservices design powered by Go,
+                            KubePilot follows a modular microservices design powered by SpringBoot,
                             React, PostgreSQL, and Kubernetes operators.
                         </p>
                         <img src={KubePilotDetailedArchitecture} alt={"kubepilot detailed architecture"}/>

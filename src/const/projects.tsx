@@ -74,16 +74,6 @@ export const projects: ProjectItem[] = [
                 label: 'SpringBoot',
             },
             {
-                icon: PostgreSQL,
-                url: "https://www.postgresql.org/",
-                label: 'PostgreSQL',
-            },
-            {
-                icon: Redis,
-                url: "https://redis.io/",
-                label: 'Redis',
-            },
-            {
                 icon: Kubernetes,
                 url: "https://kubernetes.io/",
                 label: 'Kubernetes',
@@ -112,6 +102,16 @@ export const projects: ProjectItem[] = [
                 icon: Loki,
                 url: "https://grafana.com/oss/loki/",
                 label: 'Loki',
+            },
+            {
+                icon: PostgreSQL,
+                url: "https://www.postgresql.org/",
+                label: 'PostgreSQL',
+            },
+            {
+                icon: Redis,
+                url: "https://redis.io/",
+                label: 'Redis',
             },
             {
                 icon: Gitlab,

@@ -1,0 +1,12 @@
+{
+  "badge": "✨ Turning Your Ideas Into Reality",
+  "title": {
+    "name": "Ghaith Saidani",
+    "words": ["Software Engineer", "DevOps", "Cloud Computing"]
+  },
+  "description": "From cloud infrastructure to full-stack applications, I turn ideas into robust, production-ready systems. I’m driven by curiosity, best practices, and the challenge of crafting solutions that scale effortlessly and perform flawlessly.",
+  "cta": {
+    "say_hi": "Say Hi 👋",
+    "explore": "Explore my work"
+  }
+}

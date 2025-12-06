@@ -1,0 +1,31 @@
+{
+  "title": "Bildung",
+
+  "marburg": {
+    "date": "2025 - 2026",
+    "name": "Marburg University, Marburg",
+    "degree": "Austauschprogramm",
+    "content": "Ausgewählt für ein akademisches Austauschprogramm, das sich auf fortgeschrittene Softwareentwicklung und Forschung konzentriert. Vertiefte Kenntnisse in verteilten Systemen, Cloud-Technologien und angewandter Informatik durch Lehrveranstaltungen und internationale Zusammenarbeit."
+  },
+
+  "sesame": {
+    "date": "2022 - 2025",
+    "name": "Sesame University, Ariana",
+    "degree": "Ingenieurabschluss",
+    "content": "Abschluss eines Ingenieurstudiums mit Schwerpunkt Cloud Computing und Cybersecurity. Starke Grundlagen in DevOps, verteilten Systemen und modernen Softwarearchitekturen durch praxisnahe Projekte und akademische Forschung entwickelt."
+  },
+
+  "fsb": {
+    "date": "2019 - 2022",
+    "name": "Faculty of Sciences, Bizerte",
+    "degree": "Bachelorabschluss",
+    "content": "Bachelorabschluss in Software Engineering und Informationssystemen mit Auszeichnung erworben. Solide Kenntnisse in Programmierung, Datenstrukturen, Algorithmen und Full-Stack-Entwicklung durch akademische und persönliche Projekte aufgebaut."
+  },
+
+  "ljfb": {
+    "date": "2019",
+    "name": "Lycée Jeunes-Filles, Bizerte",
+    "degree": "Abitur",
+    "content": "Abitur mit Schwerpunkt Mathematik erworben, starke analytische und problemlösende Fähigkeiten entwickelt, die die Grundlage für das weiterführende Studium der Softwaretechnik bildeten."
+  }
+}

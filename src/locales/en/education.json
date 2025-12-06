@@ -1,0 +1,31 @@
+{
+  "title": "Education",
+
+  "marburg": {
+    "date": "2025 - 2026",
+    "name": "Marburg University, Marburg",
+    "degree": "Exchange Program",
+    "content": "Selected for an academic exchange program focused on advanced software engineering and research exposure. Strengthened expertise in distributed systems, cloud technologies, and applied computer science through coursework and international collaboration."
+  },
+
+  "sesame": {
+    "date": "2022 - 2025",
+    "name": "Sesame University, Ariana",
+    "degree": "Engineer's Degree",
+    "content": "Completed an engineering degree specializing in Cloud Computing and Cybersecurity. Developed strong foundations in DevOps, distributed systems, and modern software architectures through hands-on projects and academic research."
+  },
+
+  "fsb": {
+    "date": "2019 - 2022",
+    "name": "Faculty of Sciences, Bizerte",
+    "degree": "Bachelor Degree",
+    "content": "Earned a bachelor's degree in Software Engineering and Information Systems with honors. Built a solid background in programming, data structures, algorithms, and full-stack development while completing several academic and personal projects."
+  },
+
+  "ljfb": {
+    "date": "2019",
+    "name": "Lycée Jeunes-Filles, Bizerte",
+    "degree": "Baccalaureate",
+    "content": "Earned a Baccalaureate specialized in Mathematics, developing strong analytical and problem-solving skills that formed the foundation for advanced studies in software engineering."
+  }
+}

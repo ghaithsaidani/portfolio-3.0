@@ -1,0 +1,8 @@
+export {default as hero_en} from './en/hero.json'
+export {default as hero_de} from './de/hero.json'
+export {default as navbar_en} from './en/navbar.json'
+export {default as navbar_de} from './de/navbar.json'
+export {default as experience_en} from './en/experience.json'
+export {default as experience_de} from './de/experience.json'
+export {default as education_en} from './en/education.json'
+export {default as education_de} from './de/education.json'

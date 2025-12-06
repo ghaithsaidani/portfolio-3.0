@@ -3,8 +3,8 @@ import {ThemeProvider} from "@/providers/theme-provider.tsx";
 import {AnimatedNavbar} from "@/components";
 import {Toaster} from "@/components/ui/sonner";
 
-
 const RootLayout = () => (
+
     <ThemeProvider defaultTheme="dark" storageKey="vite-ui-theme">
         <AnimatedNavbar>
             <Outlet/>
@@ -12,6 +12,7 @@ const RootLayout = () => (
         </AnimatedNavbar>
         <Toaster position={"bottom-right"}/>
     </ThemeProvider>
+
 )
 
 export const Route = createRootRoute({

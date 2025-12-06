@@ -1,0 +1,33 @@
+{
+  "title": "Berufserfahrung",
+  "items": [
+    {
+      "role": "DevOps Engineer",
+      "details": "Praktikum • Hybrid • Ariana, Tunesien",
+      "period": "Feb 2025 - Jul 2025",
+      "company": "Sofiatech",
+      "description": "Entwicklung von Kubepilot, einer einheitlichen Kubernetes-Managementplattform. Erstellung eines Drag-and-Drop CI/CD Builders mit Tekton und React Flow, Implementierung vollständiger Observability mit Prometheus und Loki und Absicherung der Plattform mit Keycloak und Vault."
+    },
+    {
+      "role": "Software Engineer",
+      "details": "Praktikum • Vor Ort • Tunis, Tunesien",
+      "period": "Jun 2024 - Aug 2024",
+      "company": "XSUSTAIN",
+      "description": "Entwicklung eines Full-Stack-Restaurantverwaltungssystems mit dem MERN-Stack. Automatisierung der Cloud-Infrastruktur auf Azure mit Terraform und Ansible sowie Implementierung einer Jenkins-CI/CD-Pipeline, die containerisierte Services nach AKS über ACR bereitstellt."
+    },
+    {
+      "role": "Software Developer",
+      "details": "Praktikum • Remote • Paris, Frankreich",
+      "period": "Aug 2023 - Okt 2023",
+      "company": "Confledis SAS",
+      "description": "Verbesserung einer Finanzplattform durch Debugging und Erweiterung mit React und Django. Containerisierung mit Docker und Bereitstellung auf AWS EC2 zur Verbesserung der Skalierbarkeit und Stabilität."
+    },
+    {
+      "role": "Software Developer",
+      "details": "Praktikum • Hybrid • Ariana, Tunesien",
+      "period": "Feb 2022 - Jun 2022",
+      "company": "Infogérance",
+      "description": "Entwicklung einer Hotelwartungsanwendung mit Angular, Spring Boot und MySQL. Entwicklung einer mobilen App für Housekeeping-Teams zur zentralisierten Meldung von Störungen."
+    }
+  ]
+}

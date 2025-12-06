@@ -11,29 +11,22 @@ import {
 import {type ReactNode, useState} from "react";
 import {AnimatedThemeToggler} from "@/components/ui/animated-theme-toggler.tsx";
 import {Link} from "@tanstack/react-router";
+import LanguageSwitcher from "@/components/ui/language-switcher.tsx";
+import {useTranslation} from "react-i18next";
 
 interface NavProps {
-    name: string
+    name: string;
     link: string;
 }
 
 const AnimatedNavbar = ({children}: { children: ReactNode }) => {
+    const {t} = useTranslation();
+
     const navItems: NavProps[] = [
-        {
-            name: "Home",
-            link: "/#hero"
-        },
-        {
-            name: "Projects",
-            link: "/#projects",
-        },
-        {
-            name: "Contact",
-            link: "/#contact",
-        },
+        {name: t("home"), link: "/#hero"},
+        {name: t("projects"), link: "/#projects"},
+        {name: t("contact"), link: "/#contact"}
     ];
-
-
 
     const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
@@ -43,27 +36,27 @@ const AnimatedNavbar = ({children}: { children: ReactNode }) => {
                 {/* Desktop Navigation */}
                 <NavBody>
                     <NavbarLogo/>
-                    <NavItems items={navItems}/>
-                    <AnimatedThemeToggler className={"z-20"}/>
-                    {/*<div className="flex items-center gap-4">
 
-                        <NavbarButton variant="primary">Book a call</NavbarButton>
-                    </div>*/}
-                    {/*<NavbarButton></NavbarButton>*/}
+                    {/* PASS translated nav items */}
+                    <NavItems items={navItems}/>
+
+                    <div className="z-30 flex gap-5">
+                        <LanguageSwitcher/>
+                        <AnimatedThemeToggler className="z-20"/>
+                    </div>
                 </NavBody>
 
                 {/* Mobile Navigation */}
                 <MobileNav>
                     <MobileNavHeader>
                         <NavbarLogo/>
-                        <div className={"flex gap-5 items-center justify-center"}>
-                            <AnimatedThemeToggler className={"z-20"}/>
+                        <div className="flex gap-5 items-center justify-center">
+                            <AnimatedThemeToggler className="z-20"/>
                             <MobileNavToggle
                                 isOpen={isMobileMenuOpen}
                                 onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
                             />
                         </div>
-
                     </MobileNavHeader>
 
                     <MobileNavMenu
@@ -80,37 +73,13 @@ const AnimatedNavbar = ({children}: { children: ReactNode }) => {
                                 <span className="block">{item.name}</span>
                             </Link>
                         ))}
-                        {/*<div className="flex w-full flex-col gap-4">
-                            <DropdownMenu>
-                                <DropdownMenuTrigger asChild>
-                                    <Button aria-label="Select theme" size="icon" variant="outline">
-                                    </Button>
-                                </DropdownMenuTrigger>
-                                <DropdownMenuContent className="min-w-32">
-                                    <DropdownMenuItem>
-                                        <SunIcon aria-hidden="true" className="opacity-60" size={16}/>
-                                        <span>Light</span>
-                                    </DropdownMenuItem>
-                                    <DropdownMenuItem>
-                                        <MoonIcon aria-hidden="true" className="opacity-60" size={16}/>
-                                        <span>Dark</span>
-                                    </DropdownMenuItem>
-                                    <DropdownMenuItem>
-                                        <MonitorIcon aria-hidden="true" className="opacity-60" size={16}/>
-                                        <span>System</span>
-                                    </DropdownMenuItem>
-                                </DropdownMenuContent>
-                            </DropdownMenu>
-
-                        </div>*/}
                     </MobileNavMenu>
                 </MobileNav>
             </Navbar>
+
             {children}
         </div>
     );
-}
+};
 
 export default AnimatedNavbar;
-
-

@@ -1,0 +1,33 @@
+{
+  "title": "Experience",
+  "items": [
+    {
+      "role": "DevOps Engineer",
+      "details": "Internship • Hybrid • Ariana, Tunisia",
+      "period": "Feb 2025 - Jul 2025",
+      "company": "Sofiatech",
+      "description": "Built Kubepilot, a unified Kubernetes management platform. Designed a drag-and-drop CI/CD builder with Tekton and React Flow, deployed full observability with Prometheus and Loki, and secured the platform using Keycloak and Vault with strong RBAC policies."
+    },
+    {
+      "role": "Software Engineer",
+      "details": "Internship • Onsite • Tunis, Tunisia",
+      "period": "Jun 2024 - Aug 2024",
+      "company": "XSUSTAIN",
+      "description": "Developed a full-stack restaurant management system using the MERN stack. Automated cloud infrastructure on Azure using Terraform and Ansible, and implemented a Jenkins CI/CD pipeline deploying containerized services to AKS through ACR."
+    },
+    {
+      "role": "Software Developer",
+      "details": "Internship • Remote • Paris, France",
+      "period": "Aug 2023 - Oct 2023",
+      "company": "Confledis SAS",
+      "description": "Improved a financial web platform by debugging and extending features using React and Django. Containerized services with Docker and deployed the application on AWS EC2, enhancing scalability and platform reliability."
+    },
+    {
+      "role": "Software Developer",
+      "details": "Internship • Hybrid • Ariana, Tunisia",
+      "period": "Feb 2022 - Jun 2022",
+      "company": "Infogérance",
+      "description": "Engineered a hotel maintenance web application using Angular, Spring Boot, and MySQL. Developed a companion mobile app for housekeepers, enabling centralized and efficient fault reporting across hotel operations."
+    }
+  ]
+}

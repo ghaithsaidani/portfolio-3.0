@@ -1,6 +1,6 @@
 interface ListItem {
     icon: React.ReactNode;
-    title: string;
+    issuer: string;
     category: string;
     description: string;
     link: string;

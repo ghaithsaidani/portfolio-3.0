@@ -41,7 +41,7 @@ const AnimatedNavbar = ({children}: { children: ReactNode }) => {
                     <NavItems items={navItems}/>
 
                     <div className="z-30 flex gap-5">
-                        <LanguageSwitcher/>
+                        {/*<LanguageSwitcher/>*/}
                         <AnimatedThemeToggler className="z-20"/>
                     </div>
                 </NavBody>
@@ -51,7 +51,9 @@ const AnimatedNavbar = ({children}: { children: ReactNode }) => {
                     <MobileNavHeader>
                         <NavbarLogo/>
                         <div className="flex gap-5 items-center justify-center">
+                            {/*<LanguageSwitcher/>*/}
                             <AnimatedThemeToggler className="z-20"/>
+
                             <MobileNavToggle
                                 isOpen={isMobileMenuOpen}
                                 onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}

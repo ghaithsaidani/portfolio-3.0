@@ -12,7 +12,7 @@ export {default as ITSpecialistCloudComputing} from './images/certifications/ITS
 export {default as CloudFoundations} from './images/certifications/cloud-foundations.png'
 export {default as CloudWebAppBuilderCertificate} from './images/certifications/cloud-web-app-builder.png'
 export {default as IntroToLinux} from './images/certifications/introduction-to-linux.png'
-
+export {default as KCNA} from './images/certifications/KCNA-Cert-Badge.png'
 
 //experience
 export {default as Infogerance} from './images/experience/infogerance.png'

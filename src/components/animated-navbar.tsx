@@ -11,7 +11,7 @@ import {
 import {type ReactNode, useState} from "react";
 import {AnimatedThemeToggler} from "@/components/ui/animated-theme-toggler.tsx";
 import {Link} from "@tanstack/react-router";
-import LanguageSwitcher from "@/components/ui/language-switcher.tsx";
+//import LanguageSwitcher from "@/components/ui/language-switcher.tsx";
 import {useTranslation} from "react-i18next";
 
 interface NavProps {

@@ -16,10 +16,12 @@
     <!-- Canonical -->
     <link rel="canonical" href="https://ghaithsaidani.me/" />
 
-    <!-- Favicon (IMPORTANT: must be in /public) -->
+    <!-- Favicons (correct + production-safe) -->
     <link rel="icon" href="/logo.svg" type="image/svg+xml" />
-    <link rel="icon" href="/logo.svg" type="image/png" />
+    <link rel="icon" href="/logo.png" type="image/png" />
+    <link rel="apple-touch-icon" href="/logo.png" />
 
+    <!-- Open Graph -->
     <meta property="og:title" content="Ghaith Saidani – Software Engineer & Full-Stack Developer" />
     <meta
             property="og:description"
@@ -27,18 +29,24 @@
     />
     <meta property="og:type" content="website" />
     <meta property="og:url" content="https://ghaithsaidani.me/" />
-    <meta property="og:image" content="https://ghaithsaidani.me/logo.svg" />
+    <meta property="og:image" content="https://ghaithsaidani.me/logo.png" />
+    <meta property="og:image:type" content="image/png" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
 
+    <!-- Twitter -->
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:title" content="Ghaith Saidani – Software Engineer" />
     <meta
             name="twitter:description"
             content="Software engineer building production-ready, scalable full-stack and cloud-based systems."
     />
-    <meta name="twitter:image" content="https://ghaithsaidani.me/logo.svg" />
+    <meta name="twitter:image" content="https://ghaithsaidani.me/logo.png" />
 
+    <!-- Theme -->
     <meta name="theme-color" content="#0f172a" />
 
+    <!-- Structured Data -->
     <script type="application/ld+json">
         {
             "@context": "https://schema.org",
@@ -46,6 +54,7 @@
             "name": "Ghaith Saidani",
             "url": "https://ghaithsaidani.me",
             "jobTitle": "Software Engineer",
+            "image": "https://ghaithsaidani.me/logo.png",
             "sameAs": [
                 "https://www.linkedin.com/in/ghaithsaidani/",
                 "https://github.com/ghaithsaidani",

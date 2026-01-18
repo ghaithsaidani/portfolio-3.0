@@ -31,6 +31,7 @@ const Experience = () => {
                                                 src={logos[idx]}
                                                 alt={`${item.company} logo`}
                                                 className="h-8 object-contain"
+                                                loading={"lazy"}
                                             />
                                             <h3 className="text-xl">{item.role}</h3>
                                         </div>

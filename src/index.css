@@ -60,23 +60,6 @@
     --font-inter: "Inter";
     --font-playfair: "Playfair Display";
     --font-roboto-mono: "Roboto Mono";
-    /*--font-playfair: var(--font-playfair);*/
-    /*--font-playfair: var(--font-playfair);
-    --font-serif: var(--font-serif);*/
-    /*--font-sans: var(--font-sans);
-
-    --font-caveat: var(--font-caveat);
-    --font-calSans: var(--font-calSans);
-    --font-bebas-neue: var(--font-bebas-neue);
-    --font-instrumentSerif: var(--font-instrumentSerif);
-    --font-merriweather: var(--font-merriweather);
-    --font-ubuntu: var(--font-ubuntu);
-    --font-dm-sans: var(--font-dm-sans);
-    --font-instrument-sans: var(--font-instrument-sans);
-    --font-assistant: var(--font-assistant);
-    --font-poppins: var(--font-poppins);
-    --font-hedvigLettersSerif: var(--font-hedvigLettersSerif);
-    --font-antonio: var(--font-antonio);*/
     --animate-orbit: orbit calc(var(--duration)*1s) linear infinite;
   @keyframes orbit {
   0% {
@@ -89,7 +72,6 @@
 }
 
 :root {
-    --radius: 0.5rem;
     --background: oklch(1 0 0);
     --foreground: oklch(0.145 0 0);
     --card: oklch(1 0 0);
@@ -128,6 +110,9 @@
     --font-sans: var(--font-inter), sans-serif;
     --font-serif: var(--font-playfair), serif;
     --font-mono: var(--font-roboto-mono), monospace;
+
+    --duration: 8;
+    --angle: 0;
 }
 
 .dark {
@@ -199,10 +184,10 @@ html body[data-scroll-locked] {
     overflow-y: scroll !important;
     --removed-body-scroll-bar-size: 0 !important;
     margin-right: 0 !important;
-    margin-top: 0px !important;
+    margin-top: 0 !important;
 
     &#explorer {
-        margin-top: 0px !important;
+        margin-top: 0 !important;
     }
 }
 

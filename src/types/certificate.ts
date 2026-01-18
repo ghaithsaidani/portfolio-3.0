@@ -1,5 +1,7 @@
+import type {ReactNode} from "react";
+
 interface ListItem {
-    icon: React.ReactNode;
+    icon: ReactNode;
     issuer: string;
     category: string;
     description: string;

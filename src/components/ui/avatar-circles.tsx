@@ -45,18 +45,11 @@ export const AvatarCircles = ({
                     }}
                     transition={{type: "spring", stiffness: 260, damping: 20}}
                 >
-                    {/* Avatar */}
-                    {/*<img
-                        src={item.imageUrl}
-                        alt={item.label}
-                        className="size-8 rounded-full object-cover"
-                    />*/}
                     <div className={"size-8 p-2 flex items-center justify-center"}>
-                        {typeof item.icon==="string" ? <img src={item.icon} alt={item.label}/> : <item.icon/>}
+                        {typeof item.icon==="string" ? <img src={item.icon} alt={item.label} loading={"lazy"}/> : <item.icon/>}
                     </div>
 
 
-                    {/* Name appears on hover */}
                     <AnimatePresence>
                         {hovered === index && (
                             <motion.span

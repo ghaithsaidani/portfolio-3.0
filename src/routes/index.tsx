@@ -1,5 +1,6 @@
 import {createFileRoute} from '@tanstack/react-router'
 import {Certificates, Contact, Education, Experience, Footer, Hero, Projects, Skills} from "@/components";
+import {Suspense} from "react";
 
 
 export const Route = createFileRoute('/')({
@@ -8,7 +9,7 @@ export const Route = createFileRoute('/')({
 
 function Index() {
     return (
-        <main>
+        <Suspense fallback={<main/>}>
             <Hero/>
             <Experience/>
             <Education/>
@@ -20,6 +21,6 @@ function Index() {
             <Contact/>
             <Footer/>
             {/*<Content1/>*/}
-        </main>
+        </Suspense>
     )
 }

@@ -35,7 +35,7 @@ const Projects = ({
         <section id={"projects"} className="py-32">
             <div className="container">
                 <div className="mb-8 flex flex-col justify-between md:mb-14 md:flex-row md:items-end lg:mb-16">
-                    <h2 className="mb-3 text-neutral-950 mb-10 text-center text-3xl font-bold tracking-tighter sm:text-6xl dark:text-neutral-50">
+                    <h2 className="text-neutral-950 mb-10 text-center text-3xl font-bold tracking-tighter sm:text-6xl dark:text-neutral-50">
                         {heading}
                     </h2>
                     <div className="mt-8 flex shrink-0 items-center justify-start gap-2">
@@ -81,7 +81,7 @@ const Projects = ({
                             <CarouselItem key={item.id}
                                           className="ml-8 max-w-[350px] md:max-w-[452px] px-5 py-8 bg-muted rounded-xl">
 
-                                <div className={"group flex flex-col h-full flex"}>
+                                <div className={"group flex flex-col h-full"}>
                                     <div
                                         className="aspect-3/2 flex overflow-clip rounded-xl border-1 dark:border-none">
                                         <div className="flex-1">
@@ -91,6 +91,7 @@ const Projects = ({
                                                     src={item.image}
                                                     alt={item.title}
                                                     className="aspect-video w-full h-full object-cover"
+                                                    loading={"lazy"}
                                                 />
                                             </div>
                                         </div>

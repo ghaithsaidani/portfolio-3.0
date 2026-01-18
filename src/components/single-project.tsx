@@ -64,7 +64,7 @@ const SingleProject = ({
     return (
         <section className="py-32">
             <div className="container max-w-7xl">
-                <div className="relative grid-cols-3 gap-20 lg:grid">
+                <div className="grid-cols-3 gap-20 lg:grid">
                     {/* LEFT — CONTENT */}
                     <div className="lg:col-span-2 gap-2">
                         {badge && <Badge variant={"outline"}>{badge}</Badge>}
@@ -96,7 +96,7 @@ const SingleProject = ({
                     </div>
 
                     {/* RIGHT — Table of Contents */}
-                    <aside className="sticky top-8 hidden h-fit lg:block">
+                    <aside className="sticky top-32 hidden h-fit lg:block">
                         <span className="flex items-center gap-2 text-sm">
                           <AlignLeft className="h-4 w-4"/>
                           On this page

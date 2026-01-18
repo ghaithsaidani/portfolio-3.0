@@ -1,22 +1,25 @@
-import { Card, CardContent } from "@/components/ui/card";
-import { Separator } from "@/components/ui/separator";
-import { FSB, LJFB, Marburg, Sesame } from "@/assets";
-import { useTranslation } from "react-i18next";
+import {Card, CardContent} from "@/components/ui/card";
+import {Separator} from "@/components/ui/separator";
+import {FSB, LJFB, Marburg, Sesame} from "@/assets";
+import {useTranslation} from "react-i18next";
 
 type University = {
     key: string;
-    logo: string;
+    logo: {
+        src: string,
+        alt: string
+    }
 };
 
 const educationsData: University[] = [
-    { key: "marburg", logo: Marburg },
-    { key: "sesame", logo: Sesame },
-    { key: "fsb", logo: FSB },
-    { key: "ljfb", logo: LJFB },
+    {key: "marburg", logo: {src: Marburg, alt: "Marburg University Logo"}},
+    {key: "sesame", logo: {src: Sesame, alt: "Sesame University Logo"}},
+    {key: "fsb", logo: {src: FSB, alt: "Faculty of Sciences Logo"}},
+    {key: "ljfb", logo: {src: LJFB, alt: "LJFB Logo"}},
 ];
 
 const Education = () => {
-    const { t } = useTranslation("education");
+    const {t} = useTranslation("education");
 
     return (
         <section id="education" className="bg-white py-32 dark:bg-neutral-950">
@@ -33,10 +36,11 @@ const Education = () => {
 
                     {educationsData.map((entry, index) => (
                         <div key={index} className="relative mb-10 pl-8">
-                            <div className="bg-neutral-950 absolute left-0 top-3.5 flex size-4 items-center justify-center rounded-full dark:bg-neutral-50" />
+                            <div
+                                className="bg-neutral-950 absolute left-0 top-3.5 flex size-4 items-center justify-center rounded-full dark:bg-neutral-50"/>
 
                             <div className="flex">
-                                <img src={entry.logo} className="h-12" />
+                                <img src={entry.logo.src} className="h-12" alt={entry.logo.alt} loading={"lazy"}/>
                                 <div className="flex flex-col ml-4">
                                     <h4 className="text-xl font-bold tracking-tight">
                                         {t(`${entry.key}.name`)}
@@ -55,7 +59,7 @@ const Education = () => {
                                 <CardContent className="px-0 xl:px-2">
                                     <p
                                         className="prose dark:prose-invert text-neutral-950 dark:text-neutral-50"
-                                        dangerouslySetInnerHTML={{ __html: t(`${entry.key}.content`) }}
+                                        dangerouslySetInnerHTML={{__html: t(`${entry.key}.content`)}}
                                     />
                                 </CardContent>
                             </Card>

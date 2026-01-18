@@ -56,6 +56,7 @@ const Hero = () => {
                             src={PersonalImage}
                             alt={'personal image'}
                             className="h-auto w-full bg-muted rounded-4xl border-primary object-cover object-[50%_0%]"
+                            loading={"lazy"}
                         />
 
                         <div className="flex sm:flex-col justify-end sm:justify-start sm:items-start gap-4">

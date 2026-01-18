@@ -264,7 +264,7 @@ const Skills = () => {
     return (
         <section id={"skills"} className={"py-10 lg:py-24"}>
             <div className="container">
-                <h2 className="mb-3 text-neutral-950 mb-10 text-3xl font-bold tracking-tighter sm:text-6xl dark:text-neutral-50">Skills</h2>
+                <h2 className="text-neutral-950 mb-10 text-3xl font-bold tracking-tighter sm:text-6xl dark:text-neutral-50">Skills</h2>
                 <Tabs value={activeTab} onValueChange={setActiveTab} className='flex justify-between'>
                     <TabsList className='h-fit gap-2 rounded-xl p-1 w-56'>
                         {tabs.map(({icon: Icon, name, value}) => {

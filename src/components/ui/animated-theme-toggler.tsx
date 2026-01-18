@@ -1,4 +1,4 @@
-import {useCallback, useRef} from "react"
+import {type ComponentPropsWithoutRef, useCallback, useRef} from "react"
 import {Moon, Sun} from "lucide-react"
 import {flushSync} from "react-dom"
 
@@ -6,7 +6,7 @@ import {cn} from "@/lib/utils"
 import {useTheme} from "@/providers/theme-provider.tsx";
 
 interface AnimatedThemeTogglerProps
-    extends React.ComponentPropsWithoutRef<"button"> {
+    extends ComponentPropsWithoutRef<"button"> {
     duration?: number
 }
 
@@ -19,22 +19,6 @@ export const AnimatedThemeToggler = ({
     const {theme, setTheme} = useTheme()
     const buttonRef = useRef<HTMLButtonElement>(null)
 
-    /*useEffect(() => {
-      /!*const updateTheme = () => {
-        setIsDark(document.documentElement.classList.contains("dark"))
-      }
-
-      updateTheme()*!/
-
-      const observer = new MutationObserver(updateTheme)
-      observer.observe(document.documentElement, {
-        attributes: true,
-        attributeFilter: ["class"],
-      })
-
-      return () => observer.disconnect()
-    }, [])*/
-
     const toggleTheme = useCallback(async () => {
         if (!buttonRef.current) return
 
@@ -42,8 +26,6 @@ export const AnimatedThemeToggler = ({
             flushSync(() => {
                 const newTheme = (theme !== "dark")
                 setTheme(newTheme ? "dark" : "light")
-                //document.documentElement.classList.toggle("dark")
-                //localStorage.setItem("theme", newTheme ? "dark" : "light")
             })
         }).ready
 
@@ -70,7 +52,7 @@ export const AnimatedThemeToggler = ({
                 pseudoElement: "::view-transition-new(root)",
             }
         )
-    }, [theme, duration])
+    }, [duration, theme, setTheme])
 
     return (
         <button

@@ -1,10 +1,13 @@
-export {default as AnimatedNavbar} from './animated-navbar'
-export {default as Certificates} from './certificates'
-export {default as Contact} from './contact.tsx'
-export {default as Education} from './education'
-export {default as Experience} from './experience'
-export {default as Footer} from './footer'
-export {default as Hero} from './hero'
-export {default as Projects} from './projects'
-export {default as SingleProject} from './single-project'
-export {default as Skills} from './skills'
+import { lazy } from "react";
+
+
+export const AnimatedNavbar = lazy(() => import("./animated-navbar"));
+export const Certificates = lazy(() => import("./certificates"));
+export const Education = lazy(() => import("./education"));
+export const Experience = lazy(() => import("./experience"));
+export const Projects = lazy(() => import("./projects"));
+export const Skills = lazy(() => import("./skills"));
+export const Contact = lazy(() => import("./contact"));
+export const Footer = lazy(() => import("./footer"));
+export const Hero = lazy(() => import("./hero"));
+export const SingleProject = lazy(() => import("./single-project"));

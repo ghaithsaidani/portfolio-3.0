@@ -89,6 +89,7 @@ export function HeroVideoDialog({
           width={1920}
           height={1080}
           className="w-full rounded-md border border-neutral-200 shadow-lg transition-all duration-200 ease-out group-hover:brightness-[0.8] dark:border-neutral-800"
+          loading={"lazy"}
         />
         <div className="absolute inset-0 flex scale-[0.9] items-center justify-center rounded-2xl transition-all duration-200 ease-out group-hover:scale-100">
           <div className="bg-neutral-900/10 flex size-28 items-center justify-center rounded-full backdrop-blur-md dark:bg-neutral-50/10">

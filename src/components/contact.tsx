@@ -22,7 +22,7 @@ const CONTACT_OPTIONS = [
     {
         icon: Phone,
         title: "Phone",
-        description: "+49 1551 1330351",
+        description: "+49 174 1690356",
     },
     {
         icon: Mail,

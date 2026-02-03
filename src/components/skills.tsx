@@ -291,7 +291,7 @@ const Skills = () => {
                                 >
                                     <TabsTrigger value={value} asChild>
                                         <motion.div
-                                            className='flex h-8 w-full items-center justify-center cursor-pointer'
+                                            className='flex h-8 w-full items-center justify-center cursor-pointer border-none'
                                             animate={{filter: 'blur(0px)'}}
                                             exit={{filter: 'blur(2px)'}}
                                             transition={{duration: 0.25, ease: 'easeOut'}}

@@ -20,7 +20,7 @@ const Certificates = ({
                               {
                                   icon: <img loading={"lazy"} src={CKA} className={"size-10"} alt={"CKA certificate logo"} />,
                                   issuer: "The Linux Foundation",
-                                  category: "Issued Apr 19, 2026",
+                                  category: "Issued Apr 18, 2026",
                                   description: "Certified Kubernetes Administrator - CKA",
                                   link: "https://www.credly.com/badges/283184f2-18d6-4300-9fca-05505a4bbf9f/public_url",
                               },

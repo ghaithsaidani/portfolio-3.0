@@ -9,7 +9,8 @@ import {
     IntroToLinux,
     ITSpecialistCloudComputing,
     ITSpecialistJava, KCNA,
-    Meta
+    Meta,
+    CKA
 } from "@/assets";
 
 
@@ -17,8 +18,15 @@ const Certificates = ({
                           heading = "Certificates",
                           items = [
                               {
+                                  icon: <img loading={"lazy"} src={CKA} className={"size-10"} alt={"CKA certificate logo"} />,
+                                  issuer: "The Linux Foundation",
+                                  category: "Issued Apr 19, 2026",
+                                  description: "Certified Kubernetes Administrator - CKA",
+                                  link: "https://www.credly.com/badges/283184f2-18d6-4300-9fca-05505a4bbf9f/public_url",
+                              },
+                              {
                                   icon: <img loading={"lazy"} src={KCNA} className={"size-10"} alt={"KCNA certificate logo"} />,
-                                  issuer: "Cloud Native Computing Foundation (CNCF)",
+                                  issuer: "The Linux Foundation",
                                   category: "Issued Dec 13, 2025",
                                   description: "Kubernetes & Cloud Native Associate - KCNA",
                                   link: "https://www.credly.com/badges/0d2522cd-44cb-4850-9867-f298fae26b7c/public_url",

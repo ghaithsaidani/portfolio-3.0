@@ -7,6 +7,7 @@ export const KubepilotDemo='https://res.cloudinary.com/df8wvnmod/video/upload/v1
 
 
 //certifications
+export const CKA="https://res.cloudinary.com/df8wvnmod/image/upload/v1776676199/cka-certified-kubernetes-administrator_pcexra.png"
 export const ITSpecialistJava='https://res.cloudinary.com/df8wvnmod/image/upload/v1768694604/ITS_Java_qqvowi.png'
 export const ITSpecialistCloudComputing='https://res.cloudinary.com/df8wvnmod/image/upload/v1768694606/ITS_Cloud_Computing_bdgqgf.png'
 export const CloudFoundations='https://res.cloudinary.com/df8wvnmod/image/upload/v1768694605/cloud-foundations_bne913.png'

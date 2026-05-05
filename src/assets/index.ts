@@ -22,7 +22,7 @@ export const Infogerance='https://res.cloudinary.com/df8wvnmod/image/upload/v176
 export const Confledis='https://res.cloudinary.com/df8wvnmod/image/upload/v1768694606/confledis-sas_gvinwj.png'
 export const Xsustain='https://res.cloudinary.com/df8wvnmod/image/upload/v1768694606/xsustain_svmeiv.jpg'
 export const Sofiatech='https://res.cloudinary.com/df8wvnmod/image/upload/v1768694606/sofiatech_wp2hlo.jpg'
-
+export const CodingSchule='https://res.cloudinary.com/df8wvnmod/image/upload/v1778007716/codingschule_upyuvb.jpg'
 
 //education
 export const Marburg='https://res.cloudinary.com/df8wvnmod/image/upload/v1768694607/marburg_hck9fj.jpg'

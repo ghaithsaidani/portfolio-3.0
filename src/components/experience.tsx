@@ -1,11 +1,11 @@
 import { useTranslation } from "react-i18next";
-import { Confledis, Infogerance, Sofiatech, Xsustain } from "@/assets";
+import {CodingSchule, Confledis, Infogerance, Sofiatech, Xsustain} from "@/assets";
 
 const Experience = () => {
     const { t } = useTranslation("experience");
 
     // Map imported logos manually to translation items:
-    const logos = [Sofiatech, Xsustain, Confledis, Infogerance];
+    const logos = [CodingSchule, Sofiatech, Xsustain, Confledis, Infogerance];
 
     const items = t("items", { returnObjects: true }) as any[];
 

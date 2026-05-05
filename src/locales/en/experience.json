@@ -2,6 +2,13 @@
   "title": "Experience",
   "items": [
     {
+      "role": "Mentor - Kubernetes & Cloud Native",
+      "details": "Working Student • Remote • Düsseldorf, Germany",
+      "period": "May 2026 - Present",
+      "company": "Tech and Teach gGmbH (CodingSchule)",
+      "description": "Mentoring students in Kubernetes fundamentals, cluster administration, and cloud-native practices. Supporting hands-on labs and project reviews covering container orchestration, CI/CD, and DevOps workflows."
+    },
+    {
       "role": "DevOps Engineer",
       "details": "Internship • Hybrid • Ariana, Tunisia",
       "period": "Feb 2025 - Jul 2025",

@@ -17,7 +17,7 @@ const CONTACT_OPTIONS = [
     {
         icon: Map,
         title: "Address",
-        description: "Hamburg, Germany",
+        description: "Frankfurt, Germany",
     },
     {
         icon: Phone,
